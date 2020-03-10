@@ -26,12 +26,9 @@ void limpa_jogadas (ESTADO *e){
 
 ESTADO *inicializar_estado() {
     ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
-    limpa_tabuleiro(e);
-    limpa_jogadas(e);
-    e -> ultima_jogada.linha = 0;
-    e -> ultima_jogada.coluna = 0;
     e -> jogador_atual = 1;
     e -> num_jogadas = 0;
-
+    limpa_tabuleiro(e);
+    limpa_jogadas(e);
     return e;
 }
