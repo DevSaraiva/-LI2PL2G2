@@ -1,4 +1,11 @@
-/home/sofia/install/clion-2019.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sofia/CLionProjects/guião5
+/snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/miguel/Documentos/LI II/Jogo-Rastros/guião5"
+-- The C compiler identification is GNU 9.2.1
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
 CMake Error at CMakeLists.txt:6 (add_executable):
   The target name "guião5" is reserved or not valid for certain CMake
   features, such as generator expressions, and may result in undefined
@@ -6,4 +13,4 @@ CMake Error at CMakeLists.txt:6 (add_executable):
 
 
 -- Configuring incomplete, errors occurred!
-See also "/home/sofia/CLionProjects/guião5/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/miguel/Documentos/LI II/Jogo-Rastros/guião5/cmake-build-debug/CMakeFiles/CMakeOutput.log".

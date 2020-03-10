@@ -3,7 +3,24 @@
 //
 
 #include <stdio.h>
-void mostrar_tabuleiro(ESTADO estado){}
+void mostrar_tabuleiro(ESTADO estado) {
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            if (estado.COORDENADA.coluna == j && estado.COORDENADA.linha == i) printf("*");
+            else if (j == 7 && i==0) printf("2");
+            else if (j==0 && i==7) printf("1"):
+            for (int k = 0; k < 32 ; k++) {
+                if ((JOGADAS[k].jogador1.linha == i && JOGADAS[i].jogador1.coluna == j) || (JOGADAS[k].jogador2.linha == i && JOGADAS[k].jogador2.coluna == j))
+                    printf("#");
+                else printf(".");
+            }
+        }
+        printf("\n");
+    }
+}
+
+
 
 
 int interpretador(ESTADO *e) {
