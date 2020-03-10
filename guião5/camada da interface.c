@@ -10,11 +10,12 @@ void mostrar_tabuleiro(ESTADO *estado) {
             if (estado->tab[i][j]) printf("*");
             else if (j == 7 && i==0) printf("2");
             else if (j==0 && i==7) printf("1");
+            else printf(".");
             for (int k = 0; k < 32 ; k++) {
                 if ((estado->jogadas[k].jogador1.linha == i && estado->jogadas[i].jogador1.coluna == j) || (estado->jogadas[k].jogador2.linha == i && estado->jogadas[k].jogador2.coluna == j))
                     printf("#");
-                else printf(".");
             }
+        
         }
         printf("\n");
     }
