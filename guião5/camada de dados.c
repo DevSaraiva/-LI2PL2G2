@@ -1,8 +1,3 @@
-//
-// Created by saraiva on 10/03/20.
-//
-
-
 #include <stdlib.h>
 #include "camada de dados.h"
 

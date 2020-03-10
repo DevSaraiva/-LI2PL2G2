@@ -1,9 +1,5 @@
-//
-// Created by sofia on 09/03/20.
-//
-
-#ifndef GUIÃO5_CAMADA_DE_DADOS_H
-#define GUIÃO5_CAMADA_DE_DADOS_H
+#ifndef _GUIAO5_CAMADA_DE_DADOS_H
+#define _GUIAO5_CAMADA_DE_DADOS_H
 #include <string.h>
 #define BUF_SIZE 1024
 // Estruturas de dados (devem ser colocadas no módulo correto da camada dos dados)
@@ -26,5 +22,7 @@ int jogador_atual;
 
 
 ESTADO *inicializar_estado();
+void limpa_tabuleiro (ESTADO *e);
+void limpa_jogadas (ESTADO *e);
 
-#endif //GUIÃO5_CAMADA_DE_DADOS_H
+#endif //_GUIAO5_CAMADA_DE_DADOS_H
