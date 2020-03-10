@@ -2,6 +2,6 @@
 #include "camada de dados.h"
 int main(){
     ESTADO *e = inicializar_estado();
-    interpretador(e);
+    mostrar_tabuleiro (e);
     return 0;
 }
