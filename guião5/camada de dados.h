@@ -23,4 +23,8 @@ JOGADAS jogadas;
 int num_jogadas;
 int jogador_atual;
 } ESTADO;
+
+
+ESTADO *inicializar_estado();
+
 #endif //GUIÃO5_CAMADA_DE_DADOS_H
