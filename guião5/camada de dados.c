@@ -27,10 +27,6 @@ int obter_jogador_atual(ESTADO *estado){
     printf("%d",estado -> jogador_atual);
 }
 
-int obter_jogador_atual(ESTADO *estado){
-    printf("%d",estado -> jogador_atual);
-}
-
 
 
 CASA obter_estado_casa(ESTADO *e, COORDENADA c){
