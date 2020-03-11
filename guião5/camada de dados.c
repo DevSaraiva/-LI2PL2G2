@@ -23,6 +23,29 @@ void limpa_jogadas (ESTADO *e){
     }
 }
 
+int obter_jogador_atual(ESTADO *estado){
+    printf("%d",estado -> jogador_atual);
+}
+
+int obter_jogador_atual(ESTADO *estado){
+    printf("%d",estado -> jogador_atual);
+}
+
+
+
+CASA obter_estado_casa(ESTADO *e, COORDENADA c){
+    int* c = &c.coluna;
+    int* l = &c.linha;
+    Casa x = tab [c] [l]);
+    switch (x){
+        case VAZIO : printf("Vazio\n");
+            break;
+        case PRETA : printf ("PRETA\n");
+            break;
+        default: printf ("BRANCA\n");
+    }
+}
+
 
 ESTADO *inicializar_estado() {
     ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
