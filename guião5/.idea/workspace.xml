@@ -51,6 +51,7 @@
       <workItem from="1583928132914" duration="15000" />
       <workItem from="1583928191745" duration="777000" />
       <workItem from="1583936620849" duration="733000" />
+      <workItem from="1583937450210" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="funções obter_jogador_atual e obter_estado_casa">
       <created>1583937338135</created>
@@ -59,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583937338135</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="funções obter_jogador_atual e obter_estado_casa">
+      <created>1583937484908</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583937484908</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,10 +78,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="funções obter_jogador_atual e obter_estado_casa" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1583937337535">
+    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1583937484353">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
-    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2/45.27.1321.741@45.27.1321.741" timestamp="1583937337535" />
+    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2/45.27.1321.741@45.27.1321.741" timestamp="1583937484353" />
     <state x="743" y="276" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583881071466">
       <screen x="0" y="27" width="1920" height="983" />
     </state>
