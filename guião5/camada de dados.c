@@ -34,7 +34,7 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){
     int* l = &c.linha;
     Casa x = tab [c] [l]);
     switch (x){
-        case VAZIO : printf("Vazio\n");
+        case VAZIO : printf("VAZIO\n");
             break;
         case PRETA : printf ("PRETA\n");
             break;
