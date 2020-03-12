@@ -9,11 +9,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626e7068-7110-4815-b498-6265e6fab844" name="Default Changelist" comment="função joga com validação da jogada">
+    <list default="true" id="626e7068-7110-4815-b498-6265e6fab844" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camada de dados.c" beforeDir="false" afterPath="$PROJECT_DIR$/camada de dados.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logica do programa.c" beforeDir="false" afterPath="$PROJECT_DIR$/logica do programa.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logica do programa.h" beforeDir="false" afterPath="$PROJECT_DIR$/logica do programa.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +52,7 @@
       <workItem from="1583928191745" duration="777000" />
       <workItem from="1583936620849" duration="733000" />
       <workItem from="1583937450210" duration="40000" />
-      <workItem from="1584019588439" duration="3636000" />
+      <workItem from="1584019588439" duration="3891000" />
     </task>
     <task id="LOCAL-00001" summary="funções obter_jogador_atual e obter_estado_casa">
       <created>1583937338135</created>
@@ -71,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583937484908</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="função joga com validação da jogada">
+      <created>1584023588887</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584023588887</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,10 +87,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="função joga com validação da jogada" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584023531505">
+    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584023588124">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
-    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2/45.27.1321.741@45.27.1321.741" timestamp="1584023531505" />
+    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2/45.27.1321.741@45.27.1321.741" timestamp="1584023588124" />
     <state x="743" y="276" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583881071466">
       <screen x="0" y="27" width="1920" height="983" />
     </state>
