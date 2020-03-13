@@ -18,7 +18,7 @@ int verifica_jogada (ESTADO *estado, COORDENADA c){
 
 
 int jogar(ESTADO *estado, COORDENADA c){
-    if ((verifica_jogada (estado,c)) == 1){
+    if ((verifica_jogada (estado,c))){
         estado -> tab [c.coluna] [c.linha] = BRANCA;
         return 1;
     }
