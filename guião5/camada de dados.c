@@ -30,9 +30,9 @@ int obter_jogador_atual(ESTADO *estado){
 
 
 CASA obter_estado_casa(ESTADO *e, COORDENADA c){
-    int* c = &c.coluna;
-    int* l = &c.linha;
-    Casa x = tab [c] [l]);
+    int coluna = c.coluna - 1;
+    int linha = c.linha - 1;
+    CASA x = e -> tab[coluna][linha];
     switch (x){
         case VAZIO : printf("VAZIO\n");
             break;
@@ -42,11 +42,19 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){
     }
 }
 
+int obter_numero_de_jogadas (ESTADO e){
+    int jog = e.num_jogadas;
+    return jog;
+}
+
+
 
 ESTADO *inicializar_estado() {
     ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
     e -> jogador_atual = 1;
     e -> num_jogadas = 0;
+    e -> ultima_jogada.linha = 5;
+    e -> ultima_jogada.coluna = 4;
     limpa_tabuleiro(e);
     limpa_jogadas(e);
     return e;

@@ -1,6 +1,8 @@
 #include <stdio.h>
-#include "camada de dados.h"
+#include <stdlib.h>
 #include <math.h>
+#include "camada de dados.h"
+
 
 
 int verifica_jogada (ESTADO *estado, COORDENADA c){
@@ -8,9 +10,8 @@ int verifica_jogada (ESTADO *estado, COORDENADA c){
     int l_ult = estado -> ultima_jogada.linha;
     int c_coluna = c.coluna;
     int c_linha = c.linha;
-    double x = sqrt 2;
-    double dist = (sqrt ((c_ult - c_coluna)^2 + (l_ult - c_linha)^2));
-    if ((dist == 1 || dist == x) && (obter_estado_casa(estado, c) == 'VAZIO')) return 1;
+    
+    if (abs(c_coluna - c_ult) <= 1 && abs (l_ult - c_linha) <= 1 && obter_estado_casa(estado,c)) return 1;
     else return 0;
 }
 
