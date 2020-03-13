@@ -8,7 +8,8 @@ int verifica_jogada (ESTADO *estado, COORDENADA c){
     int l_ult = estado -> ultima_jogada.linha;
     int c_coluna = c.coluna;
     int c_linha = c.linha;
-    if (((sqrt ((c_ult - c_coluna)^2 + (l_ult - c_linha)^2)) == 1) && (obter_estado_casa(estado, c) == 'VAZIO')) return 1;
+    double x = sqrt 2;
+    if (((sqrt ((c_ult - c_coluna)^2 + (l_ult - c_linha)^2)) <= x) && (obter_estado_casa(estado, c) == 'VAZIO')) return 1;
     else return 0;
 }
 
