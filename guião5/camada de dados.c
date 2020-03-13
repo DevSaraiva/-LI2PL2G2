@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "camada de dados.h"
 
@@ -24,7 +25,8 @@ void limpa_jogadas (ESTADO *e){
 }
 
 int obter_jogador_atual(ESTADO *estado){
-    printf("%d",estado -> jogador_atual);
+    int x = estado -> jogador_atual;
+    return x;
 }
 
 
@@ -33,13 +35,7 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){
     int coluna = c.coluna - 1;
     int linha = c.linha - 1;
     CASA x = e -> tab[coluna][linha];
-    switch (x){
-        case VAZIO : printf("VAZIO\n");
-            break;
-        case PRETA : printf ("PRETA\n");
-            break;
-        default: printf ("BRANCA\n");
-    }
+    return x;
 }
 
 int obter_numero_de_jogadas (ESTADO e){
