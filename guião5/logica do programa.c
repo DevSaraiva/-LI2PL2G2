@@ -9,7 +9,8 @@ int verifica_jogada (ESTADO *estado, COORDENADA c){
     int c_coluna = c.coluna;
     int c_linha = c.linha;
     double x = sqrt 2;
-    if (((sqrt ((c_ult - c_coluna)^2 + (l_ult - c_linha)^2)) <= x) && (obter_estado_casa(estado, c) == 'VAZIO')) return 1;
+    double dist = (sqrt ((c_ult - c_coluna)^2 + (l_ult - c_linha)^2));
+    if ((dist == 1 || dist == x) && (obter_estado_casa(estado, c) == 'VAZIO')) return 1;
     else return 0;
 }
 

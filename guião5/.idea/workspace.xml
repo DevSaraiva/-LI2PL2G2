@@ -89,10 +89,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="função joga com validação da jogada" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584093110132">
+    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584093460181">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
-    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2/45.27.1321.741@45.27.1321.741" timestamp="1584093110132" />
+    <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2/45.27.1321.741@45.27.1321.741" timestamp="1584093460181" />
     <state x="743" y="276" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583881071466">
       <screen x="0" y="27" width="1920" height="983" />
     </state>
@@ -102,9 +102,9 @@
     </state>
     <state x="630" y="346" key="com.intellij.ide.util.TipDialog/0.27.1920.983@0.27.1920.983" timestamp="1583881054105" />
     <state x="478" y="267" key="com.intellij.ide.util.TipDialog/45.27.1321.741@45.27.1321.741" timestamp="1584092963650" />
-    <state x="473" y="316" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584093422341">
+    <state x="473" y="316" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584093640869">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
-    <state x="473" y="316" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/45.27.1321.741@45.27.1321.741" timestamp="1584093422341" />
+    <state x="473" y="316" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/45.27.1321.741@45.27.1321.741" timestamp="1584093640869" />
   </component>
 </project>
