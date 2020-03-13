@@ -1,0 +1,6 @@
+Nesta semana (9-15 março) foram feitas as seguintes adições ao programa:
+1. Foram criados os 3 módulos (Camada da interface, camada de dados e lógica do programa);
+2. Foi implementada a função inicializa o estado do jogo;
+3. Foi implementada a função que mostra o tabuleiro com a jogada efetuada:
+A função mostra tabuleiro recebe um estado como argumento e em seguida desenha o jogador na posição em que este se encontra.
+Foi implementada a função que coloca uma peça branca na casa jogada validando já se a jogada realizada é ou não válida;
