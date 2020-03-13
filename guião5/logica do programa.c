@@ -18,11 +18,3 @@ int jogar (ESTADO *estado, COORDENADA c){
 }
 
 
-
-
-int main (){
-    ESTADO *e = inicializar_estado();
-    COORDENADA c = {2,6};
-    printf ("\n%d",jogar (e,c));
-}
-
