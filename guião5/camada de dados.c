@@ -32,8 +32,8 @@ int obter_jogador_atual(ESTADO *estado){
 
 
 CASA obter_estado_casa(ESTADO *e, COORDENADA c){
-    int coluna = c.coluna - 1;
-    int linha = c.linha - 1;
+    int coluna = c.coluna;
+    int linha = c.linha;
     CASA x = e -> tab[coluna][linha];
     return x;
 }
