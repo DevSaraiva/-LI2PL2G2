@@ -2,25 +2,27 @@
 #include "camada de dados.h"
 
 
-int valida_jogada (ESTADO *estado,COORDENADA c){
-    int c_ult = estado -> ultima_jogada.coluna;
-    int l_ult = estado -> ultima_jogada.linha;
+int jogar (ESTADO *estado, COORDENADA c){
+    
     int c_coluna = c.coluna;
     int c_linha = c.linha;
-    CASA x = VAZIO;
-    if (((c_coluna - c_ult)*(c_coluna - c_ult) <= 1) && ((l_ult - c_linha)*(l_ult - c_linha) <= 1) && (obter_estado_casa(estado,c)) == x)
-        return 1;
-    else return 0;
-}
+    int jog = estado -> jogador_atual;
 
+        // Muda de jogador
+        if ( jog == 1) jog = 2;
+        else jog = 1;
+        
 
-
-int jogar (ESTADO *estado, COORDENADA c){
-    if (valida_jogada(estado,c) == 1){
         printf("jogar %d %d\n", c.coluna, c.linha);
         estado -> tab [c.coluna] [c.linha] = BRANCA;
-        return 1;
-  } 
-    else return 0;
+        
+        // Aumenta número de jogadas
+        if (jog == 2) estado -> num_jogadas++;
+        
+       
+        
+        return 0;
+  
+
 }
 

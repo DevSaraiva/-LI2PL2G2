@@ -1,9 +1,9 @@
 #ifndef _GUIAO5_CAMADA_DE_DADOS_H
 #define _GUIAO5_CAMADA_DE_DADOS_H
-//#include <string.h>
-//#include <stdio.h>
-//#define BUF_SIZE 1024
-// Estruturas de dados (devem ser colocadas no módulo correto da camada dos dados)
+#include <string.h>
+#include <stdio.h>
+#define BUF_SIZE 1024
+
 
 typedef enum {VAZIO, BRANCA, PRETA} CASA;
 typedef struct {
