@@ -1,7 +1,19 @@
+
+/**
+@file logica\ do\ programa.c
+Módulo que contém toda a lógica do jogo
+*/
+
+
+
 #include <stdio.h>
 #include "camada de dados.h"
 
-// Função que altera o estado do jogo através das coordenadas fornecidas
+
+/**
+\brief Função que altera o estado do jogo através das coordenadas fornecidas
+*/
+
 
 int jogar (ESTADO *estado, COORDENADA c){
     

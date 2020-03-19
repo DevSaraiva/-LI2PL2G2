@@ -1,3 +1,15 @@
+
+
+/**
+@file camada\ de\ dados.h
+Definição do estado e das funções que o manipulam
+*/
+
+
+
+
+
+
 #ifndef _GUIAO5_CAMADA_DE_DADOS_H
 #define _GUIAO5_CAMADA_DE_DADOS_H
 #include <string.h>
@@ -5,12 +17,19 @@
 #define BUF_SIZE 1024
 
 
+/**
+\brief Definção de coordenada
+*/
+
 typedef enum {VAZIO, BRANCA, PRETA} CASA;
 typedef struct {
     int coluna;
     int linha;
 } COORDENADA;
-
+ 
+ /**
+\brief Definição da jogada
+*/
 typedef struct {
     COORDENADA jogador1;
     COORDENADA jogador2;
@@ -18,6 +37,9 @@ typedef struct {
 
 typedef JOGADA JOGADAS[32];
 
+/**
+\brief Definição do estado
+*/
 typedef struct {
     CASA tab[8][8];
     COORDENADA ultima_jogada;
