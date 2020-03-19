@@ -10,7 +10,8 @@
 int main(){
     ESTADO *e = inicializar_estado();
     mostrar_tabuleiro(e);
-   
+    prompt (e);
+    
     int num_jog = 0;
 
     while (num_jog < 32){

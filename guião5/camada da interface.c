@@ -44,3 +44,19 @@ int interpretador(ESTADO *e) {
         }
     return 1;
 }
+
+char letra (int x){
+     char arr [8] = {'a','b','c','d','e','f','g','h'};
+     return arr [(x-1)]; 
+}
+
+void prompt (ESTADO *e){
+    int n_jogadas =  e->num_jogadas;
+    int j_atual = obter_jogador_atual (e);
+    COORDENADA a = e -> ultima_jogada;
+    int x = a.coluna;
+    char col = letra(x);
+    int y = a.linha;
+    printf ("#%d PL%d %c%d\n", n_jogadas, j_atual,col,y);
+
+}
