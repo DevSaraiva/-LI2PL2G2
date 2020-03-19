@@ -28,21 +28,26 @@ void mostrar_tabuleiro(ESTADO *estado) {
         printf ("%d ",i + 1);
         
         for(j = 0; j < 8; j++){
-            switch (estado -> tab [i][j])
-            {
-            case VAZIO:
-                putchar('.');
-                break;
             
-            case BRANCA:
-                putchar('*');
-                break;
-            
-            case PRETA:
-                putchar('#');
-            
-            
-            }
+            if (i == 7 && j == 7) putchar('1');
+            else if(i == 0 && j == 0) putchar ('2');
+            else {
+                    switch (estado -> tab [i][j])
+                    {
+                    case VAZIO:
+                        putchar('.');
+                        break;
+                    
+                    case BRANCA:
+                        putchar('*');
+                        break;
+                    
+                    case PRETA:
+                        putchar('#');
+                    
+                    
+                    }
+        }
         }
     }
     putchar('\n');
@@ -53,13 +58,67 @@ void mostrar_tabuleiro(ESTADO *estado) {
 }
 
 /**
-\brief  Função que tranforma comandos dos jogador em ações no estado do jogo
+\brief  Função auxiliar da função interpretador que escreve um estado em um ficheiro
 */
 
+void gravar_estado (ESTADO *e){
+    
+    FILE *save;
+    int i, j;
+    
+    // abre o ficheiro
+    save = fopen("save1","w");
+    
+    // escreve no ficheiro o tabuleiro
+    
+    for (i = 7; i >= 0; i--){
+        fprintf(save,"\n");
+        fprintf (save,"%d ",i + 1);
+        
+        for(j = 0; j < 8; j++){
+            
+            if (i == 7 && j == 7) fprintf(save,"1");
+            else if(i == 0 && j == 0) fprintf(save,"2");
+            else {    
+                    switch (e -> tab [i][j])
+                    {
+                    case VAZIO:
+                        fprintf(save,".");
+                        break;
+                    
+                    case BRANCA:
+                        fprintf(save,"*");
+                        break;
+                    
+                    case PRETA:
+                        fprintf(save,"#");
+                    
+                    }
+        }
+        }
+    }
+    fprintf(save,"\n");
+    fprintf(save,"  abcdefgh");
+    fprintf(save,"\n");
+
+
+    // fecha o arquivo
+    fclose(save);
+}
+    
+
+
+
+/**
+\brief  Função que tranforma comandos dos jogador em ações no estado do jogo
+*/
 
 int interpretador(ESTADO *e) {
         char linha[BUF_SIZE];
         char col[2], lin[2];
+        char quit;
+        char gravar[3];
+        
         
         if(fgets(linha, BUF_SIZE, stdin) == NULL)
             return 0;
@@ -69,6 +128,14 @@ int interpretador(ESTADO *e) {
             jogar(e, coord);
             mostrar_tabuleiro(e);
         }
+    
+        if(strlen(linha) == 2 && sscanf(linha,"%[Q]", &quit) == 1){
+            printf(" \n O jogo Terminou \n");
+            e -> num_jogadas = 32;
+        }
+
+        if (strlen(linha) == 3 && sscanf(linha,"%[gr]", gravar) == 1) gravar_estado (e);
+    
     return 1;
 }
 
