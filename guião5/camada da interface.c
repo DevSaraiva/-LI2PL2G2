@@ -20,9 +20,6 @@ void mostrar_tabuleiro(ESTADO *estado) {
 
   int i, j;
     
-    
-    
-    
     for (i = 7; i >= 0; i--){
         putchar('\n');
         printf ("%d ",i + 1);
@@ -101,8 +98,6 @@ void escreve_tabuleuiro(ESTADO *e,FILE *save){
 }
 
 
-
-
 /**
 \brief  Função auxiliar da função interpretador que escreve um estado em um ficheiro
 */
@@ -124,7 +119,28 @@ void gravar_estado (ESTADO *e){
 }
     
 
+/**
+\brief  Função que lê o estado de um ficheiro
+*/
 
+void ler_estado () {
+
+    FILE *save;
+    char str[12];
+    
+    save = fopen("save1","r");
+
+    if(save == NULL) {
+        printf ("Save inexistente");
+    }else{
+        
+        while(!feof(save)){
+       
+        if (fgets(str,20,save) != NULL) printf("%s",str);
+
+    }
+    }
+}
 
 /**
 \brief  Função que tranforma comandos dos jogador em ações no estado do jogo
@@ -135,6 +151,7 @@ int interpretador(ESTADO *e) {
         char col[2], lin[2];
         char quit;
         char gravar[3];
+        char read [4];
         
         
         if(fgets(linha, BUF_SIZE, stdin) == NULL)
@@ -152,6 +169,12 @@ int interpretador(ESTADO *e) {
         }
 
         if (strlen(linha) == 3 && sscanf(linha,"%[gr]", gravar) == 1) gravar_estado (e);
+    
+    
+        if (strlen(linha) == 4 && sscanf(linha, "%[ler]", read) == 1) ler_estado();
+    
+    
+    
     
     return 1;
 }
