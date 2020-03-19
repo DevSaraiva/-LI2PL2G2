@@ -58,20 +58,14 @@ void mostrar_tabuleiro(ESTADO *estado) {
 }
 
 /**
-\brief  Função auxiliar da função interpretador que escreve um estado em um ficheiro
+\brief  Função auxiliar da função gravar_estado
 */
 
-void gravar_estado (ESTADO *e){
-    
-    FILE *save;
+
+void escreve_tabuleuiro(ESTADO *e,FILE *save){
     int i, j;
-    
-    // abre o ficheiro
-    save = fopen("save1","w");
-    
-    // escreve no ficheiro o tabuleiro
-    
-    for (i = 7; i >= 0; i--){
+
+     for (i = 7; i >= 0; i--){
         fprintf(save,"\n");
         fprintf (save,"%d ",i + 1);
         
@@ -101,6 +95,29 @@ void gravar_estado (ESTADO *e){
     fprintf(save,"  abcdefgh");
     fprintf(save,"\n");
 
+
+
+
+}
+
+
+
+
+/**
+\brief  Função auxiliar da função interpretador que escreve um estado em um ficheiro
+*/
+
+void gravar_estado (ESTADO *e){
+    
+    FILE *save;
+    
+    
+    // abre o ficheiro
+    save = fopen("save1","w");
+    
+    // escreve no ficheiro o tabuleiro
+    
+   escreve_tabuleuiro(e,save);
 
     // fecha o arquivo
     fclose(save);
