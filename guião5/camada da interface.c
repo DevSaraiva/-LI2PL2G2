@@ -1,3 +1,9 @@
+/**
+@file camada\ da\ interdace
+Funções que controem a interface do jogo
+*/
+
+
 #include <stdio.h>
 #include <string.h>
 #include "camada de dados.h"
@@ -5,8 +11,10 @@
 #include "camada da interface.h"
 #define BUF_SIZE 1024
 
+/**
+\brief  Função que desenha o tabuleiro no estado atual
+*/
 
-// Função que desenha o tabuleiro no estado atual
 
 void mostrar_tabuleiro(ESTADO *estado) {
 
@@ -27,8 +35,10 @@ void mostrar_tabuleiro(ESTADO *estado) {
 }
 
 
+/**
+\brief  Função que tranforma comandos dos jogador em ações no estado do jogo
+*/
 
-// Função que tranforma comandos dos jogador em ações no estado do jogo
 
 int interpretador(ESTADO *e) {
         char linha[BUF_SIZE];

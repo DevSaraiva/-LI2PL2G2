@@ -1,3 +1,10 @@
+/**
+@file main.c
+Aglomeração de todas as camadas
+*/
+
+
+
 #include <stdio.h>
 #include <string.h>
 #include "camada de dados.h"
@@ -5,7 +12,10 @@
 #include "logica do programa.h"
 
 
-// Função principal que aglomera todos os módulos
+/**
+\brief Função principal que aglomera todos os módulos
+*/
+
 
 int main(){
     ESTADO *e = inicializar_estado();

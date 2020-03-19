@@ -1,8 +1,17 @@
+/**
+@file camada\ de\ dados.c
+Definição das funções que manipulam o estado
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "camada de dados.h"
 
-// Função que coloca todas as casas do tabuleiro como vazias exepto a casa inicial
+
+/**
+\brief Função que coloca todas as casas do tabuleiro como vazias exepto a casa inicial
+*/
 
 void limpa_tabuleiro (ESTADO *e){
 
@@ -16,7 +25,10 @@ void limpa_tabuleiro (ESTADO *e){
     e -> tab[3][4] = BRANCA;
 }
 
-// Função que atribui jogadas inválidas a todas as jogadas não efetuadas presentes na lista de jogadas
+/**
+\brief Função que atribui jogadas inválidas a todas as jogadas não efetuadas presentes na lista de jogadas
+*/
+
 
 void limpa_jogadas (ESTADO *e){
     int i;
@@ -28,7 +40,10 @@ void limpa_jogadas (ESTADO *e){
     }
 }
 
-// Função que retorna o jogador que possui a vez de jogar
+/**
+\brief Função que retorna o jogador que possui a vez de jogar
+*/
+
 
 int obter_jogador_atual(ESTADO *estado){
     int x = estado -> jogador_atual;
@@ -36,7 +51,10 @@ int obter_jogador_atual(ESTADO *estado){
 }
 
 
-// Função que obtém o estado de determinada casa localizada na coordenada passada
+/**
+\brief Função que obtém o estado de determinada casa localizada na coordenada passada
+*/
+
 
 CASA obter_estado_casa(ESTADO *e, COORDENADA c){
     int coluna = c.coluna - 1;
@@ -45,14 +63,20 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){
     return x;
 }
 
-// Função que devolve número de jogadas efetuadas até o momento
+/**
+\brief Função que devolve número de jogadas efetuadas até o momento
+*/
+
 
 int obter_numero_de_jogadas (ESTADO e){
     int jog = e.num_jogadas;
     return jog;
 }
 
-// Função que limpa todas as variáveis do estado do jogo, tornando-o pronto para começar a jogar
+/**
+\brief Função que limpa todas as variáveis do estado do jogo, tornando-o pronto para começar a jogar
+*/
+
 
 ESTADO *inicializar_estado() {
     ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
