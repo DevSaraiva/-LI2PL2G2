@@ -5,6 +5,9 @@
 #include "camada da interface.h"
 #define BUF_SIZE 1024
 
+
+// Função que desenha o tabuleiro no estado atual
+
 void mostrar_tabuleiro(ESTADO *estado) {
 
     for (int i = 0; i < 8; i++) {
@@ -25,6 +28,7 @@ void mostrar_tabuleiro(ESTADO *estado) {
 
 
 
+// Função que tranforma comandos dos jogador em ações no estado do jogo
 
 int interpretador(ESTADO *e) {
         char linha[BUF_SIZE];
