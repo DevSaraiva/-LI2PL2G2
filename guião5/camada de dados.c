@@ -1,5 +1,5 @@
 /**
-@file camada\ de\ dados.c
+@file camadadedados.c
 Definição das funções que manipulam o estado
 */
 
@@ -22,7 +22,7 @@ void limpa_tabuleiro (ESTADO *e){
         }
 
 
-    e -> tab[3][4] = BRANCA;
+    e -> tab[4][4] = BRANCA;
 }
 
 /**

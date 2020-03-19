@@ -18,22 +18,39 @@ Funções que controem a interface do jogo
 
 void mostrar_tabuleiro(ESTADO *estado) {
 
-    for (int i = 0; i < 8; i++) {
-        for (int j = 0; j < 8; j++) {
-            if (estado->tab[i][j]) printf("*");
-            else if (j == 7 && i==0) printf("2");
-            else if (j==0 && i==7) printf("1");
-            else printf(".");
-            for (int k = 0; k < 32 ; k++) {
-                if ((estado->jogadas[k].jogador1.linha == i && estado->jogadas[i].jogador1.coluna == j) || (estado->jogadas[k].jogador2.linha == i && estado->jogadas[k].jogador2.coluna == j))
-                    printf("#");
-            }
+  int i, j;
+    
+    
+    
+    
+    for (i = 7; i >= 0; i--){
+        putchar('\n');
+        printf ("%d ",i + 1);
         
+        for(j = 0; j < 8; j++){
+            switch (estado -> tab [i][j])
+            {
+            case VAZIO:
+                putchar('.');
+                break;
+            
+            case BRANCA:
+                putchar('*');
+                break;
+            
+            case PRETA:
+                putchar('#');
+            
+            
+            }
         }
-        printf("\n");
     }
-}
+    putchar('\n');
+    printf("  abcdefgh");
+    putchar ('\n');
 
+
+}
 
 /**
 \brief  Função que tranforma comandos dos jogador em ações no estado do jogo
@@ -55,10 +72,20 @@ int interpretador(ESTADO *e) {
     return 1;
 }
 
+
+/**
+\brief  Função auxiliar da função void que tranforma um número na sua letra logicamente correspondente
+*/
+
 char letra (int x){
      char arr [8] = {'a','b','c','d','e','f','g','h'};
      return arr [(x-1)]; 
 }
+
+
+/**
+\brief  Função que fornece informação sobre o estado do jogo aos jogadores
+*/
 
 void prompt (ESTADO *e){
     int n_jogadas =  e->num_jogadas;
@@ -67,6 +94,7 @@ void prompt (ESTADO *e){
     int x = a.coluna;
     char col = letra(x);
     int y = a.linha;
+    putchar ('\n');
     printf ("#%d PL%d %c%d\n", n_jogadas, j_atual,col,y);
 
 }

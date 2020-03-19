@@ -1,6 +1,6 @@
 
 /**
-@file logica\ do\ programa.c
+@file logicadoprograma.c
 Módulo que contém toda a lógica do jogo
 */
 
@@ -27,7 +27,7 @@ int jogar (ESTADO *estado, COORDENADA c){
         
 
         printf("jogar %d %d\n", c.coluna, c.linha);
-        estado -> tab [c.coluna] [c.linha] = BRANCA;
+        estado -> tab [c.linha] [c.coluna] = BRANCA;
         
         // Aumenta número de jogadas
         if (jog == 2) estado -> num_jogadas++;

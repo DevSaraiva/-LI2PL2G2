@@ -1,5 +1,5 @@
 /**
-@file logica\ do\ programa
+@file logicadoprograma.h
 Definição das funções da componente lógica do jogo
 */
 
