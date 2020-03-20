@@ -20,7 +20,7 @@ Aglomeração de todas as camadas
 int main(){
     ESTADO *e = inicializar_estado();
     mostrar_tabuleiro(e);
-    prompt (e);
+    
     
     int num_jog = 0;
 

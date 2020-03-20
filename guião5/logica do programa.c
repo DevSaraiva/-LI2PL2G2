@@ -10,9 +10,6 @@ Módulo que contém toda a lógica do jogo
 #include "camada de dados.h"
 
 
-/**
-\brief Função que altera o estado do jogo através das coordenadas fornecidas
-*/
 
 /**
 \brief Função que verifica se uma jogada é possivel
@@ -30,18 +27,6 @@ int valida_jogada (ESTADO *estado,COORDENADA c){
 }
 
 
-/**
-\brief Função que se o jogo acabou
-*/
-
-
-int casa_vencedora (ESTADO *e,COORDENADA c){
-    int c_coluna = c.coluna;
-    int c_linha = c.linha;
-    int jog = e -> jogador_atual;
-    if ((jog == 1 && c_coluna == 1 && c_linha == 1) || (jog == 2 && c_coluna == 8 && c_linha == 8)) return 1;
-    else return 0;
-}
 
 /**
 \brief Função que altera o estado do jogo através das coordenadas fornecidas
@@ -54,13 +39,13 @@ int jogar (ESTADO *estado, COORDENADA c){
     int c_linha = c.linha;
     int j_atual = obter_jogador_atual (estado);
     printf("jogar %d %d\n", c.coluna, c.linha);
-
+   
     if (valida_jogada(estado,c)==1){
         // Atualiza o tabuleiro
-
-        estado -> tab [c.coluna -1] [c.linha-1] = BRANCA;
-        estado -> tab [c_ult-1] [l_ult-1] = PRETA;
-
+        
+        estado -> tab [c.coluna] [c.linha] = BRANCA;
+        estado -> tab [c_ult] [l_ult] = PRETA;
+        
         // Muda de jogador e guarda a jogada
         
         if (j_atual == 1) estado -> jogador_atual = 2;
@@ -75,16 +60,18 @@ int jogar (ESTADO *estado, COORDENADA c){
         }
 
         // Atualiza a última jogada
-        estado -> ultima_jogada.coluna = c_ult;
-        estado -> ultima_jogada.linha = l_ult;
+        estado -> ultima_jogada.coluna = c.coluna;
+        estado -> ultima_jogada.linha = c.linha;
         
     }    
     else printf("Jogada inválida\n");
-
+ 
     // Aumenta número de jogadas
     if (j_atual == 2) 
         estado -> num_jogadas++;
 
-    if (casa_vencedora (estado,c) == 1) printf("O vecedor é o jogador %d", j_atual-1);
+   
     
 }
+
+

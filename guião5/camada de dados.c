@@ -22,7 +22,7 @@ void limpa_tabuleiro (ESTADO *e){
         }
 
 
-    e -> tab[4][4] = BRANCA;
+    e -> tab [4][4] = BRANCA;
 }
 
 /**
@@ -82,7 +82,7 @@ ESTADO *inicializar_estado() {
     ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
     e -> jogador_atual = 1;
     e -> num_jogadas = 0;
-    e -> ultima_jogada.linha = 5;
+    e -> ultima_jogada.linha = 4;
     e -> ultima_jogada.coluna = 4;
     limpa_tabuleiro(e);
     limpa_jogadas(e);
