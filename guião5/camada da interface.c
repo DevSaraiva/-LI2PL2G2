@@ -168,10 +168,10 @@ int interpretador(ESTADO *e) {
             e -> num_jogadas = 32;
         }
 
-        if (strlen(linha) == 3 && sscanf(linha,"%[gr]", gravar) == 1) gravar_estado (e);
+        if (strlen(linha) == 3 && sscanf(linha,"gr %s", gravar) == 1) gravar_estado (e);
     
     
-        if (strlen(linha) == 4 && sscanf(linha, "%[ler]", read) == 1) ler_estado();
+        if (strlen(linha) == 4 && sscanf(linha, "ler %s", read) == 1) ler_estado();
     
     
     
