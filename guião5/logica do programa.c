@@ -4,8 +4,6 @@
 Módulo que contém toda a lógica do jogo
 */
 
-
-
 #include <stdio.h>
 #include "camada de dados.h"
 #include <math.h>
@@ -21,8 +19,6 @@ int casa_vencedora (ESTADO *e,COORDENADA c){
     if ((jog == 2 && c_coluna == 0 && c_linha == 0) || (jog == 1 && c_coluna == 7 && c_linha == 7)) return 1;
     else return 0;
 }
-
-
 
 
 /**
@@ -43,8 +39,6 @@ int jogada_e_valida (ESTADO *estado,COORDENADA c){
 }
 
 
-
-
 /**
 \brief Função que altera o estado do jogo através das coordenadas fornecidas
 */
@@ -63,7 +57,7 @@ int jogar (ESTADO *estado, COORDENADA c){
         estado -> tab [c.linha] [c.coluna] = BRANCA;
         estado -> tab [l_ult] [c_ult] = PRETA;
         
-        // Muda de jogador e guarda a jogada
+        // Muda de jogador e guarda a jogadass
         
         if (j_atual == 1) estado -> jogador_atual = 2;
         else {

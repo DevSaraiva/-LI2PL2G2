@@ -202,7 +202,7 @@ char letra (int x){
 */
 
 void prompt (ESTADO *e){
-    int n_jogadas = obter_numero_de_jogadas (e);
+    int n_jogadas = e -> num_jogadas;
     int j_atual = obter_jogador_atual (e);
     COORDENADA a = obter_ultima_jogada (e);
     int x = a.coluna;

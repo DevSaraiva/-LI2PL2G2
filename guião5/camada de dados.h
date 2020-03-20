@@ -55,5 +55,6 @@ COORDENADA obter_ultima_jogada(ESTADO *e);
 int obter_numero_de_jogadas (ESTADO *e);
 int obter_jogador_atual(ESTADO *estado);
 CASA obter_estado_casa(ESTADO *e, COORDENADA c);
+int obter_jogador_atual(ESTADO *estado);
 
 #endif //_GUIAO5_CAMADA_DE_DADOS_H
