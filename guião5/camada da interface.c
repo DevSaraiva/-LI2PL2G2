@@ -11,18 +11,6 @@ Funções que controem a interface do jogo
 #include "camada da interface.h"
 #define BUF_SIZE 1024
 
-/**
-\brief Função que se o jogo acabou
-*/
-
-int casa_vencedora (ESTADO *e,COORDENADA c){
-    int c_coluna = c.coluna;
-    int c_linha = c.linha;
-    int jog = e -> jogador_atual;
-    if ((jog == 2 && c_coluna == 0 && c_linha == 0) || (jog == 1 && c_coluna == 7 && c_linha == 7)) return 1;
-    else return 0;
-}
-
 
 
 /**
@@ -175,7 +163,7 @@ int interpretador(ESTADO *e) {
             COORDENADA coord = {*col - 'a', *lin - '1'};
             jogar(e, coord);
             int j_atual = obter_jogador_atual (e);
-            if (casa_vencedora (e,coord) == 1) {printf("O vencedor é o PL%d\n",j_atual-1);e -> num_jogadas = 32;}
+            if (casa_vencedora (e,coord)) {printf("O vencedor é o PL%d\n",j_atual-1);e -> num_jogadas = 32;}
             else mostrar_tabuleiro(e);
             
             
@@ -214,9 +202,9 @@ char letra (int x){
 */
 
 void prompt (ESTADO *e){
-    int n_jogadas =  e->num_jogadas;
+    int n_jogadas = obter_numero_de_jogadas (e);
     int j_atual = obter_jogador_atual (e);
-    COORDENADA a = e -> ultima_jogada;
+    COORDENADA a = obter_ultima_jogada (e);
     int x = a.coluna;
     char col = letra(x);
     int y = a.linha;

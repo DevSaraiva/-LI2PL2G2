@@ -10,7 +10,8 @@ Definição das funções relacionadas com interface
 #ifndef _GUIAO5_CAMADA_DA_INTERFACE_H
 #define _GUIAO5_CAMADA_DA_INTERFACE_H
 #include "camada de dados.h"
-
+#include "logica do programa.h"
+#include "camada da interface.h"
 
 
 void mostrar_tabuleiro(ESTADO *estado);

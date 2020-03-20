@@ -41,6 +41,18 @@ void limpa_jogadas (ESTADO *e){
 }
 
 /**
+\brief Função que retorna a ultima jogada efetuada
+*/
+
+COORDENADA obter_ultima_jogada(ESTADO *e){
+    COORDENADA x = e -> ultima_jogada;
+    return x;
+}
+
+
+
+
+/**
 \brief Função que retorna o jogador que possui a vez de jogar
 */
 
@@ -57,8 +69,8 @@ int obter_jogador_atual(ESTADO *estado){
 
 
 CASA obter_estado_casa(ESTADO *e, COORDENADA c){
-    int coluna = c.coluna - 1;
-    int linha = c.linha - 1;
+    int coluna = c.coluna;
+    int linha = c.linha;
     CASA x = e -> tab[coluna][linha];
     return x;
 }
@@ -68,8 +80,8 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){
 */
 
 
-int obter_numero_de_jogadas (ESTADO e){
-    int jog = e.num_jogadas;
+int obter_numero_de_jogadas (ESTADO *e){
+    int jog = e -> num_jogadas;
     return jog;
 }
 

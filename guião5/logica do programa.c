@@ -8,6 +8,20 @@ Módulo que contém toda a lógica do jogo
 
 #include <stdio.h>
 #include "camada de dados.h"
+#include <math.h>
+#include <stdlib.h>
+
+/**
+\brief Função que se o jogo acabou
+*/
+int casa_vencedora (ESTADO *e,COORDENADA c){
+    int c_coluna = c.coluna;
+    int c_linha = c.linha;
+    int jog = obter_jogador_atual(e);
+    if ((jog == 2 && c_coluna == 0 && c_linha == 0) || (jog == 1 && c_coluna == 7 && c_linha == 7)) return 1;
+    else return 0;
+}
+
 
 
 
@@ -15,16 +29,19 @@ Módulo que contém toda a lógica do jogo
 \brief Função que verifica se uma jogada é possivel
 */
 
-int valida_jogada (ESTADO *estado,COORDENADA c){
+int jogada_e_valida (ESTADO *estado,COORDENADA c){
     int c_ult = estado -> ultima_jogada.coluna;
     int l_ult = estado -> ultima_jogada.linha;
     int c_coluna = c.coluna;
     int c_linha = c.linha;
     CASA x = VAZIO;
-    if (((c_coluna - c_ult)*(c_coluna - c_ult) <= 1) && ((l_ult - c_linha)*(l_ult - c_linha) <= 1) && (obter_estado_casa(estado,c)) == x) 
+    int dif_coluna = abs(c_coluna - c_ult);
+    int dif_linha = abs(l_ult - c_linha);
+    if (dif_coluna <= 1 &&  dif_linha <= 1 && ((obter_estado_casa(estado,c)) == x)) 
         return 1;
     else return 0;
 }
+
 
 
 
@@ -40,7 +57,7 @@ int jogar (ESTADO *estado, COORDENADA c){
     int j_atual = obter_jogador_atual (estado);
     printf("jogar %d %d\n", c.coluna, c.linha);
    
-    if (valida_jogada(estado,c)==1){
+    if (jogada_e_valida(estado,c)){
         // Atualiza o tabuleiro
         
         estado -> tab [c.coluna] [c.linha] = BRANCA;
