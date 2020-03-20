@@ -16,7 +16,7 @@ int casa_vencedora (ESTADO *e,COORDENADA c){
     int c_coluna = c.coluna;
     int c_linha = c.linha;
     int jog = obter_jogador_atual(e);
-    if ((jog == 2 && c_coluna == 0 && c_linha == 0) || (jog == 1 && c_coluna == 7 && c_linha == 7)) return 1;
+    if ((jog == 1 && c_coluna == 0 && c_linha == 0) || (jog == 2 && c_coluna == 7 && c_linha == 7)) return 1;
     else return 0;
 }
 
@@ -59,8 +59,8 @@ int jogar (ESTADO *estado, COORDENADA c){
         
         // Muda de jogador e guarda a jogadass
         
-        if (j_atual == 1) estado -> jogador_atual = 2;
-        else {
+        if ((j_atual == 1) && c_coluna != 0 && c_linha != 0) estado -> jogador_atual = 2;
+        if ((j_atual == 2) && c_coluna != 7 && c_linha != 7) {
             estado -> jogador_atual = 1;
             COORDENADA j1 = {c_ult,l_ult};
             COORDENADA j2 = {c.coluna, c.linha};
