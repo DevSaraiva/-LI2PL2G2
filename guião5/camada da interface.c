@@ -12,6 +12,20 @@ Funções que controem a interface do jogo
 #define BUF_SIZE 1024
 
 /**
+\brief Função que se o jogo acabou
+*/
+
+int casa_vencedora (ESTADO *e,COORDENADA c){
+    int c_coluna = c.coluna;
+    int c_linha = c.linha;
+    int jog = e -> jogador_atual;
+    if ((jog == 2 && c_coluna == 0 && c_linha == 0) || (jog == 1 && c_coluna == 7 && c_linha == 7)) return 1;
+    else return 0;
+}
+
+
+
+/**
 \brief  Função que desenha o tabuleiro no estado atual
 */
 
@@ -26,8 +40,8 @@ void mostrar_tabuleiro(ESTADO *estado) {
         
         for(j = 0; j < 8; j++){
             
-            if (i == 7 && j == 7) putchar('1');
-            else if(i == 0 && j == 0) putchar ('2');
+            if (i == 7 && j == 7) putchar('2');
+            else if(i == 0 && j == 0) putchar ('1');
             else {
                     switch (estado -> tab [i][j])
                     {
@@ -51,7 +65,7 @@ void mostrar_tabuleiro(ESTADO *estado) {
     printf("  abcdefgh");
     putchar ('\n');
 
-
+prompt (estado);
 }
 
 /**
@@ -102,13 +116,13 @@ void escreve_tabuleuiro(ESTADO *e,FILE *save){
 \brief  Função auxiliar da função interpretador que escreve um estado em um ficheiro
 */
 
-void gravar_estado (ESTADO *e){
+void gravar_estado (ESTADO *e, char filename[]){
     
     FILE *save;
     
     
     // abre o ficheiro
-    save = fopen("save1","w");
+    save = fopen(filename,"w");
     
     // escreve no ficheiro o tabuleiro
     
@@ -123,12 +137,12 @@ void gravar_estado (ESTADO *e){
 \brief  Função que lê o estado de um ficheiro
 */
 
-void ler_estado () {
+void ler_estado (char filename[]) {
 
     FILE *save;
     char str[12];
     
-    save = fopen("save1","r");
+    save = fopen(filename,"r");
 
     if(save == NULL) {
         printf ("Save inexistente");
@@ -150,8 +164,8 @@ int interpretador(ESTADO *e) {
         char linha[BUF_SIZE];
         char col[2], lin[2];
         char quit;
-        char gravar[3];
-        char read [4];
+        char filename[BUF_SIZE];
+        
         
         
         if(fgets(linha, BUF_SIZE, stdin) == NULL)
@@ -160,18 +174,23 @@ int interpretador(ESTADO *e) {
         if(strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
             COORDENADA coord = {*col - 'a', *lin - '1'};
             jogar(e, coord);
-            mostrar_tabuleiro(e);
+            int j_atual = obter_jogador_atual (e);
+            if (casa_vencedora (e,coord) == 1) {printf("O vencedor é o PL%d\n",j_atual-1);e -> num_jogadas = 32;}
+            else mostrar_tabuleiro(e);
+            
+            
         }
     
         if(strlen(linha) == 2 && sscanf(linha,"%[Q]", &quit) == 1){
             printf(" \n O jogo Terminou \n");
             e -> num_jogadas = 32;
+            
         }
 
-        if (strlen(linha) == 3 && sscanf(linha,"gr %s", gravar) == 1) gravar_estado (e);
+        if (sscanf(linha,"gr %s", filename) == 1) gravar_estado (e,filename);
     
     
-        if (strlen(linha) == 4 && sscanf(linha, "ler %s", read) == 1) ler_estado();
+        if (sscanf(linha, "ler %s", filename) == 1) ler_estado(filename);
     
     
     
@@ -186,7 +205,7 @@ int interpretador(ESTADO *e) {
 
 char letra (int x){
      char arr [8] = {'a','b','c','d','e','f','g','h'};
-     return arr [(x-1)]; 
+     return arr [x]; 
 }
 
 
@@ -202,6 +221,6 @@ void prompt (ESTADO *e){
     char col = letra(x);
     int y = a.linha;
     putchar ('\n');
-    printf ("#%d PL%d %c%d\n", n_jogadas, j_atual,col,y);
+    printf ("#%d PL%d %c%d\n", n_jogadas, j_atual,col,y+1);
 
 }
