@@ -60,8 +60,8 @@ int jogar (ESTADO *estado, COORDENADA c){
     if (jogada_e_valida(estado,c)){
         // Atualiza o tabuleiro
         
-        estado -> tab [c.coluna] [c.linha] = BRANCA;
-        estado -> tab [c_ult] [l_ult] = PRETA;
+        estado -> tab [c.linha] [c.coluna] = BRANCA;
+        estado -> tab [l_ult] [c_ult] = PRETA;
         
         // Muda de jogador e guarda a jogada
         
