@@ -26,8 +26,8 @@ int casa_vencedora (ESTADO *e,COORDENADA c){
 */
 
 int jogada_e_valida (ESTADO *estado,COORDENADA c){
-    int c_ult = estado -> ultima_jogada.coluna;
-    int l_ult = estado -> ultima_jogada.linha;
+    int c_ult = obter_ultima_jogada(estado).coluna;
+    int l_ult = obter_ultima_jogada(estado).linha;
     int c_coluna = c.coluna;
     int c_linha = c.linha;
     CASA x = VAZIO;
@@ -44,8 +44,8 @@ int jogada_e_valida (ESTADO *estado,COORDENADA c){
 */
 
 int jogar (ESTADO *estado, COORDENADA c){
-    int c_ult = estado -> ultima_jogada.coluna;
-    int l_ult = estado -> ultima_jogada.linha;
+    int c_ult = obter_ultima_jogada(estado).coluna;
+    int l_ult = obter_ultima_jogada(estado).linha;
     int c_coluna = c.coluna;
     int c_linha = c.linha;
     int j_atual = obter_jogador_atual (estado);
