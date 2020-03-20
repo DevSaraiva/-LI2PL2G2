@@ -52,6 +52,7 @@ ESTADO* inicializar_estado();
 void limpa_tabuleiro (ESTADO *e);
 void limpa_jogadas (ESTADO *e);
 COORDENADA obter_ultima_jogada(ESTADO *e);
+int obter_numero_de_jogadas (ESTADO *e);
 int obter_jogador_atual(ESTADO *estado);
 CASA obter_estado_casa(ESTADO *e, COORDENADA c);
 
