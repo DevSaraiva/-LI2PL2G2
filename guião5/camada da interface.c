@@ -163,7 +163,7 @@ int interpretador(ESTADO *e) {
             COORDENADA coord = {*col - 'a', *lin - '1'};
             jogar(e, coord);
             int j_atual = obter_jogador_atual (e);
-            if (casa_vencedora (e,coord)) {printf("O vencedor é o PL%d\n",j_atual);e -> num_jogadas = 32;}
+            if (casa_vencedora (e,coord)) {printf("O vencedor é o PL%d\n",j_atual - 1);e -> num_jogadas = 32;}
             else mostrar_tabuleiro(e);
             
             

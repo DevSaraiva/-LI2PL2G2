@@ -81,7 +81,7 @@ int jogar (ESTADO *estado, COORDENADA c){
         estado -> ultima_jogada.linha = c.linha;
         
     }    
-    else printf("Jogada inválida\n");
+    else printf("Jogada inválida %d %d %d %d\n",c.linha,c.coluna,l_ult,c_ult);
  
     // Aumenta número de jogadas
     if (j_atual == 2) 
