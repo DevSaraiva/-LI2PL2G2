@@ -1,5 +1,5 @@
 /**
-@file logica do programa.h
+@file logica_do_programa.h
 Definição das funções da componente lógica do jogo
 */
 
@@ -8,7 +8,7 @@ Definição das funções da componente lógica do jogo
 
 #ifndef _GUIAO5_LOGICA_DO_PROGRAMA_H
 #define _GUIAO5_LOGICA_DO_PROGRAMA_H
-#include "camada de dados.h"
+#include "camada_de_dados.h"
 
 /**
 \brief Função que se o jogo acabou

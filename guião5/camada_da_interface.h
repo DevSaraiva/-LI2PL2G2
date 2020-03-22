@@ -1,5 +1,5 @@
 /**
-@file camda da interface.h
+@file camada_da_interface.h
 Definição das funções relacionadas com interface
 */
 
@@ -9,9 +9,9 @@ Definição das funções relacionadas com interface
 
 #ifndef _GUIAO5_CAMADA_DA_INTERFACE_H
 #define _GUIAO5_CAMADA_DA_INTERFACE_H
-#include "camada de dados.h"
-#include "logica do programa.h"
-#include "camada da interface.h"
+#include "camada_de_dados.h"
+#include "logica_do_programa.h"
+#include "camada_da_interface.h"
 
 /**
 \brief  Função que desenha o tabuleiro no estado atual
