@@ -1,8 +1,3 @@
-/**
-@file camada\ da\ interdace
-Funções que controem a interface do jogo
-*/
-
 
 #include <stdio.h>
 #include <string.h>
@@ -13,9 +8,6 @@ Funções que controem a interface do jogo
 
 
 
-/**
-\brief  Função que desenha o tabuleiro no estado atual
-*/
 
 
 void mostrar_tabuleiro(ESTADO *estado) {
@@ -56,9 +48,7 @@ void mostrar_tabuleiro(ESTADO *estado) {
 prompt (estado);
 }
 
-/**
-\brief  Função auxiliar da função gravar_estado
-*/
+
 
 
 void escreve_tabuleuiro(ESTADO *e,FILE *save){
@@ -100,9 +90,7 @@ void escreve_tabuleuiro(ESTADO *e,FILE *save){
 }
 
 
-/**
-\brief  Função auxiliar da função interpretador que escreve um estado em um ficheiro
-*/
+
 
 void gravar_estado (ESTADO *e, char filename[]){
     
@@ -121,9 +109,7 @@ void gravar_estado (ESTADO *e, char filename[]){
 }
     
 
-/**
-\brief  Função que lê o estado de um ficheiro
-*/
+
 
 void ler_estado (char filename[]) {
 
@@ -144,9 +130,7 @@ void ler_estado (char filename[]) {
     }
 }
 
-/**
-\brief  Função que tranforma comandos dos jogador em ações no estado do jogo
-*/
+
 
 int interpretador(ESTADO *e) {
         char linha[BUF_SIZE];
@@ -187,9 +171,7 @@ int interpretador(ESTADO *e) {
 }
 
 
-/**
-\brief  Função auxiliar da função void que tranforma um número na sua letra logicamente correspondente
-*/
+
 
 char letra (int x){
      char arr [8] = {'a','b','c','d','e','f','g','h'};
@@ -197,9 +179,7 @@ char letra (int x){
 }
 
 
-/**
-\brief  Função que fornece informação sobre o estado do jogo aos jogadores
-*/
+
 
 void prompt (ESTADO *e){
     int n_jogadas = obter_numero_de_jogadas(e);

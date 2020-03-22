@@ -1,7 +1,7 @@
 
 
 /**
-@file camada\ de\ dados.h
+@file camada de dados.h
 Definição do estado e das funções que o manipulam
 */
 
@@ -49,12 +49,44 @@ typedef struct {
 } ESTADO;
 
 ESTADO* inicializar_estado();
+
+/**
+\brief Função que coloca todas as casas do tabuleiro como vazias exepto a casa inicial
+*/
+
 void limpa_tabuleiro (ESTADO *e);
+
+/**
+\brief Função que atribui jogadas inválidas a todas as jogadas não efetuadas presentes na lista de jogadas
+*/
+
+
 void limpa_jogadas (ESTADO *e);
+
+/**
+\brief Função que retorna a ultima jogada efetuada
+*/
+
 COORDENADA obter_ultima_jogada(ESTADO *e);
+
+/**
+\brief Função que devolve número de jogadas efetuadas até o momento
+*/
+
+
 int obter_numero_de_jogadas (ESTADO *e);
+
+/**
+\brief Função que retorna o jogador que possui a vez de jogar
+*/
+
 int obter_jogador_atual(ESTADO *estado);
+
+/**
+\brief Função que obtém o estado de determinada casa localizada na coordenada passada
+*/
+
 CASA obter_estado_casa(ESTADO *e, COORDENADA c);
-int obter_jogador_atual(ESTADO *estado);
+
 
 #endif //_GUIAO5_CAMADA_DE_DADOS_H

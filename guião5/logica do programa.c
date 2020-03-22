@@ -1,17 +1,11 @@
 
-/**
-@file logicadoprograma.c
-Módulo que contém toda a lógica do jogo
-*/
 
 #include <stdio.h>
 #include "camada de dados.h"
 #include <math.h>
 #include <stdlib.h>
 
-/**
-\brief Função que se o jogo acabou
-*/
+
 int casa_vencedora (ESTADO *e,COORDENADA c){
     int c_coluna = c.coluna;
     int c_linha = c.linha;
@@ -21,9 +15,7 @@ int casa_vencedora (ESTADO *e,COORDENADA c){
 }
 
 
-/**
-\brief Função que verifica se uma jogada é possivel
-*/
+
 
 int jogada_e_valida (ESTADO *estado,COORDENADA c){
     int c_ult = obter_ultima_jogada(estado).coluna;
@@ -39,9 +31,7 @@ int jogada_e_valida (ESTADO *estado,COORDENADA c){
 }
 
 
-/**
-\brief Função que altera o estado do jogo através das coordenadas fornecidas
-*/
+
 
 int jogar (ESTADO *estado, COORDENADA c){
     int c_ult = obter_ultima_jogada(estado).coluna;

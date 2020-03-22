@@ -1,5 +1,5 @@
 /**
-@file logicadoprograma.h
+@file logica do programa.h
 Definição das funções da componente lógica do jogo
 */
 
@@ -10,8 +10,22 @@ Definição das funções da componente lógica do jogo
 #define _GUIAO5_LOGICA_DO_PROGRAMA_H
 #include "camada de dados.h"
 
+/**
+\brief Função que se o jogo acabou
+*/
+
 int casa_vencedora (ESTADO *e,COORDENADA c);
+
+/**
+\brief Função que verifica se uma jogada é possivel
+*/
+
 int jogada_e_valida (ESTADO *estado, COORDENADA c);
+
+/**
+\brief Função que altera o estado do jogo através das coordenadas fornecidas
+*/
+
 int jogar(ESTADO *estado, COORDENADA c);
 
 
