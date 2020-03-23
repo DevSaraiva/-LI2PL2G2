@@ -7,9 +7,9 @@ Aglomeração de todas as camadas
 
 #include <stdio.h>
 #include <string.h>
-#include "camada de dados.h"
-#include "camada da interface.h"
-#include "logica do programa.h"
+#include "camada_de_dados.h"
+#include "camada_da_interface.h"
+#include "logica_do_programa.h"
 
 
 /**

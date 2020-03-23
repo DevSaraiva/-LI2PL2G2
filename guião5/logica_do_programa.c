@@ -10,7 +10,7 @@ int casa_vencedora (ESTADO *e,COORDENADA c){
     int c_coluna = c.coluna;
     int c_linha = c.linha;
     int jog = obter_jogador_atual(e);
-    if ((jog == 1 && c_coluna == 0 && c_linha == 0) || (jog == 2 && c_coluna == 7 && c_linha == 7)) return 1;
+    if ((c_coluna == 0 && c_linha == 0) || (c_coluna == 7 && c_linha == 7)) return 1;
     else return 0;
 }
 
