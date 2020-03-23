@@ -57,6 +57,7 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){
     int linha = c.linha;
     CASA x = e -> tab[linha][coluna];
     return x;
+    
 }
 
 

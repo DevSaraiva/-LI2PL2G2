@@ -20,13 +20,14 @@ Aglomeração de todas as camadas
 int main(){
     ESTADO *e = inicializar_estado();
     mostrar_tabuleiro(e);
-    
+   
     
     int num_jog = 0;
 
-    while (num_jog < 32){
+    while (num_jog < 31){
     interpretador(e);
     num_jog = e -> num_jogadas;
     }
+
     return 0;
 }

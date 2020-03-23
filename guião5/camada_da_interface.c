@@ -45,7 +45,7 @@ void mostrar_tabuleiro(ESTADO *estado) {
     printf("  abcdefgh");
     putchar ('\n');
 
-prompt (estado);
+    prompt (estado);
 }
 
 
@@ -83,9 +83,6 @@ void escreve_tabuleuiro(ESTADO *e,FILE *save){
     fprintf(save,"\n");
     fprintf(save,"  abcdefgh");
     fprintf(save,"\n");
-
-
-
 
 }
 
@@ -146,11 +143,14 @@ int interpretador(ESTADO *e) {
         if(strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
             COORDENADA coord = {*col - 'a', *lin - '1'};
             jogar(e, coord);
-            int j_atual = obter_jogador_atual (e);
-            if (casa_vencedora (e,coord)) {printf("O vencedor é o PL%d\n",j_atual);e -> num_jogadas = 32;}
+            
+            if (casa_vencedora (e,coord) || (jogada_presa (e,coord) == 1) ) {
+                int j_atual = obter_jogador_atual (e);
+                printf("O vencedor é o PL%d\n",j_atual);
+                e -> num_jogadas = 32;
+            }
             else mostrar_tabuleiro(e);
-            
-            
+                              
         }
     
         if(strlen(linha) == 2 && sscanf(linha,"%[Q]", &quit) == 1){

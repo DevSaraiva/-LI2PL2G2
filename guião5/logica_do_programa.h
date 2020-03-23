@@ -9,6 +9,14 @@ Definição das funções da componente lógica do jogo
 #ifndef _GUIAO5_LOGICA_DO_PROGRAMA_H
 #define _GUIAO5_LOGICA_DO_PROGRAMA_H
 #include "camada_de_dados.h"
+/**
+\brief Função que  verifica se a peca está'presa
+*/
+
+
+int jogada_presa (ESTADO *e,COORDENADA c);
+
+
 
 /**
 \brief Função que se o jogo acabou
