@@ -82,10 +82,27 @@ void escreve_tabuleuiro(ESTADO *e,FILE *save){
     }
     fprintf(save,"\n");
     fprintf(save,"  abcdefgh");
-    fprintf(save,"\n");
+    fprintf(save,"\n\n");
 
 }
 
+void escreve_movimentos(ESTADO *e, FILE *save){
+    int temp = 0;
+    //Percorre a lista de movimentos e
+    for (int i = 0; i < 32; i++) {
+        if (e->jogadas[i].jogador1.coluna!=-1 && e->jogadas[i].jogador1.linha!=-1){
+            fprintf(save,"%d : %c%d",i+1,letra(e->jogadas[i].jogador1.coluna),e->jogadas[i].jogador1.linha+1);
+        }
+
+        if (e->jogadas[i].jogador2.coluna!=-1 && e->jogadas[i].jogador2.linha!=-1){
+            fprintf(save," %c%d \n",letra(e->jogadas[i].jogador2.coluna),e->jogadas[i].jogador2.linha+1);
+            temp++;
+        }
+    }
+
+    if (e->ultima_jogada.coluna!=e->jogadas[temp].jogador1.coluna)
+        fprintf(save,"%d : %c%d",temp+1,letra(e->ultima_jogada.coluna),e->ultima_jogada.linha+1);
+}
 
 
 
@@ -100,6 +117,9 @@ void gravar_estado (ESTADO *e, char filename[]){
     // escreve no ficheiro o tabuleiro
     
    escreve_tabuleuiro(e,save);
+
+    // escreve no fichiro a lista dos movimentos
+   escreve_movimentos(e,save);
 
     // fecha o arquivo
     fclose(save);
@@ -163,10 +183,7 @@ int interpretador(ESTADO *e) {
     
     
         if (sscanf(linha, "ler %s", filename) == 1) ler_estado(filename);
-    
-    
-    
-    
+      
     return 1;
 }
 

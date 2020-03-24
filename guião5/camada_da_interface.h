@@ -26,6 +26,12 @@ void mostrar_tabuleiro(ESTADO *estado);
 void escreve_tabuleuiro(ESTADO *e,FILE *save);
 
 /**
+ \brief Função auxiliar da função gravar estado
+ */
+
+void escreve_movimentos(ESTADO* e,FILE *save);
+
+/**
 \brief  Função auxiliar da função interpretador que escreve um estado em um ficheiro
 */
 

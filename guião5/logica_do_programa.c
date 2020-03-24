@@ -1,9 +1,8 @@
-
-
 #include <stdio.h>
 #include "camada_de_dados.h"
 #include <math.h>
 #include <stdlib.h>
+
 int casa_val (COORDENADA c){
     int coluna = c.coluna;
     int linha = c.linha;
@@ -87,9 +86,7 @@ int jogar (ESTADO *estado, COORDENADA c){
             COORDENADA j1 = {c_ult,l_ult};
             COORDENADA j2 = {c.coluna, c.linha};
             JOGADA j = {j1,j2};
-            int i = 0;
-            estado -> jogadas [i] = j;
-            i++;
+            estado -> jogadas [estado->num_jogadas] = j;
         }
 
         // Atualiza a última jogada
@@ -102,9 +99,6 @@ int jogar (ESTADO *estado, COORDENADA c){
     // Aumenta número de jogadas
     if (j_atual == 2) 
         estado -> num_jogadas++;
-
-   
-    
 }
 
 
