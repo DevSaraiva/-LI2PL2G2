@@ -70,11 +70,23 @@ void limpa_jogadas (ESTADO *e);
 COORDENADA obter_ultima_jogada(ESTADO *e);
 
 /**
+\brief Função que define a ultima jogada efetuada
+*/
+
+void set_ultima_jogada(ESTADO *e,COORDENADA x);
+
+/**
 \brief Função que devolve número de jogadas efetuadas até o momento
 */
 
-
 int obter_numero_de_jogadas (ESTADO *e);
+
+
+/**
+\brief Função que define número de jogadas efetuadas até o momento
+*/
+
+void set_numero_de_jogadas (ESTADO *e,int x);
 
 /**
 \brief Função que retorna o jogador que possui a vez de jogar
@@ -83,10 +95,23 @@ int obter_numero_de_jogadas (ESTADO *e);
 int obter_jogador_atual(ESTADO *estado);
 
 /**
+\brief Função que define o jogador que possui a vez de jogar
+*/
+void set_jogador_atual(ESTADO *e,int x);
+
+/**
 \brief Função que obtém o estado de determinada casa localizada na coordenada passada
 */
 
 CASA obter_estado_casa(ESTADO *e, COORDENADA c);
+
+/**
+\brief Função que define o estado de determinada casa localizada na coordenada passada
+*/
+void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x);
+
+void set_jogada_indice(ESTADO *e,JOGADA x,int i);
+
 
 
 #endif //_GUIAO5_CAMADA_DE_DADOS_H

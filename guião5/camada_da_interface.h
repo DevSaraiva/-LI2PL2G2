@@ -35,13 +35,19 @@ void escreve_movimentos(ESTADO* e,FILE *save);
 \brief  Função auxiliar da função interpretador que escreve um estado em um ficheiro
 */
 
+void imprime_movimentos(ESTADO* e);
+
+/**
+\brief  Função auxiliar da função interpretador que escreve um estado em um ficheiro
+*/
+
 void gravar_estado (ESTADO *e, char filename[]);
 
 /**
 \brief  Função que lê o estado de um ficheiro
 */
 
-void ler_estado (char filename[]);
+void ler_estado (ESTADO *e,char filename[]);
 
 /**
 \brief  Função que tranforma comandos dos jogador em ações no estado do jogo

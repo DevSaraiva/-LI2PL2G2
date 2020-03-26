@@ -37,10 +37,9 @@ COORDENADA obter_ultima_jogada(ESTADO *e){
     return x;
 }
 
-
-
-
-
+void set_ultima_jogada(ESTADO *e,COORDENADA x){
+    e->ultima_jogada = x;
+}
 
 
 int obter_jogador_atual(ESTADO *estado){
@@ -48,8 +47,9 @@ int obter_jogador_atual(ESTADO *estado){
     return x;
 }
 
-
-
+void set_jogador_atual(ESTADO *e,int x){
+    e->jogador_atual = x;
+}
 
 
 CASA obter_estado_casa(ESTADO *e, COORDENADA c){
@@ -57,7 +57,10 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){
     int linha = c.linha;
     CASA x = e -> tab[linha][coluna];
     return x;
-    
+}
+
+void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x){
+    e->tab[linha][coluna] = x;
 }
 
 
@@ -65,6 +68,14 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){
 int obter_numero_de_jogadas (ESTADO *e){
     int jog = e -> num_jogadas;
     return jog;
+}
+
+void set_numero_de_jogadas (ESTADO *e,int x){
+    e->num_jogadas = x;
+}
+
+void set_jogada_indice(ESTADO *e,JOGADA x,int i){
+    e->jogadas[i] = x;
 }
 
 /**
