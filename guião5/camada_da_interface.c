@@ -231,8 +231,8 @@ int interpretador(ESTADO *e) {
         if(strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
             COORDENADA coord = {*col - 'a', *lin - '1'};
             jogar(e, coord);
-            
-            if (casa_vencedora (e,coord) || (jogada_presa (e,coord) == 1) ) {
+        
+            if (casa_vencedora (e,coord) || jogada_presa (e,coord)) {
                 int j_atual = obter_jogador_atual (e);
                 printf("O vencedor é o PL%d\n",j_atual);
                 e -> num_jogadas = 32;

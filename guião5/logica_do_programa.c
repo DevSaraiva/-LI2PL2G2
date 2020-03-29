@@ -3,7 +3,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-int casa_val (COORDENADA c){
+int casa_valida (COORDENADA c){
     int coluna = c.coluna;
     int linha = c.linha;
     if ((linha >= 0)&& (linha < 8) && (coluna >= 0) &&(coluna <8))
@@ -29,11 +29,13 @@ int jogada_presa (ESTADO *e,COORDENADA c){
     CASA arr [8]; 
     
     for (int i = 0; i<8; i++){
-        if (casa_val (ar[i]) && obter_estado_casa(e,ar [i]) == VAZIO)
+        if (casa_valida (ar[i]) && obter_estado_casa(e,ar [i]) == VAZIO)
             return 0;
     }
-
-    return 1;
+    {int j_atual = obter_jogador_atual (e);
+    if (j_atual == 1) e->jogador_atual=2;
+    else e->jogador_atual=1;
+    return 1;}
 }
 
 
@@ -80,8 +82,8 @@ int jogar (ESTADO *estado, COORDENADA c){
         
         // Muda de jogador e guarda a jogadas
         
-        if ((j_atual == 1) && c_coluna != 0 && c_linha != 0) estado -> jogador_atual = 2;
-        if ((j_atual == 2) && c_coluna != 7 && c_linha != 7) {
+        if ((j_atual == 1) && ((c_coluna != 0) || (c_linha |= 0))) estado -> jogador_atual = 2;
+        if ((j_atual == 2) && ((c_coluna != 7) || (c_linha != 7))) {
             estado -> jogador_atual = 1;
             COORDENADA j1 = {c_ult,l_ult};
             COORDENADA j2 = {c.coluna, c.linha};
