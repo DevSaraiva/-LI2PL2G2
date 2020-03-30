@@ -47,8 +47,8 @@ int obter_jogador_atual(ESTADO *estado){
     return x;
 }
 
-void set_jogador_atual(ESTADO *e,int x){
-    e->jogador_atual = x;
+void set_jogador_atual(ESTADO *e, int x){
+    e -> jogador_atual = x;
 }
 
 
@@ -78,9 +78,6 @@ void set_jogada_indice(ESTADO *e,JOGADA x,int i){
     e->jogadas[i] = x;
 }
 
-/**
-\brief Função que limpa todas as variáveis do estado do jogo, tornando-o pronto para começar a jogar
-*/
 
 
 ESTADO *inicializar_estado() {

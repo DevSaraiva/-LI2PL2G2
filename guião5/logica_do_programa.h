@@ -19,7 +19,7 @@ int jogada_presa (ESTADO *e,COORDENADA c);
 
 
 /**
-\brief Função que se o jogo acabou
+\brief Função que verifica se o jogo acabou
 */
 
 int casa_vencedora (ESTADO *e,COORDENADA c);

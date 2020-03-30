@@ -21,20 +21,20 @@ void mostrar_tabuleiro(ESTADO *estado) {
         for(j = 0; j < 8; j++){
             
             if (i == 7 && j == 7) putchar('2');
-            else if(i == 0 && j == 0) printf ("1 ");
+            else if(i == 0 && j == 0) putchar('1');
             else {
                     switch (estado -> tab [i][j])
                     {
                     case VAZIO:
-                        printf(". ");
+                        printf(".");
                         break;
                     
                     case BRANCA:
-                        printf("* ");
+                        printf("*");
                         break;
                     
                     case PRETA:
-                        printf("# ");
+                        printf("#");
                     
                     
                     }
@@ -42,7 +42,7 @@ void mostrar_tabuleiro(ESTADO *estado) {
         }
     }
     putchar('\n');
-    printf("  a b c d e f g h");
+    printf("  abcdefgh");
     putchar ('\n');
 
     prompt (estado);
@@ -55,13 +55,11 @@ void escreve_tabuleuiro(ESTADO *e,FILE *save){
     int i, j;
 
      for (i = 7; i >= 0; i--){
-        fprintf(save,"\n");
-        fprintf (save,"%d ",i + 1);
-        
+   
         for(j = 0; j < 8; j++){
             
-            if (i == 7 && j == 7) fprintf(save,"1");
-            else if(i == 0 && j == 0) fprintf(save,"2");
+            if (i == 7 && j == 7) fprintf(save,"2");
+            else if(i == 0 && j == 0) fprintf(save,"1");
             else {    
                     switch (e -> tab [i][j])
                     {
@@ -79,30 +77,42 @@ void escreve_tabuleuiro(ESTADO *e,FILE *save){
                     }
         }
         }
+        fprintf(save,"\n");
+        
     }
-    fprintf(save,"\n");
-    fprintf(save,"  abcdefgh");
-    fprintf(save,"\n\n");
 
+    fprintf(save,"\n"); 
 }
 
 void escreve_movimentos(ESTADO *e, FILE *save){
+    
     int temp = 0;
-    //Percorre a lista de movimentos e imprime-a no terminal
-    for (int i = 0; i < 32; i++) {
-        if (e->jogadas[i].jogador1.coluna!=-1 && e->jogadas[i].jogador1.linha!=-1){
-            fprintf(save,"%d : %c%d",i+1,letra(e->jogadas[i].jogador1.coluna),e->jogadas[i].jogador1.linha+1);
+    int num_jogadas = obter_numero_de_jogadas (e);
+    
+    //Percorre a lista de movimentos e imprime-a no ficheiro
+    
+    for (int i = 0; i < num_jogadas; i++) {
+        
+        int ncoluna1 = e->jogadas[i].jogador1.coluna;
+        int nlinha1 = e->jogadas[i].jogador1.linha + 1;
+        int ncoluna2 = e->jogadas[i].jogador2.coluna;
+        int nlinha2 = e->jogadas[i].jogador2.linha + 1;
+        
+        if (e->jogadas[i].jogador1.coluna != -1 && e->jogadas[i].jogador1.linha != -1){
+            fprintf(save, "%02d: %c%d",i + 1,letra(ncoluna1),nlinha1);
         }
 
-        if (e->jogadas[i].jogador2.coluna!=-1 && e->jogadas[i].jogador2.linha!=-1){
-            fprintf(save," %c%d \n",letra(e->jogadas[i].jogador2.coluna),e->jogadas[i].jogador2.linha+1);
+        if (e->jogadas[i].jogador2.coluna !=-1 && e->jogadas[i].jogador2.linha != -1){
+            fprintf(save, " %c%d\n",letra(ncoluna2),nlinha2);
             temp++;
         }
     }
 
-    if ((obter_jogador_atual(e)==2)) fprintf(save,"%d : %c%d",e->num_jogadas+1,letra(e->ultima_jogada.coluna),e->ultima_jogada.linha+1);
-}
 
+    // Imprime a ultima jogada caso o jogador 1 tenha jodago e o jogador 2 não
+    
+    if (obter_jogador_atual(e) == 2)  fprintf(save, "%02d: %c%d", num_jogadas + 1, letra(e->ultima_jogada.coluna),e->ultima_jogada.linha + 1);
+}
 
 
 void gravar_estado (ESTADO *e, char filename[]){
@@ -131,32 +141,34 @@ void gravar_estado (ESTADO *e, char filename[]){
 
 void ler_estado (ESTADO *e,char filename[]) {
 
+    inicializar_estado(e);
+
     FILE *save;
-    char str[12];
+    char str[BUF_SIZE];
     
     save = fopen(filename,"r");
 
     if(save == NULL) {
-        printf ("Save inexistente");
+        printf ("Save inexistente ");
     } else {
         
         while(!feof(save)) {
 
        //Lê as primeiras 10 linhas correspondentes ao tabuleiro
-        for (int i = 10;i>=0;i--){
-               fgets(str,20,save);
-               for (int j = 0; j <= 10; j++)
+        for (int i = 7; i >= -1; i--){
+               fgets(str,BUF_SIZE,save);
+               for (int j = 0; j <= 7; j++)
                {
                    switch (str[j])
                    {
                    case '.':
-                        set_estado_casa(e,i-2,j-2,VAZIO);
+                        set_estado_casa(e,i,j,VAZIO);
                         break;
                    case '*':
-                        set_estado_casa(e,i-2,j-2,BRANCA);
+                        set_estado_casa(e,i,j,BRANCA);
                         break;
                    case '#':
-                        set_estado_casa(e,i-2,j-2,PRETA);
+                        set_estado_casa(e,i,j,PRETA);
                         break;
                    }
                }
@@ -164,20 +176,23 @@ void ler_estado (ESTADO *e,char filename[]) {
 
         //Lê a lista de movimentos (Cada linha da lista possui 9 caracteres)
         int indice = 0;
-        while (fgets(str,20,save)!=NULL){
+        while (fgets(str,20,save) != NULL){
+
             COORDENADA j1 = {str[4]-97,str[5]-49};
-            //Verifica se o jogador 2 já jogou naúltima jogada
-            if (str[7]!=' ')
+            //Verifica se o jogador 2 já jogou na última jogada
+            
+            
+            if (strlen(str) > 7)
             {   
                 COORDENADA j2 = {str[7]-97, str[8]-49};
                 JOGADA j = {j1,j2};
                 set_jogada_indice(e,j,indice);
                 set_jogador_atual(e,1);
-                set_numero_de_jogadas(e,indice);
+                set_numero_de_jogadas(e,indice + 1);
             } else
             {
+                puts(str);
                 set_jogador_atual(e,2);
-                set_numero_de_jogadas(e,indice);
                 set_ultima_jogada(e,j1);
             }
             // Limpa a string
@@ -196,20 +211,31 @@ void ler_estado (ESTADO *e,char filename[]) {
 
 void imprime_movimentos(ESTADO *e){
     int temp = 0;
+    int num_jogadas = obter_numero_de_jogadas (e);
+    
     //Percorre a lista de movimentos e imprime-a no terminal
-    for (int i = 0; i < 32; i++) {
-        if (e->jogadas[i].jogador1.coluna!=-1 && e->jogadas[i].jogador1.linha!=-1){
-            printf("%d : %c%d",i+1,letra(e->jogadas[i].jogador1.coluna),e->jogadas[i].jogador1.linha+1);
+    
+    for (int i = 0; i < num_jogadas; i++) {
+            
+            int ncoluna1 = e->jogadas[i].jogador1.coluna;
+            int nlinha1 = e->jogadas[i].jogador1.linha + 1;
+            int ncoluna2 = e->jogadas[i].jogador2.coluna;
+            int nlinha2 = e->jogadas[i].jogador2.linha + 1;
+            
+            if (e->jogadas[i].jogador1.coluna != -1 && e->jogadas[i].jogador1.linha != -1){
+                printf("%02d: %c%d",i + 1,letra(ncoluna1),nlinha1);
+            }
+
+            if (e->jogadas[i].jogador2.coluna !=-1 && e->jogadas[i].jogador2.linha != -1){
+                printf(" %c%d\n",letra(ncoluna2),nlinha2);
+                temp++;
+            }
         }
 
-        if (e->jogadas[i].jogador2.coluna!=-1 && e->jogadas[i].jogador2.linha!=-1){
-            printf(" %c%d \n",letra(e->jogadas[i].jogador2.coluna),e->jogadas[i].jogador2.linha+1);
-            temp++;
-        }
-    }
 
-    // Imprime a ultima jogada caso o jogador 1 tenha jodago e o jogador 2 não
-    if ((obter_jogador_atual(e)==2)) printf("%d : %c%d",e->num_jogadas+1,letra(e->ultima_jogada.coluna),e->ultima_jogada.linha+1);
+        // Imprime a ultima jogada caso o jogador 1 tenha jodago e o jogador 2 não
+        
+        if (obter_jogador_atual(e) == 2)  printf("%02d: %c%d", num_jogadas + 1, letra(e->ultima_jogada.coluna),e->ultima_jogada.linha + 1);
 
     printf("\n");
     mostrar_tabuleiro(e);
