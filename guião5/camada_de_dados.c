@@ -4,8 +4,6 @@
 #include "camada_de_dados.h"
 
 
-
-
 void limpa_tabuleiro (ESTADO *e){
 
     int i, j;
@@ -38,7 +36,7 @@ COORDENADA obter_ultima_jogada(ESTADO *e){
 }
 
 void set_ultima_jogada(ESTADO *e,COORDENADA x){
-    e->ultima_jogada = x;
+    e -> ultima_jogada = x;
 }
 
 
@@ -60,7 +58,8 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){
 }
 
 void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x){
-    e->tab[linha][coluna] = x;
+    
+    e -> tab[linha][coluna] = x;
 }
 
 
@@ -77,6 +76,16 @@ void set_numero_de_jogadas (ESTADO *e,int x){
 void set_jogada_indice(ESTADO *e,JOGADA x,int i){
     e->jogadas[i] = x;
 }
+
+JOGADA retorna_Jogada (ESTADO *e, int x){
+
+    JOGADA jog = e -> jogadas[x];
+
+    return jog;
+
+}
+
+
 
 
 

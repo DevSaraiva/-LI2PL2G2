@@ -15,7 +15,7 @@ int casa_valida (COORDENADA c);
 
 
 /**
-\brief Função que  verifica se a peca está'presa
+\brief Função que  verifica se a peca está presa
 */
 
 

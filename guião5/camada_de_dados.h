@@ -110,8 +110,19 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c);
 */
 void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x);
 
+
+/**
+\brief Função que define determinada jogada da lista de jogadas do estado
+*/
+
+
 void set_jogada_indice(ESTADO *e,JOGADA x,int i);
 
 
+/**
+\brief Função que retorna uma jogada de determinada posição na lista de jogadas
+*/
+
+JOGADA retorna_Jogada (ESTADO *e, int x);
 
 #endif //_GUIAO5_CAMADA_DE_DADOS_H

@@ -24,7 +24,7 @@ int main(){
     
     int num_jog = 0;
 
-    while (num_jog < 31){
+    while (num_jog <= 31){
     interpretador(e);
     num_jog = e -> num_jogadas;
     }
