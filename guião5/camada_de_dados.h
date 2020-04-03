@@ -46,6 +46,8 @@ typedef struct {
     JOGADAS jogadas;
     int num_jogadas;
     int jogador_atual;
+    int ultimo_comando_pos;
+    int valor_pos;
 } ESTADO;
 
 ESTADO* inicializar_estado();
@@ -108,7 +110,7 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c);
 /**
 \brief Função que define o estado de determinada casa localizada na coordenada passada
 */
-void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x);
+void set_estado_casa_c(ESTADO *e,COORDENADA c,CASA x);
 
 
 /**
@@ -125,4 +127,11 @@ void set_jogada_indice(ESTADO *e,JOGADA x,int i);
 
 JOGADA retorna_Jogada (ESTADO *e, int x);
 
+COORDENADA obter_jogada_por_j (ESTADO *e,int i,int x);
+int obter_comando_pos (ESTADO *e);
+int obter_valor_pos (ESTADO *e);
+void set_comando_pos (ESTADO *e,int x);
+void set_valor_pos (ESTADO *e,int x);
+void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x);
+void set_jogada(ESTADO *e,int i,int x);
 #endif //_GUIAO5_CAMADA_DE_DADOS_H

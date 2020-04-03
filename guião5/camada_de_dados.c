@@ -57,11 +57,15 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){
     return x;
 }
 
-void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x){
-    
+void set_estado_casa_c(ESTADO *e,COORDENADA c,CASA x){
+    int coluna = c.coluna;
+    int linha = c.linha;
     e -> tab[linha][coluna] = x;
 }
 
+void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x){
+    e -> tab[linha][coluna] = x;
+}
 
 
 int obter_numero_de_jogadas (ESTADO *e){
@@ -77,16 +81,52 @@ void set_jogada_indice(ESTADO *e,JOGADA x,int i){
     e->jogadas[i] = x;
 }
 
+
 JOGADA retorna_Jogada (ESTADO *e, int x){
-
     JOGADA jog = e -> jogadas[x];
-
     return jog;
 
 }
 
+COORDENADA obter_jogada_por_j (ESTADO *e,int i,int x){
+    if (x == 1){
+        int ncoluna1 = e->jogadas[i].jogador1.coluna;
+        int nlinha1 = e->jogadas[i].jogador1.linha;
+        COORDENADA j1 = {ncoluna1,nlinha1};
+        return j1;
+    }else{
+        int ncoluna = e->jogadas[i].jogador2.coluna;
+        int nlinha = e->jogadas[i].jogador2.linha;
+        COORDENADA j2 = {ncoluna,nlinha};
+        return j2;
+    }
+
+}
+
+int obter_comando_pos (ESTADO *e){
+    int x =  e -> ultimo_comando_pos;
+    return x;
+}
+
+void set_comando_pos (ESTADO *e,int x){
+    e->ultimo_comando_pos = x;
+}
 
 
+int obter_valor_pos (ESTADO *e) {
+    int x = e->valor_pos;
+    return x;
+}
+void set_valor_pos (ESTADO *e,int x){
+    e->valor_pos=x;
+}
+
+void set_jogada(ESTADO *e,int i,int x){
+    e->jogadas[i].jogador1.coluna = x;
+    e->jogadas[i].jogador1.linha = x;
+    e->jogadas[i].jogador2.coluna = x;
+    e->jogadas[i].jogador2.linha = x;
+}
 
 
 ESTADO *inicializar_estado() {
@@ -97,5 +137,7 @@ ESTADO *inicializar_estado() {
     e -> ultima_jogada.coluna = 4;
     limpa_tabuleiro(e);
     limpa_jogadas(e);
+    e -> ultimo_comando_pos = 0;
+    e -> valor_pos = 0;
     return e;
 }

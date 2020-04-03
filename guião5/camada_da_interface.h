@@ -68,23 +68,10 @@ char letra (int x);
 void prompt (ESTADO *e);
 
 /**
-\brief  Função que tranforma o estado atual num estado anterior do jogo
+\brief  Função que executa o comando pos
 */
 
-int volta_estado (ESTADO *e, int pos);
+ESTADO escreve_pos (ESTADO *e,int n);
 
-/**
-\brief  Função que dado uma jogada apaga-a do tabuleiro
-*/
-
-int apaga_jogada_tab (ESTADO *e, JOGADA jog);
-
-/**
-\brief  Função que coloca  a ultima casa jogada como BRANCA
-*/
-
-int last_jogada_branca (ESTADO *e, int pos);
-
-
-
+void apaga_ultima_jogada (ESTADO *e);
 #endif //_GUIAO5_CAMADA_DA_INTERFACE_H

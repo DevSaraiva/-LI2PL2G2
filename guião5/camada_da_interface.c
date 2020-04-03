@@ -244,135 +244,112 @@ void imprime_movimentos(ESTADO *e){
     mostrar_tabuleiro(e);
 }
 
-
-
-
-
-int apaga_jogada_tab (ESTADO *e, JOGADA jog){
-
-    
-    int linha1 = jog.jogador1.linha;
-    int linha2 = jog.jogador2.linha;
-    int coluna1 = jog.jogador1.coluna;
-    int coluna2 = jog.jogador2.coluna;
-    
-    set_estado_casa(e,linha1,coluna1,VAZIO);
-    set_estado_casa(e,linha2,coluna2,VAZIO);
-
-}
-
-
-
-int apaga_jogadas (ESTADO *e, int pos){
-    
-    int i = pos;
-    JOGADA vazia;
-
-    vazia.jogador1.linha = -1;
-    vazia.jogador1.coluna = -1;
-    vazia.jogador2.linha = -1;
-    vazia.jogador2.coluna = -1;
-    
-
-    for (i ; i < 32; i++){
-    
-             
-        JOGADA jog = e -> jogadas[i];
-        
-        // Apaga a jogada do tabuleiro
-        
-        apaga_jogada_tab(e,jog);
-        
-        // Apaga a jogada da lista de jogadas
-        
-        set_jogada_indice(e,vazia,i);
+void apaga_ultima_jogada (ESTADO *e){
+    int i = obter_numero_de_jogadas (e);
+    if (i == 1) {
+    set_jogador_atual(e,1);
+    set_numero_de_jogadas(e,0);
+    COORDENADA c = {4,4};
+    set_ultima_jogada(e,c);
+    limpa_tabuleiro(e);
+    limpa_jogadas(e);
+    set_valor_pos (e,0);
+    set_comando_pos(e,0);
     }
-
-    set_numero_de_jogadas (e,pos);
-
-    return 0;
-}
-
-
-
-
-int last_jogada_branca (ESTADO *e, int pos){
-    
-    JOGADA ultima = retorna_Jogada(e,pos - 1);
-    int linha2 = ultima.jogador2.linha;
-    COORDENADA last;
-    
-    
-    if (linha2 == -1){
-        printf ("correu 1");
-        COORDENADA last = {ultima.jogador1.coluna,ultima.jogador1.linha};
-        set_ultima_jogada(e,last);
-        
-    
-    } else {
-        printf("correu 2");
-        COORDENADA last = {ultima.jogador2.coluna,ultima.jogador2.linha};
-        set_ultima_jogada(e,last);
-        
+    else { 
+    COORDENADA j1 = obter_jogada_por_j (e,i-1,1);
+    COORDENADA j2 = obter_jogada_por_j (e,i-1,2);
+    set_estado_casa_c(e,j1,VAZIO);
+    set_estado_casa_c(e,j2,VAZIO);
+    set_jogada (e,i-1,-1);
+    int c = e -> jogadas[i-2].jogador2.coluna;
+    int l = e -> jogadas[i-2].jogador2.linha;
+    COORDENADA ult = {c,l};
+    set_estado_casa (e,l,c,BRANCA);
+    set_ultima_jogada (e,ult);
+    set_numero_de_jogadas (e,i-1);
     }
-    
-    int l_linha = last.linha;
-    int l_coluna = last.coluna;
-
-    set_estado_casa(e,l_linha,l_coluna,BRANCA);
 }
 
-int volta_estado (ESTADO *e, int pos) {
-    
-    apaga_jogadas(e,pos);
-    last_jogada_branca(e,pos);
-    mostrar_tabuleiro(e);
-
-return 0;
-
+ESTADO escreve_pos (ESTADO *e,int n){
+    ESTADO *s = inicializar_estado();
+    int i;
+    if (n == 0) mostrar_tabuleiro(s);
+    else {
+    set_estado_casa(s,4,4,PRETA);
+    COORDENADA j1,j2;
+    for (i=0;i < n;i++){
+    j1 = obter_jogada_por_j (e,i,1);
+    j2 = obter_jogada_por_j (e,i,2);
+    set_estado_casa_c (s,j1,PRETA);
+    set_estado_casa_c (s,j2,PRETA);}
+    set_estado_casa_c (s,j2,BRANCA);
+    set_ultima_jogada (s,j2);
+    set_numero_de_jogadas (s,i);
+    mostrar_tabuleiro(s);
+    }
+    return *e;
 }
+
+
 
 
 int interpretador(ESTADO *e) {
-        
         char linha[BUF_SIZE];
         char col[2], lin[2];
         char quit;
         char filename[BUF_SIZE];
-        int pos;
-        
+        int n_jog;
         
         if(fgets(linha, BUF_SIZE, stdin) == NULL)
             return 0;
     
         if(strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
             COORDENADA coord = {*col - 'a', *lin - '1'};
+            if (obter_comando_pos(e)) {
+                int n = obter_valor_pos(e);
+                int nt = obter_numero_de_jogadas(e);
+                for(int i = 0; n < nt-i; i++)
+                apaga_ultima_jogada (e);
+            }
             jogar(e, coord);
-        
-            if (casa_vencedora (e,coord) || jogada_presa (e,coord)) {
+
+            if (jogada_e_valida (e,coord) &&(casa_vencedora (e,coord) || jogada_presa (e,coord))) {
                 int j_atual = obter_jogador_atual (e);
                 printf("O vencedor é o PL%d\n",j_atual);
                 e -> num_jogadas = 32;
             }
             else mostrar_tabuleiro(e);
-                              
+        if (obter_comando_pos(e)) set_comando_pos(e,0);                    
         }
+    
     
         if(strlen(linha) == 2 && sscanf(linha,"%[Q]", &quit)){
             printf(" \n O jogo Terminou \n");
             set_numero_de_jogadas(e,32);
         }
 
-        if (sscanf(linha,"gr %s", filename)) gravar_estado (e,filename);
+        if (sscanf(linha,"gr %s", filename)) {gravar_estado (e,filename);
+            if (obter_comando_pos (e))
+            set_comando_pos(e,0);}
     
-        if (sscanf(linha, "ler %s", filename)) ler_estado(e,filename);
+        if (sscanf(linha, "ler %s", filename)) {ler_estado(e,filename);
+            if (obter_comando_pos(e) )
+            set_comando_pos(e,0);}
 
-        if (sscanf(linha, "movs %s", filename)) imprime_movimentos(e);
-
-        if (sscanf(linha, "pos %d", &pos)) volta_estado (e,pos);
-      
+        if (sscanf(linha, "movs %s", filename)) {imprime_movimentos(e);
+            if (obter_comando_pos(e) )
+            set_comando_pos(e,0);}
+        
+        if (sscanf(linha, "pos %d", &n_jog)) {escreve_pos(e,n_jog);
+            if (obter_comando_pos(e) == 0) set_comando_pos(e,1);
+            set_valor_pos(e,n_jog);
+        } 
+        
     return 1;
 }
+
+
 
 
 char letra (int x){
@@ -389,6 +366,6 @@ void prompt (ESTADO *e){
     char col = letra(x);
     int y = a.linha;
     putchar ('\n');
-    printf ("#%d PL%d %c%d\n", n_jogadas, j_atual,col,y+1);
+    printf ("#%d PL%d %c%d\n", n_jogadas+1, j_atual,col,y+1);
 
 }
