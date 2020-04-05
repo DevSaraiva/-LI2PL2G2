@@ -277,6 +277,7 @@ void apaga_ultima_jogada (ESTADO *e){
 ESTADO escreve_pos (ESTADO *e,int n){
     ESTADO *s = inicializar_estado();
     int i;
+    
     if (n == 0) mostrar_tabuleiro(s);
     else {
         set_estado_casa(s,4,4,PRETA);
@@ -344,9 +345,12 @@ int interpretador(ESTADO *e) {
             if (obter_comando_pos(e) )
             set_comando_pos(e,0);}
         
-        if (sscanf(linha, "pos %d", &n_jog)) {escreve_pos(e,n_jog);
+        if (sscanf(linha, "pos %d", &n_jog)){ 
+            int n = obter_numero_de_jogadas(e);
+            if (n_jog >= n) printf("Posição anterior inválida\n");
+            else {escreve_pos(e,n_jog);
             if (obter_comando_pos(e) == 0) set_comando_pos(e,1);
-            set_valor_pos(e,n_jog);
+            set_valor_pos(e,n_jog);}
         } 
         
     return 1;
