@@ -316,8 +316,8 @@ int interpretador(ESTADO *e) {
                 apaga_ultima_jogada (e);
             }
             jogar(e, coord);
-
-            if (jogada_e_valida (e,coord) &&(casa_vencedora (e,coord) || jogada_presa (e,coord))) {
+            
+            if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
                 int j_atual = obter_jogador_atual (e);
                 printf("O vencedor é o PL%d\n",j_atual);
                 e -> num_jogadas = 32;
