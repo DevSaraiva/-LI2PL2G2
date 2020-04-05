@@ -73,5 +73,10 @@ void prompt (ESTADO *e);
 
 ESTADO escreve_pos (ESTADO *e,int n);
 
+/**
+\brief  Função que apaga a ultima jogada
+*/
 void apaga_ultima_jogada (ESTADO *e);
+
+
 #endif //_GUIAO5_CAMADA_DA_INTERFACE_H
