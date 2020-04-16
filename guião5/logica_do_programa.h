@@ -10,6 +10,11 @@ Definição das funções da componente lógica do jogo
 #define _GUIAO5_LOGICA_DO_PROGRAMA_H
 #include "camada_de_dados.h"
 
+
+
+
+
+
 int casa_valida (COORDENADA c);
 
 

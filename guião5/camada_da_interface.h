@@ -11,7 +11,12 @@ Definição das funções relacionadas com interface
 #define _GUIAO5_CAMADA_DA_INTERFACE_H
 #include "camada_de_dados.h"
 #include "logica_do_programa.h"
-#include "camada_da_interface.h"
+
+
+
+
+
+
 
 /**
 \brief  Função que desenha o tabuleiro no estado atual

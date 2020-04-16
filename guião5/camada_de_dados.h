@@ -17,6 +17,7 @@ Definição do estado e das funções que o manipulam
 #define BUF_SIZE 1024
 
 
+
 /**
 \brief Definção de coordenada
 */
