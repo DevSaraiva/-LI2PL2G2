@@ -10,6 +10,8 @@ Aglomeração de todas as camadas
 #include "camada_de_dados.h"
 #include "camada_da_interface.h"
 #include "logica_do_programa.h"
+#include "listas.h"
+
 
 
 

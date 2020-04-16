@@ -8,9 +8,7 @@ Definição das funções relacionadas com listas ligadas
 #ifndef _GUIAO5_LISTAS_H
 #define _GUIAO5_LISTAS_H
 
-#include "camada_de_dados.h"
-#include "logica_do_programa.h"
-#include "camada_da_interface.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

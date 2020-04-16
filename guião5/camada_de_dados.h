@@ -14,6 +14,7 @@ Definição do estado e das funções que o manipulam
 #define _GUIAO5_CAMADA_DE_DADOS_H
 #include <string.h>
 #include <stdio.h>
+#include "listas.h"
 #define BUF_SIZE 1024
 
 
