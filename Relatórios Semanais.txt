@@ -19,7 +19,7 @@ isso as funções de IO de fichieros de texto: fprintf,feof,fgets,fopen e fclose
 onde não há jogadas possíveis e adicionada uma função que diz o jogador vencedor
 7. Melhorada a função mostra_tabuleiro;
 
-Nesta semana (16-29 março) foram realizadas as seguintes adições:
+Nesta semana (23-29 março) foram realizadas as seguintes adições:
 1. Adicionado o código correspondente á lista de jogadas na lógica do programa;
 2. Implementado o comando "movs" que imprime a lista de jogadas;
 3. Adicionado ao ficheiro guardado a lista de movimentos;
@@ -30,3 +30,14 @@ do jogo, bem como as variáveis como o número de jogadas e o jogador atual.
 set_jogador que permitem isolar a camada de dados, usando nas outras camadas apenas essas funções,com o objetivo de não
 haver acesso direto aos dados.
 6. Melhorias gerais de código (alterações de código redundante como por exemplo if(condição==1) para if(condição))
+
+No período (30 março - 6 abril ) foram realizadas as seguintes adições:
+1. Foi implementado o comando pos que permite voltar a uma determinada jogada. Para esta implementação tivemos em conta
+a lista de jogadas efetuadas onde fomos buscar a jogada pretendida e as anteriores a essa. Todas as jogadas posteriores
+foram apagadas usando as coordenas dos jogadores como (-1). Assim sempre que uma jogada possuiu como coordenas dos jogadores
+-1 essa jogada é ignorada. As outras variaveis do jogo, como a última jogada e o número de jogadas são modificadas de acordo
+com a jogada que foi selecionada.
+
+No período (7-19 abril) foram realizadas as seguintes modificações:
+1. Criação dos módulos de listas ligadas para suporte da estrutura de dados.
+2. Implementação do comando jog (?)

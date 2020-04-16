@@ -43,7 +43,8 @@ int jogada_presa (ESTADO *e,COORDENADA c){
 int casa_vencedora (ESTADO *e,COORDENADA c){
     int c_coluna = c.coluna;
     int c_linha = c.linha;
-    if ((c_coluna == 0 && c_linha == 0) || (c_coluna == 7 && c_linha == 7)) return 1;
+    int pl= obter_jogador_atual(e);
+    if ((pl == 2 && c_coluna == 0 && c_linha == 0) || (pl==1 && c_coluna == 7 && c_linha == 7)) return 1;
     else return 0;
 }
 
@@ -58,9 +59,9 @@ int jogada_e_valida (ESTADO *estado,COORDENADA c){
     CASA x = VAZIO;
     int dif_coluna = abs(c_coluna - c_ult);
     int dif_linha = abs(l_ult - c_linha);
-    if (dif_coluna <= 1 &&  dif_linha <= 1 && ((obter_estado_casa(estado,c)) == x)) 
-        return 1;
-    else return 0;
+    int r = 0;
+    if (dif_coluna <= 1 &&  dif_linha <= 1 && ((obter_estado_casa(estado,c)) == x)) r=1;
+    return r;
 }
 
 
