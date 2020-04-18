@@ -351,7 +351,9 @@ int interpretador(ESTADO *e) {
             else {escreve_pos(e,n_jog);
             if (obter_comando_pos(e) == 0) set_comando_pos(e,1);
             set_valor_pos(e,n_jog);}
-        } 
+        }
+        if (sscanf(linha, "jog %s", filename)) {};
+           
         
     return 1;
 }

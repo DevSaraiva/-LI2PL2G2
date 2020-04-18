@@ -9,7 +9,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="626e7068-7110-4815-b498-6265e6fab844" name="Default Changelist" comment="" />
+    <list default="true" id="626e7068-7110-4815-b498-6265e6fab844" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +56,7 @@
       <workItem from="1584019588439" duration="3891000" />
       <workItem from="1584092960729" duration="764000" />
       <workItem from="1587063517500" duration="73000" />
+      <workItem from="1587219424728" duration="986000" />
     </task>
     <task id="LOCAL-00001" summary="funções obter_jogador_atual e obter_estado_casa">
       <created>1583937338135</created>
@@ -110,11 +114,11 @@
       <screen x="0" y="27" width="1920" height="983" />
     </state>
     <state x="743" y="276" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.983@0.27.1920.983" timestamp="1583881071466" />
-    <state x="478" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1587063521741">
+    <state x="478" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1587219440195">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
     <state x="630" y="346" key="com.intellij.ide.util.TipDialog/0.27.1920.983@0.27.1920.983" timestamp="1583881054105" />
-    <state x="478" y="267" key="com.intellij.ide.util.TipDialog/45.27.1321.741@45.27.1321.741" timestamp="1587063521741" />
+    <state x="478" y="267" key="com.intellij.ide.util.TipDialog/45.27.1321.741@45.27.1321.741" timestamp="1587219440195" />
     <state x="473" y="316" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584093640869">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
