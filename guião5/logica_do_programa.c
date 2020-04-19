@@ -80,6 +80,11 @@ int jogar (ESTADO *estado, COORDENADA c){
         
         estado -> tab [c.linha] [c.coluna] = BRANCA;
         estado -> tab [l_ult] [c_ult] = PRETA;
+    
+        // Aumenta número de jogadas
+    
+        if (j_atual == 2) 
+        estado -> num_jogadas++;
         
         // Muda de jogador e guarda a jogadas
         
@@ -99,9 +104,8 @@ int jogar (ESTADO *estado, COORDENADA c){
     }    
     else printf("Jogada inválida\n");
  
-    // Aumenta número de jogadas
-    if (j_atual == 2) 
-        estado -> num_jogadas++;
+    
+    
 }
 
 

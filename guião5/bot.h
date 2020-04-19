@@ -26,7 +26,7 @@ LISTA jogada_possivel (ESTADO *e,COORDENADA c);
 \brief  Função que dadas 1 coordenada calcula a distância euclidiana entre essa e posição onde termina o jogo considerando o jogador atuak
 */
 
-int calcula_dist(COORDENADA * C, int jog);
+double calcula_dist(COORDENADA * C, int jog);
 
 
 /**

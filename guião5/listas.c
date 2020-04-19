@@ -19,7 +19,6 @@ LISTA insere_cabeca(LISTA L, void *v){
     LISTA nova;
     nova = criar_lista();
     nova -> valor = v;
-    nova -> prox = malloc(sizeof(Nodo));
     nova -> prox = L;
 
 return nova;

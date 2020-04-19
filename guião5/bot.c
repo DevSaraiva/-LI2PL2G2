@@ -30,6 +30,7 @@ LISTA jogada_possivel (ESTADO *e,COORDENADA c){
     COORDENADA ar [8] = {x1, x2, y1, y2, z1,z2,z3,z4};
 
     for (int i = 0; i<8; i++){
+        ap = malloc(sizeof(COORDENADA));
         * ap = ar[i];
         if (casa_valida (ar[i]) && obter_estado_casa(e,ar [i]) == VAZIO){
             l = insere_cabeca(l,ap);}
@@ -41,7 +42,7 @@ return l;
 
 
 
-int calcula_dist(COORDENADA * c, int jog){
+double calcula_dist(COORDENADA * c, int jog){
     
     COORDENADA game_over;
     if (jog == 1) { 
@@ -56,8 +57,8 @@ int calcula_dist(COORDENADA * c, int jog){
     int y2 = c ->coluna;
     int x = x1 - x2;
     int y = y1 - y2;
-    int dist;
-    
+    double dist;
+
     dist = sqrt(pow(x,2)+pow(y,2));
     
 return dist;
@@ -78,12 +79,17 @@ void joga_euclidiana (ESTADO *e){
     best_play = l -> valor;
     l = l -> prox;
     int jog = obter_jogador_atual(e);
-    int dist = calcula_dist(best_play,jog);
-    int dist_temp;
-    while(l != NULL){
+    double dist = calcula_dist(best_play,jog);
+    double dist_temp;
+            
+   
+    while(l -> prox != NULL){
+        
         best_play_temp = l -> valor;
         dist_temp = calcula_dist(best_play_temp,jog);
-        if (dist_temp > dist){
+           
+        
+        if (dist_temp < dist){
             best_play = best_play_temp;
             dist = dist_temp;
         }
