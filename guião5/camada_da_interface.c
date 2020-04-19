@@ -1,9 +1,6 @@
 
-#include <stdio.h>
-#include <string.h>
-#include "camada_de_dados.h"
-#include "logica_do_programa.h"
 #include "camada_da_interface.h"
+
 #define BUF_SIZE 1024
 
 
@@ -300,10 +297,11 @@ ESTADO escreve_pos (ESTADO *e,int n){
 
 int interpretador(ESTADO *e) {
         char linha[BUF_SIZE];
-        char col[2], lin[2];
+        char col[2], lin[2], aut[4];
         char quit;
         char filename[BUF_SIZE];
         int n_jog;
+        
         
         if(fgets(linha, BUF_SIZE, stdin) == NULL)
             return 0;
@@ -328,7 +326,7 @@ int interpretador(ESTADO *e) {
         }
     
     
-        if(strlen(linha) == 2 && sscanf(linha,"%[Q]", &quit)){
+        if(sscanf(linha,"%[Q]", &quit)){
             printf(" \n O jogo Terminou \n");
             set_numero_de_jogadas(e,32);
         }
@@ -352,8 +350,12 @@ int interpretador(ESTADO *e) {
             if (obter_comando_pos(e) == 0) set_comando_pos(e,1);
             set_valor_pos(e,n_jog);}
         }
-        if (sscanf(linha, "jog %s", filename)) {};
-           
+        if (sscanf(linha,"%[jog]",aut)) {
+            joga_euclidiana(e);
+            
+        }
+        
+
         
     return 1;
 }

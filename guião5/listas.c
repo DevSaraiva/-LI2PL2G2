@@ -2,11 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include "listas.h"
+#include "camada_de_dados.h"
+
 
 LISTA criar_lista(){
 
     LISTA vazia;
     vazia = malloc(sizeof(Nodo));
+    vazia -> valor = malloc(sizeof(COORDENADA));
     return vazia;
 
 }
@@ -14,8 +17,9 @@ LISTA criar_lista(){
 LISTA insere_cabeca(LISTA L, void *v){
 
     LISTA nova;
-    nova = malloc(sizeof(Nodo));
+    nova = criar_lista();
     nova -> valor = v;
+    nova -> prox = malloc(sizeof(Nodo));
     nova -> prox = L;
 
 return nova;
@@ -53,3 +57,6 @@ int lista_esta_vazia(LISTA L){
     if (L-> valor == NULL && L-> prox == NULL) return 1;
     else return 0;
 }
+
+
+
