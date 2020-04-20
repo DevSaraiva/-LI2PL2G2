@@ -350,6 +350,7 @@ int interpretador(ESTADO *e) {
             set_valor_pos(e,n_jog);}
         }
         if (strcmp(linha, "jog\n")==0) {joga_euclidiana(e);}
+        if (strcmp(linha, "jog2\n")==0) {joga_aleatorio(e);}
         
     return 1;
 }
