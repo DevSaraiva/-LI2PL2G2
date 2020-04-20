@@ -108,8 +108,8 @@ void joga_euclidiana (ESTADO *e){
 
 void joga_aleatorio (ESTADO *e) {
 	srand(time (NULL));
-	//número aleatório entre 1 e 8 (oito casas envolventes á peça)
-	int jogada = rand() % 8 + 1;
+	//número aleatório entre 0 e 7 (oito casas envolventes á peça)
+	int jogada = rand() % 8;
 	COORDENADA c = obter_ultima_jogada(e);
 	int c_ult = c.coluna;
    	int l_ult = c.linha;
