@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <time.h>
 #include "camada_de_dados.h"
 #include "bot.h"
 #include "logica_do_programa.h"
@@ -102,6 +103,28 @@ void joga_euclidiana (ESTADO *e){
 jogar(e,*best_play);
 mostrar_tabuleiro(e);
 
+}
+
+void joga_aleatorio (ESTADO *e) {
+	srand(time (NULL));
+	//número aleatório entre 1 e 8 (oito casas envolventes á peça)
+	int jogada = rand() % 8 + 1;
+	COORDENADA c = obter_ultima_jogada(e);
+	int c_ult = c.coluna;
+   	int l_ult = c.linha;
+	COORDENADA x1 = {c_ult+1,l_ult};
+    COORDENADA x2 = {c_ult-1,l_ult};
+    COORDENADA y1 = {c_ult,l_ult+1};
+    COORDENADA y2 = {c_ult,l_ult-1};
+    COORDENADA z1 = {c_ult+1,l_ult+1};
+    COORDENADA z2 = {c_ult+1,l_ult-1};
+    COORDENADA z3 = {c_ult-1,l_ult+1};
+    COORDENADA z4 = {c_ult-1,l_ult-1};
+    COORDENADA ar [8] = {x1, x2, y1, y2, z1,z2,z3,z4};
+    if (casa_valida (ar[jogada]) && obter_estado_casa(e,ar [jogada]) == VAZIO){
+   		jogar(e,ar[jogada]);
+   	} else joga_aleatorio (e); 
+	mostrar_tabuleiro(e);
 }
 
 
