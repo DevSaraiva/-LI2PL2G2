@@ -301,13 +301,12 @@ int interpretador(ESTADO *e) {
         char quit;
         char filename[BUF_SIZE];
         int n_jog;
-        COORDENADA coord = {*col - 'a', *lin - '1'};
         
         if(fgets(linha, BUF_SIZE, stdin) == NULL)
             return 0;
     
         if(strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
-            
+            COORDENADA coord = {*col - 'a', *lin - '1'};
             if (obter_comando_pos(e)) {
                 int n = obter_valor_pos(e);
                 int nt = obter_numero_de_jogadas(e);
@@ -315,7 +314,7 @@ int interpretador(ESTADO *e) {
                 apaga_ultima_jogada (e);
             }
             jogar(e, coord);
-            
+
             if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
                 int j_atual = obter_jogador_atual (e);
                 printf("O vencedor é o PL%d\n",j_atual);
@@ -350,12 +349,7 @@ int interpretador(ESTADO *e) {
             if (obter_comando_pos(e) == 0) set_comando_pos(e,1);
             set_valor_pos(e,n_jog);}
         }
-        if (strcmp(linha, "jog\n") == 0)  {
-            joga_euclidiana(e);
-            
-        }
-        
-
+        if (strcmp(linha, "jog\n")==0) {joga_euclidiana(e);}
         
     return 1;
 }

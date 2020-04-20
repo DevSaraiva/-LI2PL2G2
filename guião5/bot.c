@@ -12,7 +12,6 @@
 
 
 LISTA jogada_possivel (ESTADO *e,COORDENADA c){
-    
 
     LISTA l = criar_lista();
     COORDENADA *ap;
@@ -82,26 +81,28 @@ void joga_euclidiana (ESTADO *e){
     int jog = obter_jogador_atual(e);
     double dist = calcula_dist(best_play,jog);
     double dist_temp;
-            
-   
+
     while(l -> prox != NULL){
         
         best_play_temp = l -> valor;
         dist_temp = calcula_dist(best_play_temp,jog);
-           
-        
+
         if (dist_temp < dist){
             best_play = best_play_temp;
             dist = dist_temp;
         }
-        
 
         l = l -> prox;
-
     }
 
-jogar(e,*best_play);
-mostrar_tabuleiro(e);
+    jogar(e,*best_play);
+
+    if (casa_vencedora (e,*best_play) || jogada_presa (e,*best_play)){
+        int j_atual = obter_jogador_atual (e);
+        printf("O vencedor é o PL%d\n",j_atual);
+        e -> num_jogadas = 32;
+    }
+    else mostrar_tabuleiro(e);
 
 }
 
