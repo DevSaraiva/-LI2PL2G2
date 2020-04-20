@@ -14,7 +14,7 @@ Definição das funções relacionadas com listas ligadas
 #include <string.h>
 #include "camada_de_dados.h"
 #include "logica_do_programa.h"
-
+#include "camada_da_interface.h"
 
 /**
 \brief  Função que cria uma lista com todas as jogadas possiveis

@@ -11,7 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="626e7068-7110-4815-b498-6265e6fab844" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.c" beforeDir="false" afterPath="$PROJECT_DIR$/bot.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.h" beforeDir="false" afterPath="$PROJECT_DIR$/bot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camada_da_interface.c" beforeDir="false" afterPath="$PROJECT_DIR$/camada_da_interface.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logica_do_programa.c" beforeDir="false" afterPath="$PROJECT_DIR$/logica_do_programa.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +61,9 @@
       <workItem from="1584092960729" duration="764000" />
       <workItem from="1587063517500" duration="73000" />
       <workItem from="1587219424728" duration="986000" />
+      <workItem from="1587286508421" duration="44000" />
+      <workItem from="1587325228441" duration="1094000" />
+      <workItem from="1587368317069" duration="5184000" />
     </task>
     <task id="LOCAL-00001" summary="funções obter_jogador_atual e obter_estado_casa">
       <created>1583937338135</created>
@@ -106,6 +113,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="possibilidade de jogar na diagonal" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="419" y="201" width="563" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587325709850">
+      <screen x="45" y="27" width="1321" height="741" />
+    </state>
+    <state x="419" y="201" width="563" height="390" key="#com.intellij.fileTypes.FileTypeChooser/45.27.1321.741@45.27.1321.741" timestamp="1587325709850" />
     <state x="270" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1584093729231">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
@@ -114,11 +125,11 @@
       <screen x="0" y="27" width="1920" height="983" />
     </state>
     <state x="743" y="276" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.983@0.27.1920.983" timestamp="1583881071466" />
-    <state x="478" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1587219440195">
+    <state x="478" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1587368318668">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
     <state x="630" y="346" key="com.intellij.ide.util.TipDialog/0.27.1920.983@0.27.1920.983" timestamp="1583881054105" />
-    <state x="478" y="267" key="com.intellij.ide.util.TipDialog/45.27.1321.741@45.27.1321.741" timestamp="1587219440195" />
+    <state x="478" y="267" key="com.intellij.ide.util.TipDialog/45.27.1321.741@45.27.1321.741" timestamp="1587368318668" />
     <state x="473" y="316" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584093640869">
       <screen x="45" y="27" width="1321" height="741" />
     </state>

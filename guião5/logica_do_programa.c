@@ -25,9 +25,7 @@ int jogada_presa (ESTADO *e,COORDENADA c){
     COORDENADA z3 = {c_ult-1,l_ult+1};
     COORDENADA z4 = {c_ult-1,l_ult-1};
     COORDENADA ar [8] = {x1, x2, y1, y2, z1,z2,z3,z4};
-    
-    CASA arr [8]; 
-    
+
     for (int i = 0; i<8; i++){
         if (casa_valida (ar[i]) && obter_estado_casa(e,ar [i]) == VAZIO)
             return 0;
@@ -44,7 +42,7 @@ int casa_vencedora (ESTADO *e,COORDENADA c){
     int c_coluna = c.coluna;
     int c_linha = c.linha;
     int pl= obter_jogador_atual(e);
-    if ((pl == 2 && c_coluna == 0 && c_linha == 0) || (pl==1 && c_coluna == 7 && c_linha == 7)) return 1;
+    if ((pl == 1 && c_coluna == 0 && c_linha == 0) || (pl==2 && c_coluna == 7 && c_linha == 7)) return 1;
     else return 0;
 }
 
@@ -103,8 +101,6 @@ int jogar (ESTADO *estado, COORDENADA c){
         
     }    
     else printf("Jogada inválida\n");
- 
-    
     
 }
 
