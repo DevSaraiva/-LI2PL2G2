@@ -107,7 +107,6 @@ void joga_euclidiana (ESTADO *e){
 }
 
 void joga_aleatorio (ESTADO *e) {
-	srand(time (NULL));
 	//número aleatório entre 0 e 7 (oito casas envolventes á peça)
 	int jogada = rand() % 8;
 	COORDENADA c = obter_ultima_jogada(e);
@@ -124,8 +123,15 @@ void joga_aleatorio (ESTADO *e) {
     COORDENADA ar [8] = {x1, x2, y1, y2, z1,z2,z3,z4};
     if (casa_valida (ar[jogada]) && obter_estado_casa(e,ar [jogada]) == VAZIO){
    		jogar(e,ar[jogada]);
-   	} else joga_aleatorio (e); 
-	mostrar_tabuleiro(e);
+        mostrar_tabuleiro(e);
+        if (casa_vencedora (e,ar[jogada]) || jogada_presa (e,ar[jogada])){
+            int j_atual = obter_jogador_atual (e);
+            printf("O vencedor é o PL%d\n",j_atual);
+            e -> num_jogadas = 32;
+        }
+   	} else {
+        joga_aleatorio (e);
+	    mostrar_tabuleiro(e);}
 }
 
 
