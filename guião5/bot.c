@@ -33,8 +33,7 @@ LISTA jogada_possivel (ESTADO *e,COORDENADA c){
         ap = malloc(sizeof(COORDENADA));
         * ap = ar[i];
         if (casa_valida (ar[i]) && obter_estado_casa(e,ar [i]) == VAZIO){
-            l = insere_cabeca(l,ap);}
-            
+            l = insere_cabeca(l,ap);} 
     }
 
 return l;
@@ -107,31 +106,37 @@ void joga_euclidiana (ESTADO *e){
 }
 
 void joga_aleatorio (ESTADO *e) {
-	//número aleatório entre 0 e 7 (oito casas envolventes á peça)
-	int jogada = rand() % 8;
+	LISTA l;
 	COORDENADA c = obter_ultima_jogada(e);
-	int c_ult = c.coluna;
-   	int l_ult = c.linha;
-	COORDENADA x1 = {c_ult+1,l_ult};
-    COORDENADA x2 = {c_ult-1,l_ult};
-    COORDENADA y1 = {c_ult,l_ult+1};
-    COORDENADA y2 = {c_ult,l_ult-1};
-    COORDENADA z1 = {c_ult+1,l_ult+1};
-    COORDENADA z2 = {c_ult+1,l_ult-1};
-    COORDENADA z3 = {c_ult-1,l_ult+1};
-    COORDENADA z4 = {c_ult-1,l_ult-1};
-    COORDENADA ar [8] = {x1, x2, y1, y2, z1,z2,z3,z4};
-    if (casa_valida (ar[jogada]) && obter_estado_casa(e,ar [jogada]) == VAZIO){
-   		jogar(e,ar[jogada]);
-        mostrar_tabuleiro(e);
-        if (casa_vencedora (e,ar[jogada]) || jogada_presa (e,ar[jogada])){
-            int j_atual = obter_jogador_atual (e);
-            printf("O vencedor é o PL%d\n",j_atual);
-            e -> num_jogadas = 32;
-        }
-   	} else {
-        joga_aleatorio (e);
-	    mostrar_tabuleiro(e);}
+	//Obtem a lista com todas as jogadas possíveis
+	l = jogada_possivel (e,c);
+	//Guardar o apontador para a lista l
+	LISTA temp = l;
+	int count = 0;
+	//Contar os elementos da lista
+	while (l->prox != NULL){
+	    l = l->prox;
+	    count ++;
+	}
+	srand(time(NULL));
+	//Gerar um número entre 0 e o comprimento da lista
+    	int jogada = rand() % (count);
+	int indice = 0;
+	//Buscar o valor aleatória à lista
+	while (indice < jogada){
+	    temp = temp -> prox;
+	    indice ++;
+	}
+	//Jogar a coordenada escolhida
+	COORDENADA *coord = temp -> valor;
+    	jogar(e,*coord);
+    	mostrar_tabuleiro(e);
+    //Verificar se a jogada resultou num jogador vencedor	
+   	if (casa_vencedora (e,*coord) || jogada_presa (e,*coord)){
+        int j_atual = obter_jogador_atual (e);
+        printf("O vencedor é o PL%d\n",j_atual);
+        e -> num_jogadas = 32;
+    } 
 }
 
 
