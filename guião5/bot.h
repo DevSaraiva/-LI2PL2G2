@@ -34,5 +34,6 @@ double calcula_dist(COORDENADA * C, int jog);
 */
 void joga_euclidiana (ESTADO *e);
 
+void joga_aleatorio (ESTADO *e);
 
 #endif //_GUIAO5_BOT_H
