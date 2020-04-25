@@ -65,7 +65,7 @@ return dist;
 
 
 
-void joga_euclidiana (ESTADO *e){
+COORDENADA joga_euclidiana (ESTADO *e){
     
     LISTA l;
     l = malloc(sizeof(Nodo));
@@ -96,16 +96,10 @@ void joga_euclidiana (ESTADO *e){
 
     jogar(e,*best_play);
 
-    if (casa_vencedora (e,*best_play) || jogada_presa (e,*best_play)){
-        int j_atual = obter_jogador_atual (e);
-        printf("O vencedor é o PL%d\n",j_atual);
-        e -> num_jogadas = 32;
-    }
-    else mostrar_tabuleiro(e);
-
+    return *best_play;
 }
 
-void joga_aleatorio (ESTADO *e) {
+COORDENADA joga_aleatorio (ESTADO *e) {
 	LISTA l;
 	COORDENADA c = obter_ultima_jogada(e);
 	//Obtem a lista com todas as jogadas possíveis
@@ -130,13 +124,8 @@ void joga_aleatorio (ESTADO *e) {
 	//Jogar a coordenada escolhida
 	COORDENADA *coord = temp -> valor;
     	jogar(e,*coord);
-    	mostrar_tabuleiro(e);
-    //Verificar se a jogada resultou num jogador vencedor	
-   	if (casa_vencedora (e,*coord) || jogada_presa (e,*coord)){
-        int j_atual = obter_jogador_atual (e);
-        printf("O vencedor é o PL%d\n",j_atual);
-        e -> num_jogadas = 32;
-    } 
+    
+    return *coord; 
 }
 
 

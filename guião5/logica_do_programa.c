@@ -79,26 +79,30 @@ int jogar (ESTADO *estado, COORDENADA c){
         estado -> tab [c.linha] [c.coluna] = BRANCA;
         estado -> tab [l_ult] [c_ult] = PRETA;
     
-        // Aumenta número de jogadas
-    
-        if (j_atual == 2) 
-        estado -> num_jogadas++;
         
         // Muda de jogador e guarda a jogadas
         
-        if ((j_atual == 1) && ((c_coluna != 0) || (c_linha |= 0))) estado -> jogador_atual = 2;
+        if ((j_atual == 1) && ((c_coluna != 0) || (c_linha |= 0))){
+            estado -> jogador_atual = 2;
+            COORDENADA j = {c.coluna, c.linha};
+            estado -> jogadas[estado->num_jogadas].jogador1 = j;
+        }
         if ((j_atual == 2) && ((c_coluna != 7) || (c_linha != 7))) {
             estado -> jogador_atual = 1;
-            COORDENADA j1 = {c_ult,l_ult};
+            //COORDENADA j1 = {c_ult, l_ult};
             COORDENADA j2 = {c.coluna, c.linha};
-            JOGADA j = {j1,j2};
-            estado -> jogadas [estado->num_jogadas] = j;
+            //JOGADA j= {j1,j2};
+            estado -> jogadas [estado->num_jogadas].jogador2 = j2;
         }
 
         // Atualiza a última jogada
         estado -> ultima_jogada.coluna = c.coluna;
         estado -> ultima_jogada.linha = c.linha;
-        
+
+        // Aumenta número de jogadas
+    
+        if (j_atual == 2) 
+        estado -> num_jogadas++;
     }    
     else printf("Jogada inválida\n");
     

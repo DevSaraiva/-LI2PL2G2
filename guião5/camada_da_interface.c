@@ -212,7 +212,6 @@ void ler_estado (ESTADO *e,char filename[]) {
 }
 
 void imprime_movimentos(ESTADO *e){
-    int temp = 0;
     int num_jogadas = obter_numero_de_jogadas (e);
     
     //Percorre a lista de movimentos e imprime-a no terminal
@@ -224,18 +223,16 @@ void imprime_movimentos(ESTADO *e){
             int ncoluna2 = e->jogadas[i].jogador2.coluna;
             int nlinha2 = e->jogadas[i].jogador2.linha + 1;
             
-            if (e -> jogadas[i].jogador1.coluna != -1 && e -> jogadas[i].jogador1.linha != -1){
+            if (((e -> jogadas[i].jogador1.coluna) != -1) && ((e -> jogadas[i].jogador1.linha) != -1))
                 printf("%02d: %c%d",i + 1,letra(ncoluna1),nlinha1);
-            }
+            
 
-            if (e -> jogadas[i].jogador2.coluna !=-1 && e -> jogadas[i].jogador2.linha != -1){
+            if (e -> jogadas[i].jogador2.coluna !=-1 && e -> jogadas[i].jogador2.linha != -1)
                 printf(" %c%d\n",letra(ncoluna2),nlinha2);
-                temp++;
-            }
+                
+            
         }
-
-
-        // Imprime a ultima jogada caso o jogador 1 tenha jodado e o jogador 2 não
+      // Imprime a ultima jogada caso o jogador 1 tenha jodado e o jogador 2 não
         
         if (obter_jogador_atual(e) == 2)  printf("%02d: %c%d", num_jogadas + 1, letra(e->ultima_jogada.coluna),e->ultima_jogada.linha + 1);
 
@@ -243,9 +240,28 @@ void imprime_movimentos(ESTADO *e){
     mostrar_tabuleiro(e);
 }
 
+void apaga_ultima_jogada_completa (ESTADO *e){
+    int i = obter_numero_de_jogadas (e);
+
+    COORDENADA j1 = obter_jogada_por_j (e,i-1,1);
+    COORDENADA j2 = obter_jogada_por_j (e,i-1,2);
+    set_estado_casa_c(e,j1,VAZIO);
+    set_estado_casa_c(e,j2,VAZIO);
+    set_jogada (e,i-1,-1);
+    int c = e -> jogadas[i-2].jogador2.coluna;
+    int l = e -> jogadas[i-2].jogador2.linha;
+    COORDENADA ult = {c,l};
+    set_estado_casa (e,l,c,BRANCA);
+    set_ultima_jogada (e,ult);
+    set_numero_de_jogadas (e,i-1);
+}
+
+
+
 
 void apaga_ultima_jogada (ESTADO *e){
     int i = obter_numero_de_jogadas (e);
+
     if (i == 1) {
         set_jogador_atual(e,1);
         set_numero_de_jogadas(e,0);
@@ -257,17 +273,15 @@ void apaga_ultima_jogada (ESTADO *e){
         set_comando_pos(e,0);
     }
     else { 
-        COORDENADA j1 = obter_jogada_por_j (e,i-1,1);
-        COORDENADA j2 = obter_jogada_por_j (e,i-1,2);
-        set_estado_casa_c(e,j1,VAZIO);
-        set_estado_casa_c(e,j2,VAZIO);
-        set_jogada (e,i-1,-1);
-        int c = e -> jogadas[i-2].jogador2.coluna;
-        int l = e -> jogadas[i-2].jogador2.linha;
-        COORDENADA ult = {c,l};
-        set_estado_casa (e,l,c,BRANCA);
-        set_ultima_jogada (e,ult);
-        set_numero_de_jogadas (e,i-1);
+        if (e -> jogadas[i].jogador1.coluna ==-1 && e -> jogadas[i].jogador1.linha == -1)
+        apaga_ultima_jogada_completa (e);
+        else{
+            COORDENADA j = obter_jogada_por_j (e,i,1); 
+            set_estado_casa_c(e,j,VAZIO);
+            e->jogadas[i].jogador1.coluna = -1;
+            e->jogadas[i].jogador1.linha = -1;
+            apaga_ultima_jogada_completa(e);
+        }
     }
 }
 
@@ -283,7 +297,8 @@ ESTADO escreve_pos (ESTADO *e,int n){
         j1 = obter_jogada_por_j (e,i,1);
         j2 = obter_jogada_por_j (e,i,2);
         set_estado_casa_c (s,j1,PRETA);
-        set_estado_casa_c (s,j2,PRETA);}
+        set_estado_casa_c (s,j2,PRETA);
+        }
         set_estado_casa_c (s,j2,BRANCA);
         set_ultima_jogada (s,j2);
         set_numero_de_jogadas (s,i);
@@ -314,7 +329,7 @@ int interpretador(ESTADO *e) {
                 apaga_ultima_jogada (e);
             }
             jogar(e, coord);
-
+           
             if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
                 int j_atual = obter_jogador_atual (e);
                 printf("O vencedor é o PL%d\n",j_atual);
@@ -349,9 +364,41 @@ int interpretador(ESTADO *e) {
             if (obter_comando_pos(e) == 0) set_comando_pos(e,1);
             set_valor_pos(e,n_jog);}
         }
-        if (strcmp(linha, "jog\n")==0) {joga_euclidiana(e);}
-
-        if (strcmp(linha, "jog2\n")==0) {joga_aleatorio(e);}
+        if (strcmp(linha, "jog\n")==0) {
+            if (obter_comando_pos(e)) {
+                int n = obter_valor_pos(e);
+                int nt = obter_numero_de_jogadas(e);
+                for(int i = 0; n < nt-i; i++)
+                apaga_ultima_jogada (e);
+            }
+            COORDENADA coord = joga_euclidiana(e);
+           
+            if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
+                int j_atual = obter_jogador_atual (e);
+                printf("O vencedor é o PL%d\n",j_atual);
+                e -> num_jogadas = 32;
+            }
+            else mostrar_tabuleiro(e);
+            if (obter_comando_pos(e)) set_comando_pos(e,0);                    
+        }
+            
+        if (strcmp(linha, "jog2\n")==0) {
+            if (obter_comando_pos(e)) {
+                int n = obter_valor_pos(e);
+                int nt = obter_numero_de_jogadas(e);
+                for(int i = 0; n < nt-i; i++)
+                apaga_ultima_jogada (e);
+            }
+            COORDENADA coord = joga_aleatorio(e);
+           
+            if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
+                int j_atual = obter_jogador_atual (e);
+                printf("O vencedor é o PL%d\n",j_atual);
+                e -> num_jogadas = 32;
+            }
+            else mostrar_tabuleiro(e);
+            if (obter_comando_pos(e)) set_comando_pos(e,0);                    
+        }
         
     return 1;
 }

@@ -32,8 +32,8 @@ double calcula_dist(COORDENADA * C, int jog);
 /**
 \brief  Função que aplica a heuristica do vizinho mais proximo e joga automáticamente
 */
-void joga_euclidiana (ESTADO *e);
+COORDENADA joga_euclidiana (ESTADO *e);
 
-void joga_aleatorio (ESTADO *e);
+COORDENADA joga_aleatorio (ESTADO *e);
 
 #endif //_GUIAO5_BOT_H

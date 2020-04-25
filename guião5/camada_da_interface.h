@@ -86,5 +86,5 @@ ESTADO escreve_pos (ESTADO *e,int n);
 */
 void apaga_ultima_jogada (ESTADO *e);
 
-
+void apaga_ultima_jogada_completa (ESTADO *e);
 #endif //_GUIAO5_CAMADA_DA_INTERFACE_H
