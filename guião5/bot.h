@@ -36,4 +36,6 @@ COORDENADA joga_euclidiana (ESTADO *e);
 
 COORDENADA joga_aleatorio (ESTADO *e);
 
+int verifica_jogada_flood (ESTADO *e,COORDENADA c);
+COORDENADA joga_flood (ESTADO *e);
 #endif //_GUIAO5_BOT_H

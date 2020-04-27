@@ -397,6 +397,23 @@ int interpretador(ESTADO *e) {
             else mostrar_tabuleiro(e);
             if (obter_comando_pos(e)) set_comando_pos(e,0);                    
         }
+        if (strcmp(linha, "jogf\n")==0) {
+            if (obter_comando_pos(e)) {
+                int n = obter_valor_pos(e);
+                int nt = obter_numero_de_jogadas(e);
+                for(int i = 0; n < nt-i; i++)
+                    apaga_ultima_jogada (e);
+            }
+            COORDENADA coord = joga_flood(e);
+           
+            if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
+                int j_atual = obter_jogador_atual (e);
+                printf("O vencedor é o PL%d\n",j_atual);
+                e -> num_jogadas = 32;
+            }
+            else mostrar_tabuleiro(e);
+            if (obter_comando_pos(e)) set_comando_pos(e,0);
+        }
         
     return 1;
 }
