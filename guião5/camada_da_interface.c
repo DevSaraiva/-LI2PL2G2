@@ -153,7 +153,7 @@ void ler_estado (ESTADO *e,char filename[]) {
 
        //Lê as primeiras 10 linhas correspondentes ao tabuleiro
         for (int i = 7; i >= -1; i--){
-               fgets(str,BUF_SIZE,save);
+		fgets(str,BUF_SIZE,save);
                for (int j = 0; j <= 7; j++)
                {
                    switch (str[j])
@@ -191,8 +191,6 @@ void ler_estado (ESTADO *e,char filename[]) {
             } else
             {
                
-                COORDENADA c3 = {-1,-1};
-                JOGADA j2 = {c1,c3};
                 set_jogador_atual(e,2);
                 set_ultima_jogada(e,c1);
 
@@ -312,7 +310,7 @@ ESTADO escreve_pos (ESTADO *e,int n){
 
 int interpretador(ESTADO *e) {
         char linha[BUF_SIZE];
-        char col[2], lin[2], aut[4];
+        char col[2], lin[2];
         char quit;
         char filename[BUF_SIZE];
         int n_jog;

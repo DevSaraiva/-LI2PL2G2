@@ -15,7 +15,6 @@ int casa_valida (COORDENADA c){
 int jogada_presa (ESTADO *e,COORDENADA c){
     int c_ult = c.coluna;
     int l_ult = c.linha;
-    CASA p = PRETA;
     COORDENADA x1 = {c_ult+1,l_ult};
     COORDENADA x2 = {c_ult-1,l_ult};
     COORDENADA y1 = {c_ult,l_ult+1};
@@ -65,7 +64,7 @@ int jogada_e_valida (ESTADO *estado,COORDENADA c){
 
 
 
-int jogar (ESTADO *estado, COORDENADA c){
+void jogar (ESTADO *estado, COORDENADA c){
     int c_ult = obter_ultima_jogada(estado).coluna;
     int l_ult = obter_ultima_jogada(estado).linha;
     int c_coluna = c.coluna;
@@ -107,5 +106,3 @@ int jogar (ESTADO *estado, COORDENADA c){
     else printf("Jogada inválida\n");
     
 }
-
-

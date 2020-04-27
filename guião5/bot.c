@@ -18,7 +18,6 @@ LISTA jogada_possivel (ESTADO *e,COORDENADA c){
     ap = malloc(sizeof(COORDENADA));
     int c_ult = c.coluna;
     int l_ult = c.linha;
-    CASA p = PRETA;
     COORDENADA x1 = {c_ult+1,l_ult};
     COORDENADA x2 = {c_ult-1,l_ult};
     COORDENADA y1 = {c_ult,l_ult+1};
