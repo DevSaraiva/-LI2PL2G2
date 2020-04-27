@@ -153,7 +153,7 @@ void ler_estado (ESTADO *e,char filename[]) {
 
        //Lê as primeiras 10 linhas correspondentes ao tabuleiro
         for (int i = 7; i >= -1; i--){
-		fgets(str,BUF_SIZE,save);
+		if (fgets(str,BUF_SIZE,save)==NULL) return;
                for (int j = 0; j <= 7; j++)
                {
                    switch (str[j])
