@@ -29,10 +29,17 @@ int jogada_presa (ESTADO *e,COORDENADA c){
         if (casa_valida (ar[i]) && obter_estado_casa(e,ar [i]) == VAZIO)
             return 0;
     }
-    {int j_atual = obter_jogador_atual (e);
-    if (j_atual == 1) e->jogador_atual=2;
-    else e->jogador_atual=1;
-    return 1;}
+    int j_atual = obter_jogador_atual (e);
+    if ((j_atual == 1)){
+        if((c_ult == 7) && (l_ult == 7)) return 1;
+        else {e->jogador_atual=2; return 1;}
+    }
+    
+    if (j_atual == 2){
+        if ((c_ult == 0) && (l_ult == 0)) return 1;
+        else {e->jogador_atual = 1; return 1;}
+    }
+
 }
 
 
