@@ -62,6 +62,143 @@ double calcula_dist(COORDENADA * c, int jog){
 return dist;
 }
 
+int atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
+
+    int jog_min;
+    if (jog_max == 1) jog_min = 2;
+    else jog_min = 1;
+
+    int jogador_atual = obter_jogador_atual(e);
+    
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+TREEMinMax create_tree (int depth, ESTADO *e, COORDENADA c){
+
+    TREEMinMax tree;
+    tree.coord = c;
+    
+    //Coordenadas possiveis onde é possivel jogar dado determinada coordenada e respetivas copias do estado para que seja possivel analisar a situação do jogo
+    
+    //CODIGO A MELHORAR
+    COORDENADA c1;
+    c1.linha = c.linha - 1;
+    c1.coluna = c.coluna + 1 ;
+    ESTADO * copia1;
+    copia1 = malloc(sizeof(ESTADO));
+    copia1 = e;
+    jogar(copia1,c1);   
+    
+    COORDENADA c2;
+    c2.linha = c.linha ;
+    c2.coluna = c.coluna + 1;
+    ESTADO * copia2;
+    copia2 = malloc(sizeof(ESTADO));
+    copia2 = e;
+    jogar(copia2,c2);  
+    
+    COORDENADA c3;
+    c3.linha = c.linha + 1;
+    c3.coluna = c.coluna + 1;
+    ESTADO * copia3;
+    copia3 = malloc(sizeof(ESTADO));
+    copia3 = e;
+    jogar(copia3,c3);  
+    
+    COORDENADA c4;
+    c4.linha = c.linha + 1;
+    c4.coluna = c.coluna;
+    ESTADO * copia4;
+    copia4 = malloc(sizeof(ESTADO));
+    copia4 = e;
+    jogar(copia4,c4);  
+    
+    COORDENADA c5;
+    c5.linha = c.linha + 1;
+    c5.coluna = c.coluna - 1;
+    ESTADO * copia5;
+    copia5 = malloc(sizeof(ESTADO));
+    copia5 = e;
+    jogar(copia5,c);  
+    
+    COORDENADA c6;
+    c6.linha = c.linha;
+    c6.coluna = c.coluna - 1;
+    ESTADO * copia6;
+    copia6 = malloc(sizeof(ESTADO));
+    copia6 = e;
+    jogar(copia6,c6);  
+    
+    COORDENADA c7;
+    c7.linha = c.linha - 1;
+    c7.coluna = c.coluna - 1;
+    ESTADO * copia7;
+    copia7 = malloc(sizeof(ESTADO));
+    copia7 = e;
+    jogar(copia7,c7);  
+    
+    COORDENADA c8;
+    c8.linha = c.linha - 1;
+    c8.coluna = c.coluna;
+    ESTADO * copia8;
+    copia8 = malloc(sizeof(ESTADO));
+    copia8 = e;
+    jogar(copia8,c8);  
+    
+    
+    
+    if (depth != 0){
+    if (jogada_e_valida(e,c1)){
+    tree.nodo1 = malloc(sizeof(TREEMinMax));
+    create_tree(depth - 1, copia1, c1);}
+    
+    if (jogada_e_valida(e,c2)){
+    tree.nodo2 = malloc(sizeof(TREEMinMax));
+    create_tree(depth - 1, copia2, c2);}
+    
+    if (jogada_e_valida(e,c3)){
+    tree.nodo3 = malloc(sizeof(TREEMinMax));
+    create_tree(depth - 1, copia3, c3);}
+    
+    if (jogada_e_valida(e,c4)){
+    tree.nodo4 = malloc(sizeof(TREEMinMax));
+    create_tree(depth - 1, copia4, c4);}
+    
+    if (jogada_e_valida(e,c5)){
+    tree.nodo5 = malloc(sizeof(TREEMinMax));
+    create_tree(depth - 1, copia5, c5);}
+    
+    if (jogada_e_valida(e,c6)){
+    tree.nodo6 = malloc(sizeof(TREEMinMax));
+    create_tree(depth - 1, copia6, c6);}
+    
+    if (jogada_e_valida(e,c7)){
+    tree.nodo7 = malloc(sizeof(TREEMinMax));
+    create_tree(depth - 1, copia7, c7);}
+    
+    if (jogada_e_valida(e,c8)){
+    tree.nodo8 = malloc(sizeof(TREEMinMax));
+    create_tree(depth - 1, copia8, c8);}
+    
+    }else{
+        tree.valor = 1;
+    }
+
+
+
+return tree;
+}
 
 
 COORDENADA joga_euclidiana (ESTADO *e){
