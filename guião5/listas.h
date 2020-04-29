@@ -14,7 +14,9 @@ Definição das funções relacionadas com listas ligadas
 #include <string.h>
 
 
-
+/**
+\brief  Lista ligada generica
+*/
 typedef struct slist
 {
     void *valor;

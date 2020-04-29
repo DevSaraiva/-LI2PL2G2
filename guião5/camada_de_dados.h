@@ -52,6 +52,9 @@ typedef struct {
     int valor_pos;
 } ESTADO;
 
+/**
+\brief  função que inicializa um estado
+*/
 ESTADO* inicializar_estado();
 
 /**
@@ -129,11 +132,26 @@ void set_jogada_indice(ESTADO *e,JOGADA x,int i);
 
 JOGADA retorna_Jogada (ESTADO *e, int x);
 
+/**
+\brief  Coordenada auxiliar
+*/
 COORDENADA obter_jogada_por_j (ESTADO *e,int i,int x);
+/**
+\brief  Obtem o a ultima jogada
+*/
 int obter_comando_pos (ESTADO *e);
+/**
+\brief  Coordenada auxiliar
+*/
 int obter_valor_pos (ESTADO *e);
 void set_comando_pos (ESTADO *e,int x);
 void set_valor_pos (ESTADO *e,int x);
+/**
+\brief  Define o estado da casa
+*/
 void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x);
+/**
+\brief  Define uma jogada da um índice
+*/
 void set_jogada(ESTADO *e,int i,int x);
 #endif //_GUIAO5_CAMADA_DE_DADOS_H

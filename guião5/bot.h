@@ -52,8 +52,17 @@ double calcula_dist(COORDENADA * C, int jog);
 */
 COORDENADA joga_euclidiana (ESTADO *e);
 
+/**
+\brief  Função que aplica a heuristica aleatoria e joga automáticamente
+*/
 COORDENADA joga_aleatorio (ESTADO *e);
 
+/**
+\brief  Função que aplica a heuristica do floddfill e joga automáticamente
+*/
 int verifica_jogada_flood (ESTADO *e,COORDENADA c);
+/**
+\brief COORDENADA auxiliar para a heuristica floddfill
+*/
 COORDENADA joga_flood (ESTADO *e);
 #endif //_GUIAO5_BOT_H

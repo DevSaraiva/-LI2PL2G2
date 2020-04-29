@@ -16,7 +16,9 @@ Definição das funções da componente lógica do jogo
 
 
 
-
+/**
+\brief  Função que verifica se a casa é valida para jogar
+*/
 int casa_valida (COORDENADA c);
 
 
