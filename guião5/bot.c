@@ -62,22 +62,35 @@ double calcula_dist(COORDENADA * c, int jog){
 return dist;
 }
 
-int atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
 
+
+
+
+double atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
+    
+    COORDENADA * coord;
+    coord = malloc(sizeof(COORDENADA));
+    coord = &c;
+    double valor;
     int jog_min;
     if (jog_max == 1) jog_min = 2;
     else jog_min = 1;
 
-    int jogador_atual = obter_jogador_atual(e);
+    int jog_atual = obter_jogador_atual(e);
+
+    if(jogada_presa(e,c)){
+        if(jog_atual = jog_max) valor = -1000;
+        else valor = 1000; 
     
+    }else{
+    
+        int dist_fav = calcula_dist(coord, jog_max);
+        int dis_desf = calcula_dist(coord,jog_min);
+        valor = dis_desf - dist_fav;
+        }
 
-
-
-
-
-
-
-
+    
+return valor;
 
 }
 
@@ -88,7 +101,7 @@ TREEMinMax create_tree (int depth, ESTADO *e, COORDENADA c){
 
     TREEMinMax tree;
     tree.coord = c;
-    
+    int jog = 1;
     //Coordenadas possiveis onde é possivel jogar dado determinada coordenada e respetivas copias do estado para que seja possivel analisar a situação do jogo
     
     //CODIGO A MELHORAR
@@ -97,108 +110,159 @@ TREEMinMax create_tree (int depth, ESTADO *e, COORDENADA c){
     c1.coluna = c.coluna + 1 ;
     ESTADO * copia1;
     copia1 = malloc(sizeof(ESTADO));
-    copia1 = e;
-    jogar(copia1,c1);   
+    *copia1 = *e;
+    
     
     COORDENADA c2;
     c2.linha = c.linha ;
     c2.coluna = c.coluna + 1;
     ESTADO * copia2;
     copia2 = malloc(sizeof(ESTADO));
-    copia2 = e;
-    jogar(copia2,c2);  
+    *copia2 = *e;
+    
     
     COORDENADA c3;
     c3.linha = c.linha + 1;
     c3.coluna = c.coluna + 1;
     ESTADO * copia3;
     copia3 = malloc(sizeof(ESTADO));
-    copia3 = e;
-    jogar(copia3,c3);  
+    *copia3 = *e;
     
     COORDENADA c4;
     c4.linha = c.linha + 1;
     c4.coluna = c.coluna;
     ESTADO * copia4;
     copia4 = malloc(sizeof(ESTADO));
-    copia4 = e;
-    jogar(copia4,c4);  
+    *copia4 = *e;
+    
     
     COORDENADA c5;
     c5.linha = c.linha + 1;
     c5.coluna = c.coluna - 1;
     ESTADO * copia5;
     copia5 = malloc(sizeof(ESTADO));
-    copia5 = e;
-    jogar(copia5,c);  
+    *copia5 = *e;
+      
     
     COORDENADA c6;
     c6.linha = c.linha;
     c6.coluna = c.coluna - 1;
     ESTADO * copia6;
     copia6 = malloc(sizeof(ESTADO));
-    copia6 = e;
-    jogar(copia6,c6);  
+    *copia6 = *e;
+     
     
     COORDENADA c7;
     c7.linha = c.linha - 1;
     c7.coluna = c.coluna - 1;
     ESTADO * copia7;
     copia7 = malloc(sizeof(ESTADO));
-    copia7 = e;
-    jogar(copia7,c7);  
+    *copia7 = *e;
+     
     
     COORDENADA c8;
     c8.linha = c.linha - 1;
     c8.coluna = c.coluna;
     ESTADO * copia8;
     copia8 = malloc(sizeof(ESTADO));
-    copia8 = e;
-    jogar(copia8,c8);  
+    *copia8 = *e;
+    
     
     
     
     if (depth != 0){
     if (jogada_e_valida(e,c1)){
     tree.nodo1 = malloc(sizeof(TREEMinMax));
+    //create_tree(depth - 1, copia1, c1);
+    printf("###################################### \n");
+    mostrar_tabuleiro(copia1);
+    jogar(copia1,c1);
+    mostrar_tabuleiro(copia1);
+    printf("###################################### \n");
     create_tree(depth - 1, copia1, c1);}
     
     if (jogada_e_valida(e,c2)){
     tree.nodo2 = malloc(sizeof(TREEMinMax));
+    //create_tree(depth - 1, copia2, c2);
+    mostrar_tabuleiro(copia2);
+    jogar(copia2,c2);
+    mostrar_tabuleiro(copia2);
+    printf("###################################### \n");
     create_tree(depth - 1, copia2, c2);}
     
     if (jogada_e_valida(e,c3)){
     tree.nodo3 = malloc(sizeof(TREEMinMax));
+    //create_tree(depth - 1, copia3, c3);
+    mostrar_tabuleiro(copia3);
+    jogar(copia3,c3);
+    mostrar_tabuleiro(copia3);
     create_tree(depth - 1, copia3, c3);}
     
     if (jogada_e_valida(e,c4)){
     tree.nodo4 = malloc(sizeof(TREEMinMax));
+    //create_tree(depth - 1, copia4, c4);
+    mostrar_tabuleiro(copia4);   
+    jogar(copia4,c4);
+    mostrar_tabuleiro(copia4);
+    printf("###################################### \n");
     create_tree(depth - 1, copia4, c4);}
     
     if (jogada_e_valida(e,c5)){
     tree.nodo5 = malloc(sizeof(TREEMinMax));
-    create_tree(depth - 1, copia5, c5);}
+    //create_tree(depth - 1, copia5, c5);
+    mostrar_tabuleiro(copia5);
+    jogar(copia5,c5); 
+    mostrar_tabuleiro(copia5);
+    printf("###################################### \n");
+    create_tree(depth - 1, copia5, c5);  }
     
     if (jogada_e_valida(e,c6)){
-    tree.nodo6 = malloc(sizeof(TREEMinMax));
-    create_tree(depth - 1, copia6, c6);}
+    tree.nodo6 = malloc(sizeof(TREEMinMax)); 
+    //create_tree(depth - 1, copia6, c6);
+    mostrar_tabuleiro(copia6);
+    jogar(copia6,c6); 
+    mostrar_tabuleiro(copia6);
+    printf("###################################### \n");
+    create_tree(depth - 1, copia6, c6); }
     
     if (jogada_e_valida(e,c7)){
     tree.nodo7 = malloc(sizeof(TREEMinMax));
+    //create_tree(depth - 1, copia7, c7);
+    mostrar_tabuleiro(copia7);
+    jogar(copia7,c7);
+    mostrar_tabuleiro(copia7);
+    printf("###################################### \n");
     create_tree(depth - 1, copia7, c7);}
     
     if (jogada_e_valida(e,c8)){
-    tree.nodo8 = malloc(sizeof(TREEMinMax));
+    tree.nodo8 = malloc(sizeof(TREEMinMax)); 
+    //create_tree(depth - 1, copia8, c8);
+    mostrar_tabuleiro(copia8);
+    jogar(copia8,c8);
+    mostrar_tabuleiro(copia8);
+    printf("###################################### \n");
     create_tree(depth - 1, copia8, c8);}
     
     }else{
-        tree.valor = 1;
+        tree.valor = atribui_valor(e,jog,c);
     }
 
 
 
 return tree;
 }
+
+COORDENADA joga_MinMax(ESTADO *e){
+    
+    COORDENADA ultima_jog = obter_ultima_jogada(e);
+    int depth = 7;
+    create_tree (depth, e, ultima_jog);
+    
+
+}
+
+
+
 
 
 COORDENADA joga_euclidiana (ESTADO *e){
