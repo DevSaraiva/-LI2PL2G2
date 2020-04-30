@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="camada__da__interface_8h" kind="file" language="C++">
+    <compoundname>camada_da_interface.h</compoundname>
+    <includes refid="camada__de__dados_8h" local="yes">camada_de_dados.h</includes>
+    <includes refid="logica__do__programa_8h" local="yes">logica_do_programa.h</includes>
+    <includes refid="listas_8h" local="yes">listas.h</includes>
+    <includes refid="bot_8h" local="yes">bot.h</includes>
+    <includedby refid="bot_8h" local="yes">bot.h</includedby>
+    <includedby refid="bot_8c" local="yes">bot.c</includedby>
+    <includedby refid="camada__da__interface_8c" local="yes">camada_da_interface.c</includedby>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>bot.h</label>
+        <link refid="bot_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>logica_do_programa.h</label>
+        <link refid="logica__do__programa_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string.h</label>
+      </node>
+      <node id="5">
+        <label>listas.h</label>
+        <link refid="listas_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>math.h</label>
+      </node>
+      <node id="2">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>camada_da_interface.h</label>
+        <link refid="camada__da__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>bot.h</label>
+        <link refid="bot_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="1">
+        <label>camada_da_interface.h</label>
+        <link refid="camada__da__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="camada__da__interface_8h_1a4525a57d0cd9ed3c9150e19b67e1dad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mostrar_tabuleiro</definition>
+        <argsstring>(ESTADO *estado)</argsstring>
+        <name>mostrar_tabuleiro</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>estado</declname>
+        </param>
+        <briefdescription>
+<para>Função que desenha o tabuleiro no estado atual. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="28" column="6" bodyfile="camada_da_interface.c" bodystart="4" bodyend="40" declfile="camada_da_interface.h" declline="28" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1a3cec1f7f711da0874ec656837ad771fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void escreve_tabuleuiro</definition>
+        <argsstring>(ESTADO *e, FILE *save)</argsstring>
+        <name>escreve_tabuleuiro</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>save</declname>
+        </param>
+        <briefdescription>
+<para>Função auxiliar da função gravar_estado. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="34" column="6" bodyfile="camada_da_interface.c" bodystart="45" bodyend="76" declfile="camada_da_interface.h" declline="34" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1a995a746618aead6885562e953d9ab3dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void escreve_movimentos</definition>
+        <argsstring>(ESTADO *e, FILE *save)</argsstring>
+        <name>escreve_movimentos</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>save</declname>
+        </param>
+        <briefdescription>
+<para>Função auxiliar da função gravar estado. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="40" column="6" bodyfile="camada_da_interface.c" bodystart="78" bodyend="106" declfile="camada_da_interface.h" declline="40" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1ab783fac6270e30fbc50d1b09ee4b2867" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void imprime_movimentos</definition>
+        <argsstring>(ESTADO *e)</argsstring>
+        <name>imprime_movimentos</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Função auxiliar da função interpretador que escreve um estado em um ficheiro. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="46" column="6" bodyfile="camada_da_interface.c" bodystart="206" bodyend="233" declfile="camada_da_interface.h" declline="46" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1aa4d2bacf7b2ab01ba45b8dd7467a4cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gravar_estado</definition>
+        <argsstring>(ESTADO *e, char filename[])</argsstring>
+        <name>gravar_estado</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>filename</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Função auxiliar da função interpretador que escreve um estado em um ficheiro. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="52" column="6" bodyfile="camada_da_interface.c" bodystart="109" bodyend="128" declfile="camada_da_interface.h" declline="52" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1afecedbc2f32c723fea80df91ebaaf7bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ler_estado</definition>
+        <argsstring>(ESTADO *e, char filename[])</argsstring>
+        <name>ler_estado</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>filename</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Função que lê o estado de um ficheiro. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="58" column="6" bodyfile="camada_da_interface.c" bodystart="133" bodyend="204" declfile="camada_da_interface.h" declline="58" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1a24da95ebeede4a540e37790ce8be359b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int interpretador</definition>
+        <argsstring>(ESTADO *e)</argsstring>
+        <name>interpretador</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Função que tranforma comandos dos jogador em ações no estado do jogo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>1 se a função foi bem sucedida, 0 caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="65" column="5" bodyfile="camada_da_interface.c" bodystart="305" bodyend="413" declfile="camada_da_interface.h" declline="65" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1ae41fb376b5e99f2c6981f8c754806bfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char letra</definition>
+        <argsstring>(int x)</argsstring>
+        <name>letra</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Função auxiliar da função void que tranforma um número na sua letra logicamente correspondente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A letra na posiçao x do array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="72" column="6" bodyfile="camada_da_interface.c" bodystart="418" bodyend="421" declfile="camada_da_interface.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1a33d09196f922a638847c19f3aca3fc3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void prompt</definition>
+        <argsstring>(ESTADO *e)</argsstring>
+        <name>prompt</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Função que fornece informação sobre o estado do jogo aos jogadores. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="78" column="6" bodyfile="camada_da_interface.c" bodystart="424" bodyend="434" declfile="camada_da_interface.h" declline="78" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1af102fab7a3dd8a7c0290ef3b22c8e3d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structESTADO" kindref="compound">ESTADO</ref></type>
+        <definition>ESTADO escreve_pos</definition>
+        <argsstring>(ESTADO *e, int n)</argsstring>
+        <name>escreve_pos</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Função que executa o comando pos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>O estado do jogo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="85" column="8" bodyfile="camada_da_interface.c" bodystart="280" bodyend="300" declfile="camada_da_interface.h" declline="85" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1a22ec825139ca5e16ca75fd66a33c94e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apaga_ultima_jogada</definition>
+        <argsstring>(ESTADO *e)</argsstring>
+        <name>apaga_ultima_jogada</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Função que apaga a ultima jogada. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="90" column="6" bodyfile="camada_da_interface.c" bodystart="254" bodyend="278" declfile="camada_da_interface.h" declline="90" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camada__da__interface_8h_1a9e97feb76fafa957aaf05ee729a13999" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apaga_ultima_jogada_completa</definition>
+        <argsstring>(ESTADO *e)</argsstring>
+        <name>apaga_ultima_jogada_completa</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Função que apaga a ultima jogada. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_da_interface.h" line="94" column="6" bodyfile="camada_da_interface.c" bodystart="235" bodyend="249" declfile="camada_da_interface.h" declline="94" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Definição das funções relacionadas com interface </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>_GUIAO5_CAMADA_DA_INTERFACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GUIAO5_CAMADA_DA_INTERFACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="camada__de__dados_8h" kindref="compound">camada_de_dados.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logica__do__programa_8h" kindref="compound">logica_do_programa.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="listas_8h" kindref="compound">listas.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bot_8h" kindref="compound">bot.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1a4525a57d0cd9ed3c9150e19b67e1dad6" kindref="member">mostrar_tabuleiro</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*estado);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1a3cec1f7f711da0874ec656837ad771fe" kindref="member">escreve_tabuleuiro</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,FILE<sp/>*save);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1a995a746618aead6885562e953d9ab3dd" kindref="member">escreve_movimentos</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref>*<sp/>e,FILE<sp/>*save);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1ab783fac6270e30fbc50d1b09ee4b2867" kindref="member">imprime_movimentos</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref>*<sp/>e);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1aa4d2bacf7b2ab01ba45b8dd7467a4cac" kindref="member">gravar_estado</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>filename[]);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1afecedbc2f32c723fea80df91ebaaf7bf" kindref="member">ler_estado</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>filename[]);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1a24da95ebeede4a540e37790ce8be359b" kindref="member">interpretador</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1ae41fb376b5e99f2c6981f8c754806bfe" kindref="member">letra</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1a33d09196f922a638847c19f3aca3fc3c" kindref="member">prompt</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/><ref refid="camada__da__interface_8h_1af102fab7a3dd8a7c0290ef3b22c8e3d3" kindref="member">escreve_pos</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1a22ec825139ca5e16ca75fd66a33c94e5" kindref="member">apaga_ultima_jogada</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="94"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1a9e97feb76fafa957aaf05ee729a13999" kindref="member">apaga_ultima_jogada_completa</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//_GUIAO5_CAMADA_DA_INTERFACE_H</highlight></codeline>
+    </programlisting>
+    <location file="camada_da_interface.h"/>
+  </compounddef>
+</doxygen>
