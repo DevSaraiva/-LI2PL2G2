@@ -59,12 +59,14 @@ void ler_estado (ESTADO *e,char filename[]);
 
 /**
 \brief  Função que tranforma comandos dos jogador em ações no estado do jogo
+\return 1 se a função foi bem sucedida, 0 caso contrário
 */
 
 int interpretador(ESTADO *e);
 
 /**
 \brief  Função auxiliar da função void que tranforma um número na sua letra logicamente correspondente
+\return A letra na posiçao x do array
 */
 
 char letra (int x);
@@ -77,6 +79,7 @@ void prompt (ESTADO *e);
 
 /**
 \brief  Função que executa o comando pos
+\return O estado do jogo
 */
 
 ESTADO escreve_pos (ESTADO *e,int n);

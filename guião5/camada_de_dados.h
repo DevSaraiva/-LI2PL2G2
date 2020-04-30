@@ -15,6 +15,10 @@ Definição do estado e das funções que o manipulam
 #include <string.h>
 #include <stdio.h>
 #include "listas.h"
+/**
+\brief Tamanho do buffer
+*/
+
 #define BUF_SIZE 1024
 
 
@@ -37,6 +41,10 @@ typedef struct {
     COORDENADA jogador2;
 } JOGADA;
 
+/**
+\brief Definição do tipo JOGADa como sendo um array de 32 jogadas
+*/
+
 typedef JOGADA JOGADAS[32];
 
 /**
@@ -54,6 +62,7 @@ typedef struct {
 
 /**
 \brief  função que inicializa um estado
+\return O ponteiro para o estado
 */
 ESTADO* inicializar_estado();
 
@@ -72,6 +81,7 @@ void limpa_jogadas (ESTADO *e);
 
 /**
 \brief Função que retorna a ultima jogada efetuada
+\return A última coordenada jogada
 */
 
 COORDENADA obter_ultima_jogada(ESTADO *e);
@@ -84,6 +94,7 @@ void set_ultima_jogada(ESTADO *e,COORDENADA x);
 
 /**
 \brief Função que devolve número de jogadas efetuadas até o momento
+\return Número de jogadas efetuadas
 */
 
 int obter_numero_de_jogadas (ESTADO *e);
@@ -97,6 +108,7 @@ void set_numero_de_jogadas (ESTADO *e,int x);
 
 /**
 \brief Função que retorna o jogador que possui a vez de jogar
+\return Número do jogador atual (1 ou 2)
 */
 
 int obter_jogador_atual(ESTADO *estado);
@@ -108,6 +120,7 @@ void set_jogador_atual(ESTADO *e,int x);
 
 /**
 \brief Função que obtém o estado de determinada casa localizada na coordenada passada
+\return O estado da casa
 */
 
 CASA obter_estado_casa(ESTADO *e, COORDENADA c);
@@ -128,30 +141,40 @@ void set_jogada_indice(ESTADO *e,JOGADA x,int i);
 
 /**
 \brief Função que retorna uma jogada de determinada posição na lista de jogadas
+\return A jogada selecionada
 */
 
 JOGADA retorna_Jogada (ESTADO *e, int x);
 
 /**
-\brief  Coordenada auxiliar
+\brief  Obtem as jogadas de um dado jogador
+\return Coordenada da jogada de um determinado jogador
 */
 COORDENADA obter_jogada_por_j (ESTADO *e,int i,int x);
 /**
-\brief  Obtem o a ultima jogada
+\brief  Função que diz se o comando pos está ativo
+\return O último comando pos usado
 */
 int obter_comando_pos (ESTADO *e);
 /**
-\brief  Coordenada auxiliar
+\brief  Função que diz qual o valor do comando pos
+\return O valor do último comando pos usado
 */
 int obter_valor_pos (ESTADO *e);
+/**
+\brief  Função define um comando pos
+*/
 void set_comando_pos (ESTADO *e,int x);
+/**
+\brief  Função define o valor do comando pos
+*/
 void set_valor_pos (ESTADO *e,int x);
 /**
 \brief  Define o estado da casa
 */
 void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x);
 /**
-\brief  Define uma jogada da um índice
+\brief  Define uma jogada daso um índice
 */
 void set_jogada(ESTADO *e,int i,int x);
 #endif //_GUIAO5_CAMADA_DE_DADOS_H
