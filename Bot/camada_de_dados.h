@@ -60,6 +60,11 @@ typedef struct {
     int valor_pos;
 } ESTADO;
 
+/**
+\brief  função que inicializa um estado
+\return O ponteiro para o estado
+*/
+ESTADO* inicializar_estado();
 
 /**
 \brief Função que coloca todas as casas do tabuleiro como vazias exepto a casa inicial
@@ -73,6 +78,7 @@ void limpa_tabuleiro (ESTADO *e);
 
 
 void limpa_jogadas (ESTADO *e);
+
 /**
 \brief Função que retorna a ultima jogada efetuada
 \return A última coordenada jogada
@@ -131,8 +137,6 @@ void set_estado_casa_c(ESTADO *e,COORDENADA c,CASA x);
 
 
 void set_jogada_indice(ESTADO *e,JOGADA x,int i);
-
-ESTADO *inicializar_estado();
 
 
 /**

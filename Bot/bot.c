@@ -169,7 +169,7 @@ TREEMinMax create_tree (int depth, ESTADO *e, COORDENADA c){
     
     
     
-    /*
+    
     if (depth != 0){
     if (jogada_e_valida(e,c1)){
     tree.nodo1 = malloc(sizeof(TREEMinMax));
@@ -246,7 +246,8 @@ TREEMinMax create_tree (int depth, ESTADO *e, COORDENADA c){
     }else{
         tree.valor = atribui_valor(e,jog,c);
     }
-*/
+
+
 
 return tree;
 }

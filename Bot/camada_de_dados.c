@@ -1,6 +1,8 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "camada_de_dados.h"
+
 
 void limpa_tabuleiro (ESTADO *e){
 
@@ -25,6 +27,7 @@ void limpa_jogadas (ESTADO *e){
         e -> jogadas[i].jogador2.linha = -1;
     }
 }
+
 
 
 COORDENADA obter_ultima_jogada(ESTADO *e){
