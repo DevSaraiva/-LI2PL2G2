@@ -91,12 +91,11 @@ void gravar_estado (ESTADO *e, char filename[]){
 
 
 void ler_estado (ESTADO *e,char filename[]) {
-    inicializar_estado();
     FILE *save;
     char str[BUF_SIZE];
     save = fopen(filename,"r");
     if(save == NULL) {
-        printf ("Save inexistente ");
+        printf ("Save inexistente\n");
     } else {
         
         while(!feof(save)) {
