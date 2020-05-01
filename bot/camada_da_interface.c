@@ -193,6 +193,7 @@ void ler_estado (ESTADO *e,char filename[]) {
                
                 set_jogador_atual(e,2);
                 set_ultima_jogada(e,c1);
+                e->jogadas[indice].jogador1=c1;
 
             }
             // Limpa a string
