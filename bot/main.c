@@ -22,6 +22,7 @@ Aglomeração de todas as camadas
 
 
 int main (int argc, char *argv[]){
+    if(argc != 3) printf("Não foi fornecido o número correto de ficheiros");
     ESTADO *e = inicializar_estado();
     char *filename1 = argv[1];
     char *filename2 = argv[2];
