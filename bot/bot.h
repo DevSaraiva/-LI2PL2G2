@@ -30,6 +30,7 @@ LISTA jogada_possivel (ESTADO *e,COORDENADA c);
 typedef struct MinMaxTREE {
     COORDENADA coord;
     int valor;
+    ESTADO * e;
     struct MinMaxTREE  *nodo1;
     struct MinMaxTREE  *nodo2;
     struct MinMaxTREE  *nodo3;
@@ -56,25 +57,20 @@ COORDENADA joga_euclidiana (ESTADO *e);
 \brief  Função que aplica a heuristica aleatoria e joga automáticamente
 */
 COORDENADA joga_aleatorio (ESTADO *e);
+
 /**
-\brief  Função que aplica a heuristica aleatoria e joga automáticamente
+\brief  Função que aplica a heuristica do floddfill e joga automáticamente
 */
-double atribui_valor (ESTADO *e, int jog_max, COORDENADA c);
+int verifica_jogada_flood (ESTADO *e,COORDENADA c);
 /**
-\brief  Função que aplica a heuristica aleatoria e joga automáticamente
-*/
-TREEMinMax create_tree (int depth, ESTADO *e, COORDENADA c);
-/**
-\brief  Função que aplica a heuristica aleatoria e joga automáticamente
-*/
-void joga_MinMax(ESTADO *e);
-/**
-\brief  Função que verifica se c torna a jogada presa
-*/
-int verifica_jogada_flood (ESTADO *e,COORDENADA  c);
-/**
-\brief  Função que aplica a heuristica flood
+\brief COORDENADA auxiliar para a heuristica floddfill
 */
 COORDENADA joga_flood (ESTADO *e);
+
+/**
+\brief Função que joga automaticamente segundo o algoritmo min_max
+*/
+
+COORDENADA joga_MinMax(ESTADO *e);
 
 #endif //_GUIAO5_BOT_H
