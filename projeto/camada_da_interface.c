@@ -377,7 +377,7 @@ int interpretador(ESTADO *e) {
                 for(int i = 0; n < nt-i; i++)
                 apaga_ultima_jogada (e);
             }
-            COORDENADA coord = joga_euclidiana(e);
+            COORDENADA coord = joga_MinMax(e);
            
             if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
                 int j_atual = obter_jogador_atual (e);

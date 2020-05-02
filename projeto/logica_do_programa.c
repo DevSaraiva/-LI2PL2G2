@@ -79,7 +79,7 @@ void jogar (ESTADO *estado, COORDENADA c){
     COORDENADA c_ult = obter_ultima_jogada(estado);
     int j_atual = obter_jogador_atual (estado);
     
-    printf("jogar %d %d\n", c.coluna, c.linha);
+    //printf("jogar %d %d\n", c.coluna, c.linha);
    
     if (jogada_e_valida(estado,c)){
         
