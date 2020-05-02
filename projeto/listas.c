@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
 #include "listas.h"
-#include "camada_de_dados.h"
+//#include "camada_de_dados.h"
 
 
 LISTA criar_lista(){

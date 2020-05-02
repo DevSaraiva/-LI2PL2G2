@@ -14,7 +14,8 @@ Definição do estado e das funções que o manipulam
 #define _GUIAO5_CAMADA_DE_DADOS_H
 #include <string.h>
 #include <stdio.h>
-#include "listas.h"
+#include <stdlib.h>
+
 /**
 \brief Tamanho do buffer
 */
@@ -150,7 +151,7 @@ JOGADA retorna_Jogada (ESTADO *e, int x);
 \brief  Obtem as jogadas de um dado jogador
 \return Coordenada da jogada de um determinado jogador
 */
-COORDENADA obter_jogada_por_j (ESTADO *e,int i,int x);
+COORDENADA obter_jogada_por_jog (ESTADO *e,int i,int x);
 /**
 \brief  Função que diz se o comando pos está ativo
 \return O último comando pos usado
@@ -177,4 +178,10 @@ void set_estado_casa(ESTADO *e,int linha,int coluna,CASA x);
 \brief  Define uma jogada daso um índice
 */
 void set_jogada(ESTADO *e,int i,int x);
+/**
+\brief  Define uma jogada para um só jogador dando um índice
+*/
+void set_jogada_jog(ESTADO *e,int ind,int jog,COORDENADA c);
+
+
 #endif //_GUIAO5_CAMADA_DE_DADOS_H

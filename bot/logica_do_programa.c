@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include "camada_de_dados.h"
-#include <math.h>
-#include <stdlib.h>
+#include "logica_do_programa.h"
 
 int casa_valida (COORDENADA c){
     int coluna = c.coluna;
@@ -13,6 +10,7 @@ int casa_valida (COORDENADA c){
 }
 
 int jogada_presa (ESTADO *e,COORDENADA c){
+    int r = 0;
     int c_ult = c.coluna;
     int l_ult = c.linha;
     COORDENADA x1 = {c_ult+1,l_ult};
@@ -27,19 +25,23 @@ int jogada_presa (ESTADO *e,COORDENADA c){
 
     for (int i = 0; i<8; i++){
         if (casa_valida (ar[i]) && obter_estado_casa(e,ar [i]) == VAZIO)
-            return 0;
+            return r;
     }
     int j_atual = obter_jogador_atual (e);
     if ((j_atual == 1)){
-        if((c_ult == 7) && (l_ult == 7)) return 1;
-        else {e->jogador_atual=2; return 1;}
+        if((c_ult == 7) && (l_ult == 7)) r = 1;
+        else {
+            set_jogador_atual (e,2);
+            r = 1;
+        }
     }
-    
-    if (j_atual == 2){
-        if ((c_ult == 0) && (l_ult == 0)) return 1;
-        else {e->jogador_atual = 1; return 1;}
+    else {
+        if ((c_ult == 0) && (l_ult == 0)) r = 1;
+        else {
+            set_jogador_atual(e,1);
+            r = 1;}
     }
-
+    return r;
 }
 
 
@@ -74,43 +76,37 @@ int jogada_e_valida (ESTADO *estado,COORDENADA c){
 
 
 void jogar (ESTADO *estado, COORDENADA c){
-    int c_ult = obter_ultima_jogada(estado).coluna;
-    int l_ult = obter_ultima_jogada(estado).linha;
-    int c_coluna = c.coluna;
-    int c_linha = c.linha;
+    COORDENADA c_ult = obter_ultima_jogada(estado);
     int j_atual = obter_jogador_atual (estado);
+    
     printf("jogar %d %d\n", c.coluna, c.linha);
    
     if (jogada_e_valida(estado,c)){
-        // Atualiza o tabuleiro
         
-        estado -> tab [c.linha] [c.coluna] = BRANCA;
-        estado -> tab [l_ult] [c_ult] = PRETA;
-    
+        // Atualiza o tabuleiro
+        set_estado_casa_c(estado,c,BRANCA);
+        set_estado_casa_c(estado,c_ult,PRETA);
         
         // Muda de jogador e guarda a jogadas
-        
-        if ((j_atual == 1) && ((c_coluna != 0) || (c_linha |= 0))){
-            estado -> jogador_atual = 2;
-            COORDENADA j = {c.coluna, c.linha};
-            estado -> jogadas[estado->num_jogadas].jogador1 = j;
+        if ((j_atual == 1) && ((c.coluna != 0) || (c.linha != 0))){
+            set_jogador_atual(estado,2);
+            int n_js = obter_numero_de_jogadas(estado);
+            set_jogada_jog(estado,n_js,1,c);
         }
-        if ((j_atual == 2) && ((c_coluna != 7) || (c_linha != 7))) {
-            estado -> jogador_atual = 1;
-            //COORDENADA j1 = {c_ult, l_ult};
-            COORDENADA j2 = {c.coluna, c.linha};
-            //JOGADA j= {j1,j2};
-            estado -> jogadas [estado->num_jogadas].jogador2 = j2;
+        if ((j_atual == 2) && ((c.coluna != 7) || (c.linha != 7))) {
+            set_jogador_atual(estado,1);
+            int n_joga = obter_numero_de_jogadas(estado);
+            set_jogada_jog(estado,n_joga,2,c);
         }
 
         // Atualiza a última jogada
-        estado -> ultima_jogada.coluna = c.coluna;
-        estado -> ultima_jogada.linha = c.linha;
-
+        set_ultima_jogada (estado,c);
+        
         // Aumenta número de jogadas
-    
-        if (j_atual == 2) 
-        estado -> num_jogadas++;
+        if (j_atual == 2){
+        int n_js = obter_numero_de_jogadas(estado); 
+        set_numero_de_jogadas (estado,n_js +1);
+        }
     }    
     else printf("Jogada inválida\n");
     

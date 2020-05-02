@@ -9,7 +9,9 @@ Definição das funções relacionadas com interface
 
 #ifndef _GUIAO5_CAMADA_DA_INTERFACE_H
 #define _GUIAO5_CAMADA_DA_INTERFACE_H
-
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "camada_de_dados.h"
 #include "logica_do_programa.h"
 #include "listas.h"

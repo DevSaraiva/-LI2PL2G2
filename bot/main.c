@@ -11,7 +11,7 @@ Aglomeração de todas as camadas
 #include "camada_da_interface.h"
 #include "logica_do_programa.h"
 #include "listas.h"
-
+#include "bot.h"
 
 
 
@@ -21,20 +21,17 @@ Aglomeração de todas as camadas
 */
 
 
-int main(int argc, char *argv[]){
+int main (int argc, char *argv[]){
     ESTADO *e = inicializar_estado();
     char *filename1 = argv[1];
     char *filename2 = argv[2];
     mostrar_tabuleiro(e);
     ler_estado(e,filename1);
-    COORDENADA coord = joga_euclidiana(e);
+    COORDENADA coord = joga_aleatorio(e);
     if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
                 int j_atual = obter_jogador_atual (e);
-                printf("O vencedor é o PL%d\n",j_atual);
-                e -> num_jogadas = 32;}
+                printf("O vencedor é PL%d\n",j_atual);
+                }
     gravar_estado (e,filename2);
-
-
-
     return 0;
 }

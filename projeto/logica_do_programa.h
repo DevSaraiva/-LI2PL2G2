@@ -10,7 +10,8 @@ Definição das funções da componente lógica do jogo
 #define _GUIAO5_LOGICA_DO_PROGRAMA_H
 #include "camada_de_dados.h"
 #include "listas.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 
 
 

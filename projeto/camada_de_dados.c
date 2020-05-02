@@ -1,6 +1,3 @@
-
-#include <stdio.h>
-#include <stdlib.h>
 #include "camada_de_dados.h"
 
 
@@ -88,7 +85,7 @@ JOGADA retorna_Jogada (ESTADO *e, int x){
 
 }
 
-COORDENADA obter_jogada_por_j (ESTADO *e,int i,int x){
+COORDENADA obter_jogada_por_jog (ESTADO *e,int i,int x){
     if (x == 1){
         int ncoluna1 = e->jogadas[i].jogador1.coluna;
         int nlinha1 = e->jogadas[i].jogador1.linha;
@@ -128,6 +125,10 @@ void set_jogada(ESTADO *e,int i,int x){
     e->jogadas[i].jogador2.linha = x;
 }
 
+void set_jogada_jog(ESTADO *e,int ind,int jog,COORDENADA c){
+    if (jog == 1) e->jogadas[ind].jogador1 = c;
+    else e->jogadas[ind].jogador2 = c;
+}
 
 ESTADO *inicializar_estado() {
     ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));

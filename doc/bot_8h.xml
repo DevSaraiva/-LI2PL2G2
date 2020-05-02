@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="bot_8h" kind="file" language="C++">
     <compoundname>bot.h</compoundname>
+    <includes local="no">time.h</includes>
     <includes local="no">math.h</includes>
     <includes local="no">stdio.h</includes>
     <includes local="no">stdlib.h</includes>
@@ -12,120 +13,114 @@
     <includedby refid="bot_8c" local="yes">bot.c</includedby>
     <includedby refid="camada__da__interface_8h" local="yes">camada_da_interface.h</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>stdlib.h</label>
-      </node>
-      <node id="1">
+      <node id="12">
         <label>bot.h</label>
         <link refid="bot_8h"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
-      </node>
-      <node id="8">
-        <label>logica_do_programa.h</label>
-        <link refid="logica__do__programa_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>string.h</label>
+      <node id="16">
+        <label>stdlib.h</label>
       </node>
-      <node id="7">
-        <label>listas.h</label>
-        <link refid="listas_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>math.h</label>
-      </node>
-      <node id="6">
+      <node id="18">
         <label>camada_de_dados.h</label>
         <link refid="camada__de__dados_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="17">
+        <label>string.h</label>
+      </node>
+      <node id="21">
         <label>camada_da_interface.h</label>
         <link refid="camada__da__interface_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="1" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="19">
+        <label>logica_do_programa.h</label>
+        <link refid="logica__do__programa_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>time.h</label>
+      </node>
+      <node id="14">
+        <label>math.h</label>
+      </node>
+      <node id="20">
+        <label>listas.h</label>
+        <link refid="listas_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1">
+      <node id="22">
         <label>bot.h</label>
         <link refid="bot_8h"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="24">
         <label>main.c</label>
         <link refid="main_8c"/>
       </node>
-      <node id="2">
+      <node id="23">
         <label>camada_da_interface.h</label>
         <link refid="camada__da__interface_8h"/>
-        <childnode refid="1" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="structMinMaxTREE" prot="public">MinMaxTREE</innerclass>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="bot_8h_1a3d6bd3cc23521d2e51b87070b5358717" prot="public" static="no">
-        <type>struct <ref refid="structMinMaxTREE" kindref="compound">MinMaxTREE</ref></type>
-        <definition>typedef struct MinMaxTREE TREEMinMax</definition>
-        <argsstring></argsstring>
-        <name>TREEMinMax</name>
-        <briefdescription>
-<para>Estrutura que possiblita a implementação do MinMax. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="bot.h" line="41" column="12"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="bot_8h_1a67d2ac5fe27554a704b4faa0e630f17d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="bot_8h_1a14a674bfe06b5fd86be79e8aac0b82da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="listas_8h_1aed36772fcdfbb27cdedbbd652b9de4d0" kindref="member">LISTA</ref></type>
-        <definition>LISTA jogada_possivel</definition>
+        <definition>LISTA jogadas_possivel</definition>
         <argsstring>(ESTADO *e, COORDENADA c)</argsstring>
-        <name>jogada_possivel</name>
+        <name>jogadas_possivel</name>
         <param>
           <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
           <declname>e</declname>
@@ -135,13 +130,12 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para>Função que cria uma lista com todas as jogadas possiveis. </para>
-        </briefdescription>
+<para>Função que cria uma lista com todas as jogadas possiveis. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="bot.h" line="23" column="7" bodyfile="bot.c" bodystart="14" bodyend="39" declfile="bot.h" declline="23" declcolumn="7"/>
+        <location file="bot.h" line="23" column="1" bodyfile="bot.c" bodystart="6" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="bot_8h_1a245e961862375b7367604c36a5400301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -157,13 +151,12 @@
           <declname>jog</declname>
         </param>
         <briefdescription>
-<para>Função que dadas 1 coordenada calcula a distância euclidiana entre essa e posição onde termina o jogo considerando o jogador atuak. </para>
-        </briefdescription>
+<para>Função que dadas 1 coordenada calcula a distância euclidiana entre essa e posição onde termina o jogo considerando o jogador atuak. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="bot.h" line="47" column="8" bodyfile="bot.c" bodystart="43" bodyend="63" declfile="bot.h" declline="47" declcolumn="8"/>
+        <location file="bot.h" line="30" column="1" bodyfile="bot.c" bodystart="35" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="bot_8h_1ae778a7a9723a20ac11042ba78c54e849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -175,13 +168,12 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que aplica a heuristica do vizinho mais proximo e joga automáticamente. </para>
-        </briefdescription>
+<para>Função que aplica a heuristica do vizinho mais proximo e joga automáticamente. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="bot.h" line="53" column="12" bodyfile="bot.c" bodystart="268" bodyend="300" declfile="bot.h" declline="53" declcolumn="12"/>
+        <location file="bot.h" line="36" column="1" bodyfile="bot.c" bodystart="58" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="bot_8h_1a8462cdb7d30b34c6cf61ab7176dd37e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -193,66 +185,24 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que aplica a heuristica aleatoria e joga automáticamente. </para>
-        </briefdescription>
+<para>Função que aplica a heuristica aleatoria e joga automáticamente. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="bot.h" line="58" column="12" bodyfile="bot.c" bodystart="302" bodyend="329" declfile="bot.h" declline="58" declcolumn="12"/>
-      </memberdef>
-      <memberdef kind="function" id="bot_8h_1a0646f7852572dfa31926f7bcb81c292b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int verifica_jogada_flood</definition>
-        <argsstring>(ESTADO *e, COORDENADA c)</argsstring>
-        <name>verifica_jogada_flood</name>
-        <param>
-          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
-          <declname>e</declname>
-        </param>
-        <param>
-          <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
-          <declname>c</declname>
-        </param>
-        <briefdescription>
-<para>Função que aplica a heuristica do floddfill e joga automáticamente. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="bot.h" line="63" column="5" bodyfile="bot.c" bodystart="332" bodyend="351" declfile="bot.h" declline="63" declcolumn="5"/>
-      </memberdef>
-      <memberdef kind="function" id="bot_8h_1a8f357cfd8c41b7f5842e23c4cea1f36f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
-        <definition>COORDENADA joga_flood</definition>
-        <argsstring>(ESTADO *e)</argsstring>
-        <name>joga_flood</name>
-        <param>
-          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
-          <declname>e</declname>
-        </param>
-        <briefdescription>
-<para><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref> auxiliar para a heuristica floddfill. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="bot.h" line="67" column="12" bodyfile="bot.c" bodystart="355" bodyend="381" declfile="bot.h" declline="67" declcolumn="12"/>
+        <location file="bot.h" line="41" column="1" bodyfile="bot.c" bodystart="92" bodyend="119"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Definição das funções relacionadas com listas ligadas </para>
-    </detaileddescription>
+<para>Definição das funções relacionadas com listas ligadas </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>_BOT_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_BOT_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -260,32 +210,17 @@
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logica__do__programa_8h" kindref="compound">logica_do_programa.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="camada__da__interface_8h" kindref="compound">camada_da_interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><ref refid="structslist" kindref="compound">LISTA</ref><sp/><ref refid="bot_8h_1a67d2ac5fe27554a704b4faa0e630f17d" kindref="member">jogada_possivel</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="structslist" kindref="compound">LISTA</ref><sp/><ref refid="bot_8h_1a14a674bfe06b5fd86be79e8aac0b82da" kindref="member">jogadas_possivel</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="structMinMaxTREE" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMinMaxTREE" kindref="compound">MinMaxTREE</ref><sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>valor;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMinMaxTREE" kindref="compound">MinMaxTREE</ref><sp/><sp/>*nodo1;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMinMaxTREE" kindref="compound">MinMaxTREE</ref><sp/><sp/>*nodo2;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMinMaxTREE" kindref="compound">MinMaxTREE</ref><sp/><sp/>*nodo3;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMinMaxTREE" kindref="compound">MinMaxTREE</ref><sp/><sp/>*nodo4;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMinMaxTREE" kindref="compound">MinMaxTREE</ref><sp/><sp/>*nodo5;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMinMaxTREE" kindref="compound">MinMaxTREE</ref><sp/><sp/>*nodo6;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMinMaxTREE" kindref="compound">MinMaxTREE</ref><sp/><sp/>*nodo7;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMinMaxTREE" kindref="compound">MinMaxTREE</ref><sp/><sp/>*nodo8;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">}<sp/><ref refid="bot_8h_1a3d6bd3cc23521d2e51b87070b5358717" kindref="member">TREEMinMax</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1a245e961862375b7367604c36a5400301" kindref="member">calcula_dist</ref>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*<sp/>C,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jog);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="bot_8h_1ae778a7a9723a20ac11042ba78c54e849" kindref="member">joga_euclidiana</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="bot_8h_1a8462cdb7d30b34c6cf61ab7176dd37e8" kindref="member">joga_aleatorio</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1a245e961862375b7367604c36a5400301" kindref="member">calcula_dist</ref>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*<sp/>C,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jog);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="bot_8h_1ae778a7a9723a20ac11042ba78c54e849" kindref="member">joga_euclidiana</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="bot_8h_1a8462cdb7d30b34c6cf61ab7176dd37e8" kindref="member">joga_aleatorio</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1a0646f7852572dfa31926f7bcb81c292b" kindref="member">verifica_jogada_flood</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="bot_8h_1a8f357cfd8c41b7f5842e23c4cea1f36f" kindref="member">joga_flood</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//_GUIAO5_BOT_H</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//_GUIAO5_BOT_H</highlight></codeline>
     </programlisting>
     <location file="bot.h"/>
   </compounddef>

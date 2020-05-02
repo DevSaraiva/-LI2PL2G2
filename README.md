@@ -1,5 +1,5 @@
 # Jogo-Rastros
-
+Curso: MIEI
 Laboratórios de Informática II
 PL2
 

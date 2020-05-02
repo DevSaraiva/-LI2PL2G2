@@ -79,7 +79,7 @@ double atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
     int jog_atual = obter_jogador_atual(e);
 
     if(jogada_presa(e,c)){
-        if(jog_atual = jog_max) valor = -1000;
+        if(jog_atual == jog_max) valor = -1000;
         else valor = 1000; 
     
     }else{
@@ -252,13 +252,11 @@ TREEMinMax create_tree (int depth, ESTADO *e, COORDENADA c){
 return tree;
 }
 
-COORDENADA joga_MinMax(ESTADO *e){
+void joga_MinMax(ESTADO *e){
     
     COORDENADA ultima_jog = obter_ultima_jogada(e);
     int depth = 7;
     create_tree (depth, e, ultima_jog);
-    
-
 }
 
 
@@ -360,6 +358,7 @@ COORDENADA joga_flood (ESTADO *e){
     COORDENADA *prox_jogada;
     COORDENADA p;
     int r = 0;
+    int j_atual = obter_jogador_atual(e);
 
     while (l ->prox != NULL){
         possivel_jogada = l -> valor;
@@ -370,7 +369,7 @@ COORDENADA joga_flood (ESTADO *e){
         }   
         l = l -> prox;
     }
-    if (r == 0) {
+    if (r == 0 || (j_atual == 1 && prox_jogada->coluna == 7 && prox_jogada->linha==7) || (j_atual == 2 && prox_jogada->coluna == 0 && prox_jogada->linha==0)) {
         p = joga_euclidiana(e);
         return p;
     }

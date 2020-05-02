@@ -56,13 +56,25 @@ COORDENADA joga_euclidiana (ESTADO *e);
 \brief  Função que aplica a heuristica aleatoria e joga automáticamente
 */
 COORDENADA joga_aleatorio (ESTADO *e);
-
 /**
-\brief  Função que aplica a heuristica do floddfill e joga automáticamente
+\brief  Função que aplica a heuristica aleatoria e joga automáticamente
 */
-int verifica_jogada_flood (ESTADO *e,COORDENADA c);
+double atribui_valor (ESTADO *e, int jog_max, COORDENADA c);
 /**
-\brief COORDENADA auxiliar para a heuristica floddfill
+\brief  Função que aplica a heuristica aleatoria e joga automáticamente
+*/
+TREEMinMax create_tree (int depth, ESTADO *e, COORDENADA c);
+/**
+\brief  Função que aplica a heuristica aleatoria e joga automáticamente
+*/
+void joga_MinMax(ESTADO *e);
+/**
+\brief  Função que verifica se c torna a jogada presa
+*/
+int verifica_jogada_flood (ESTADO *e,COORDENADA  c);
+/**
+\brief  Função que aplica a heuristica flood
 */
 COORDENADA joga_flood (ESTADO *e);
+
 #endif //_GUIAO5_BOT_H

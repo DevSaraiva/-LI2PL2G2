@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
   <compound refid="structCOORDENADA" kind="struct"><name>COORDENADA</name>
     <member refid="structCOORDENADA_1adfbc8d4856ce807139fdf62e00aed29a" kind="variable"><name>coluna</name></member>
     <member refid="structCOORDENADA_1aefe14bcc5a066ac3b21500cc3d28c06f" kind="variable"><name>linha</name></member>
@@ -17,41 +17,21 @@
     <member refid="structJOGADA_1a93d9306cb0c49b66b7d9a615bffe0149" kind="variable"><name>jogador1</name></member>
     <member refid="structJOGADA_1ab46b16dfbdc7f2af9430c8dcdac0914b" kind="variable"><name>jogador2</name></member>
   </compound>
-  <compound refid="structMinMaxTREE" kind="struct"><name>MinMaxTREE</name>
-    <member refid="structMinMaxTREE_1a912a7b3035bc43b726755d7c8b271cd9" kind="variable"><name>coord</name></member>
-    <member refid="structMinMaxTREE_1ac9cdfca2e47e7608afaa4eb46c059aaa" kind="variable"><name>valor</name></member>
-    <member refid="structMinMaxTREE_1a085ca43357ab6387f558481fe3db460e" kind="variable"><name>nodo1</name></member>
-    <member refid="structMinMaxTREE_1a2ec59b40a3f550566e56b4c41498e40f" kind="variable"><name>nodo2</name></member>
-    <member refid="structMinMaxTREE_1a41bbb0df1d553d7e795006a4195ed198" kind="variable"><name>nodo3</name></member>
-    <member refid="structMinMaxTREE_1a83762795b46e8c773aa4165466f8ad74" kind="variable"><name>nodo4</name></member>
-    <member refid="structMinMaxTREE_1a1a49e80f65f3984210051e5dfcf5bb3c" kind="variable"><name>nodo5</name></member>
-    <member refid="structMinMaxTREE_1a2aad473d2b9556e48d054ec77a156404" kind="variable"><name>nodo6</name></member>
-    <member refid="structMinMaxTREE_1a584739983efc4d69b7bcf9fde369b285" kind="variable"><name>nodo7</name></member>
-    <member refid="structMinMaxTREE_1af33d9bb166d56df23eef7e846c0ec377" kind="variable"><name>nodo8</name></member>
-  </compound>
   <compound refid="structslist" kind="struct"><name>slist</name>
     <member refid="structslist_1ab63ad42983b98688633e869e9a155c7c" kind="variable"><name>valor</name></member>
     <member refid="structslist_1a2a3c25b5642546ea739b43061e3eb1f0" kind="variable"><name>prox</name></member>
   </compound>
   <compound refid="bot_8c" kind="file"><name>bot.c</name>
-    <member refid="bot_8c_1a67d2ac5fe27554a704b4faa0e630f17d" kind="function"><name>jogada_possivel</name></member>
+    <member refid="bot_8c_1a14a674bfe06b5fd86be79e8aac0b82da" kind="function"><name>jogadas_possivel</name></member>
     <member refid="bot_8c_1a5b38fb765099c259fe4b6829cc10afc3" kind="function"><name>calcula_dist</name></member>
-    <member refid="bot_8c_1a64898a674620e1e7c01657413b50e3c8" kind="function"><name>atribui_valor</name></member>
-    <member refid="bot_8c_1afc29c36a96c24bfaba1b0a6a45c47df9" kind="function"><name>create_tree</name></member>
-    <member refid="bot_8c_1ac73c0279607c36fd19b4eadb84bb24ef" kind="function"><name>joga_MinMax</name></member>
     <member refid="bot_8c_1ae778a7a9723a20ac11042ba78c54e849" kind="function"><name>joga_euclidiana</name></member>
     <member refid="bot_8c_1a8462cdb7d30b34c6cf61ab7176dd37e8" kind="function"><name>joga_aleatorio</name></member>
-    <member refid="bot_8c_1a0646f7852572dfa31926f7bcb81c292b" kind="function"><name>verifica_jogada_flood</name></member>
-    <member refid="bot_8c_1a8f357cfd8c41b7f5842e23c4cea1f36f" kind="function"><name>joga_flood</name></member>
   </compound>
   <compound refid="bot_8h" kind="file"><name>bot.h</name>
-    <member refid="bot_8h_1a3d6bd3cc23521d2e51b87070b5358717" kind="typedef"><name>TREEMinMax</name></member>
-    <member refid="bot_8h_1a67d2ac5fe27554a704b4faa0e630f17d" kind="function"><name>jogada_possivel</name></member>
+    <member refid="bot_8h_1a14a674bfe06b5fd86be79e8aac0b82da" kind="function"><name>jogadas_possivel</name></member>
     <member refid="bot_8h_1a245e961862375b7367604c36a5400301" kind="function"><name>calcula_dist</name></member>
     <member refid="bot_8h_1ae778a7a9723a20ac11042ba78c54e849" kind="function"><name>joga_euclidiana</name></member>
     <member refid="bot_8h_1a8462cdb7d30b34c6cf61ab7176dd37e8" kind="function"><name>joga_aleatorio</name></member>
-    <member refid="bot_8h_1a0646f7852572dfa31926f7bcb81c292b" kind="function"><name>verifica_jogada_flood</name></member>
-    <member refid="bot_8h_1a8f357cfd8c41b7f5842e23c4cea1f36f" kind="function"><name>joga_flood</name></member>
   </compound>
   <compound refid="camada__da__interface_8c" kind="file"><name>camada_da_interface.c</name>
     <member refid="camada__da__interface_8c_1a6821bafc3c88dfb2e433a095df9940c6" kind="define"><name>BUF_SIZE</name></member>
@@ -96,12 +76,13 @@
     <member refid="camada__de__dados_8c_1a6488675aa725aba9817ddf7e4400f1ff" kind="function"><name>set_numero_de_jogadas</name></member>
     <member refid="camada__de__dados_8c_1a8ea2483c691783d59f493c9a779abdd5" kind="function"><name>set_jogada_indice</name></member>
     <member refid="camada__de__dados_8c_1a788fcf76b3701f0fdcf5db312132a9c1" kind="function"><name>retorna_Jogada</name></member>
-    <member refid="camada__de__dados_8c_1abe4739995db5750e092e5d2cb13fef9f" kind="function"><name>obter_jogada_por_j</name></member>
+    <member refid="camada__de__dados_8c_1a648af8c5557bb6c70d0526b630ccb6d1" kind="function"><name>obter_jogada_por_jog</name></member>
     <member refid="camada__de__dados_8c_1a229893df34b1c4d70de18501c365ff13" kind="function"><name>obter_comando_pos</name></member>
     <member refid="camada__de__dados_8c_1afd3a085c8db7800a35884a89b842893d" kind="function"><name>set_comando_pos</name></member>
     <member refid="camada__de__dados_8c_1a91f83ff370b2ee904584ac7b2a83e573" kind="function"><name>obter_valor_pos</name></member>
     <member refid="camada__de__dados_8c_1a48e0ec2d6ce99bf5078a2b7e37b80a71" kind="function"><name>set_valor_pos</name></member>
     <member refid="camada__de__dados_8c_1ad109f3e32f207e33bb2f4d43949e54a5" kind="function"><name>set_jogada</name></member>
+    <member refid="camada__de__dados_8c_1a553aea90c78e14dca02698fd3e9ad52e" kind="function"><name>set_jogada_jog</name></member>
     <member refid="camada__de__dados_8c_1a7e0c7e26fb685d9ab501e19b05e6954f" kind="function"><name>inicializar_estado</name></member>
   </compound>
   <compound refid="camada__de__dados_8h" kind="file"><name>camada_de_dados.h</name>
@@ -124,13 +105,14 @@
     <member refid="camada__de__dados_8h_1a60a461e722e8beb32647bed475481e25" kind="function"><name>set_estado_casa_c</name></member>
     <member refid="camada__de__dados_8h_1a8ea2483c691783d59f493c9a779abdd5" kind="function"><name>set_jogada_indice</name></member>
     <member refid="camada__de__dados_8h_1a788fcf76b3701f0fdcf5db312132a9c1" kind="function"><name>retorna_Jogada</name></member>
-    <member refid="camada__de__dados_8h_1abe4739995db5750e092e5d2cb13fef9f" kind="function"><name>obter_jogada_por_j</name></member>
+    <member refid="camada__de__dados_8h_1a648af8c5557bb6c70d0526b630ccb6d1" kind="function"><name>obter_jogada_por_jog</name></member>
     <member refid="camada__de__dados_8h_1a229893df34b1c4d70de18501c365ff13" kind="function"><name>obter_comando_pos</name></member>
     <member refid="camada__de__dados_8h_1a91f83ff370b2ee904584ac7b2a83e573" kind="function"><name>obter_valor_pos</name></member>
     <member refid="camada__de__dados_8h_1afd3a085c8db7800a35884a89b842893d" kind="function"><name>set_comando_pos</name></member>
     <member refid="camada__de__dados_8h_1a48e0ec2d6ce99bf5078a2b7e37b80a71" kind="function"><name>set_valor_pos</name></member>
     <member refid="camada__de__dados_8h_1afe76af8f3d8d748148e9aebd7f68349e" kind="function"><name>set_estado_casa</name></member>
     <member refid="camada__de__dados_8h_1ad109f3e32f207e33bb2f4d43949e54a5" kind="function"><name>set_jogada</name></member>
+    <member refid="camada__de__dados_8h_1a553aea90c78e14dca02698fd3e9ad52e" kind="function"><name>set_jogada_jog</name></member>
   </compound>
   <compound refid="listas_8c" kind="file"><name>listas.c</name>
     <member refid="listas_8c_1ae3b99323b6f8f35d80bb69ff1a27985e" kind="function"><name>criar_lista</name></member>
@@ -166,13 +148,5 @@
   </compound>
   <compound refid="main_8c" kind="file"><name>main.c</name>
     <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
-  </compound>
-  <compound refid="tab1_8txt" kind="file"><name>tab1.txt</name>
-  </compound>
-  <compound refid="tab2_8txt" kind="file"><name>tab2.txt</name>
-  </compound>
-  <compound refid="tab3_8txt" kind="file"><name>tab3.txt</name>
-  </compound>
-  <compound refid="tab4_8txt" kind="file"><name>tab4.txt</name>
   </compound>
 </doxygenindex>
