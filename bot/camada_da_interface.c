@@ -94,12 +94,9 @@ void escreve_movimentos(ESTADO *e, FILE *save){
         int nlinha1 = e->jogadas[i].jogador1.linha + 1;
         int ncoluna2 = e->jogadas[i].jogador2.coluna;
         int nlinha2 = e->jogadas[i].jogador2.linha + 1;
-        
-        if (e->jogadas[i].jogador1.coluna != -1 && e->jogadas[i].jogador1.linha != -1){
-            fprintf(save, "%02d: %c%d",i + 1,letra(ncoluna1),nlinha1);
-        }
-
+       
         if (e->jogadas[i].jogador2.coluna !=-1 && e->jogadas[i].jogador2.linha != -1){
+            fprintf(save, "%02d: %c%d",i + 1,letra(ncoluna1),nlinha1);
             fprintf(save, " %c%d\n",letra(ncoluna2),nlinha2);
             temp++;
         }
@@ -108,7 +105,7 @@ void escreve_movimentos(ESTADO *e, FILE *save){
 
     // Imprime a ultima jogada caso o jogador 1 tenha jodago e o jogador 2 não
     
-    if (obter_jogador_atual(e) == 2)  fprintf(save, "%02d: %c%d", num_jogadas + 1, letra(e->ultima_jogada.coluna),e->ultima_jogada.linha + 1);
+    if (obter_jogador_atual(e) == 2)  fprintf(save, "%02d: %c%d ", num_jogadas + 1, letra(e->ultima_jogada.coluna),e->ultima_jogada.linha + 1);
 }
 
 

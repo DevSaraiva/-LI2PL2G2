@@ -27,14 +27,11 @@ int main(int argc, char *argv[]){
     char *filename2 = argv[2];
     mostrar_tabuleiro(e);
     ler_estado(e,filename1);
-    COORDENADA coord = joga_euclidiana(e);
+    COORDENADA coord = joga_aleatorio(e);
     if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
                 int j_atual = obter_jogador_atual (e);
-                printf("O vencedor é o PL%d\n",j_atual);
-                e -> num_jogadas = 32;}
+                printf("O vencedor é PL%d\n",j_atual);
+                }
     gravar_estado (e,filename2);
-
-
-
     return 0;
 }
