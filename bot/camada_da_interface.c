@@ -52,8 +52,8 @@ void escreve_tabuleuiro(ESTADO *e,FILE *save){
    
         for(j = 0; j < 8; j++){
             
-            if (i == 7 && j == 7) fprintf(save,"2");
-            else if(i == 0 && j == 0) fprintf(save,"1");
+            if (i == 7 && j == 7 && e -> tab[7][7] == VAZIO) fprintf(save,"2");
+            else if(i == 0 && j == 0 && e -> tab[0][0] == VAZIO) fprintf(save,"1");
             else {    
                     switch (e -> tab [i][j])
                     {

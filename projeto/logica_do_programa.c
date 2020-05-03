@@ -88,12 +88,12 @@ void jogar (ESTADO *estado, COORDENADA c){
         set_estado_casa_c(estado,c_ult,PRETA);
         
         // Muda de jogador e guarda a jogadas
-        if ((j_atual == 1) && ((c.coluna != 0) || (c.linha != 0))){
+        if ((j_atual == 1)){
             set_jogador_atual(estado,2);
             int n_js = obter_numero_de_jogadas(estado);
             set_jogada_jog(estado,n_js,1,c);
         }
-        if ((j_atual == 2) && ((c.coluna != 7) || (c.linha != 7))) {
+        if ((j_atual == 2)) {
             set_jogador_atual(estado,1);
             int n_joga = obter_numero_de_jogadas(estado);
             set_jogada_jog(estado,n_joga,2,c);
