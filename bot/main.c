@@ -32,7 +32,8 @@ int main (int argc, char *argv[]){
     if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
                 int j_atual = obter_jogador_atual (e);
                 printf("O vencedor é PL%d\n",j_atual);
-                }
-    gravar_estado (e,filename2);
+    }
+        gravar_estado (e,filename2);
+ 
     return 0;
 }

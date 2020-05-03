@@ -90,13 +90,9 @@ void escreve_movimentos(ESTADO *e, FILE *save){
         int ncoluna2 = obter_jogada_por_jog(e,i,2).coluna;
         int nlinha2 = obter_jogada_por_jog(e,i,2).linha + 1;
             
-        
-        if (ncoluna1 != -1 && nlinha1 != -1){
-            fprintf(save, "%02d: %c%d",i + 1,letra(ncoluna1),nlinha1);
-        }
-
         if (ncoluna2 !=-1 && nlinha2 != -1){
-            fprintf(save, " %c%d\n",letra(ncoluna2),nlinha2);
+            fprintf(save, "%02d: %c%d ",i + 1,letra(ncoluna1),nlinha1);
+            fprintf(save, "%c%d\n",letra(ncoluna2),nlinha2);
         }
     }
 
@@ -106,7 +102,7 @@ void escreve_movimentos(ESTADO *e, FILE *save){
     if (obter_jogador_atual(e) == 2){
         int c_ult = obter_ultima_jogada(e).coluna;
         int l_ult = obter_ultima_jogada(e).linha;
-        fprintf(save, "%02d: %c%d", num_jogadas + 1, letra(c_ult),l_ult + 1);
+        fprintf(save, "%02d: %c%d ", num_jogadas + 1, letra(c_ult),l_ult + 1);
     }
 }
 
