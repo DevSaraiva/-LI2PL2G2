@@ -12,7 +12,7 @@ Definição das funções relacionadas com listas ligadas
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "camada_de_dados.h"
 
 /**
 \brief  Lista ligada genérica

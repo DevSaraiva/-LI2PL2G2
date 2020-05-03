@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="listas_8c" kind="file" language="C++">
     <compoundname>listas.c</compoundname>
     <includes refid="listas_8h" local="yes">listas.h</includes>
     <incdepgraph>
+<<<<<<< HEAD
       <node id="66">
         <label>stdlib.h</label>
       </node>
@@ -39,6 +40,43 @@
         </childnode>
       </node>
       <node id="65">
+=======
+      <node id="6">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>listas.c</label>
+        <link refid="listas_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>listas.h</label>
+        <link refid="listas_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -49,13 +87,16 @@
         <argsstring>()</argsstring>
         <name>criar_lista</name>
         <briefdescription>
-<para>Função que cria uma lista vazia. </para>        </briefdescription>
+<para>Função que cria uma lista vazia. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O ponteiro para a lista </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>O ponteiro para a lista </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.c" line="8" column="1" bodyfile="listas.c" bodystart="8" bodyend="15"/>
+        <location file="listas.c" line="8" column="7" bodyfile="listas.c" bodystart="8" bodyend="15"/>
       </memberdef>
       <memberdef kind="function" id="listas_8c_1a5f74e07389068229446ef997f20679e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="listas_8h_1aed36772fcdfbb27cdedbbd652b9de4d0" kindref="member">LISTA</ref></type>
@@ -72,13 +113,16 @@
           <defname>v</defname>
         </param>
         <briefdescription>
-<para>Função que insere um valor na cabeça da lista. </para>        </briefdescription>
+<para>Função que insere um valor na cabeça da lista. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O ponteiro para a o primeiro elemento da lista </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>O ponteiro para a o primeiro elemento da lista </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.c" line="17" column="1" bodyfile="listas.c" bodystart="17" bodyend="25"/>
+        <location file="listas.c" line="17" column="7" bodyfile="listas.c" bodystart="17" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="listas_8c_1abfcb205f3eb670157be0d1221021714b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -90,12 +134,13 @@
           <declname>L</declname>
         </param>
         <briefdescription>
-<para>Função que devolve a cabeça da lista. </para>        </briefdescription>
+<para>Função que devolve a cabeça da lista. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.c" line="27" column="1" bodyfile="listas.c" bodystart="27" bodyend="32"/>
+        <location file="listas.c" line="27" column="6" bodyfile="listas.c" bodystart="27" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="listas_8c_1ad9380152361127432c55c1c6067e05ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="listas_8h_1aed36772fcdfbb27cdedbbd652b9de4d0" kindref="member">LISTA</ref></type>
@@ -107,13 +152,16 @@
           <declname>L</declname>
         </param>
         <briefdescription>
-<para>Função que devolve a cauda da lista. </para>        </briefdescription>
+<para>Função que devolve a cauda da lista. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O ponteiro para o primeiro elemento da cauda da lista </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>O ponteiro para o primeiro elemento da cauda da lista </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.c" line="35" column="1" bodyfile="listas.c" bodystart="35" bodyend="41"/>
+        <location file="listas.c" line="35" column="7" bodyfile="listas.c" bodystart="35" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="listas_8c_1a9026a681a68322b5ec7f07137b864cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="listas_8h_1aed36772fcdfbb27cdedbbd652b9de4d0" kindref="member">LISTA</ref></type>
@@ -125,13 +173,16 @@
           <declname>L</declname>
         </param>
         <briefdescription>
-<para>Função que remove a cabeça da lista (libertando o espaço ocupado) e devolve a cauda. </para>        </briefdescription>
+<para>Função que remove a cabeça da lista (libertando o espaço ocupado) e devolve a cauda. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O ponteiro para o primeiro elemento da cauda da lista </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>O ponteiro para o primeiro elemento da cauda da lista </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.c" line="43" column="1" bodyfile="listas.c" bodystart="43" bodyend="50"/>
+        <location file="listas.c" line="43" column="7" bodyfile="listas.c" bodystart="43" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="listas_8c_1a4c10928f7acaa4e3de3760cea0dfd9c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -143,13 +194,17 @@
           <declname>L</declname>
         </param>
         <briefdescription>
-<para>Função que devolve verdareiro se a lista é vazia. </para>        </briefdescription>
+<para>Função que devolve verdareiro se a lista é vazia. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>1 se estiver vazia ou 0 caso contrário </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>1 se estiver vazia ou 0 caso contrário <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.c" line="54" column="1" bodyfile="listas.c" bodystart="54" bodyend="58"/>
+        <location file="listas.c" line="54" column="5" bodyfile="listas.c" bodystart="54" bodyend="58"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

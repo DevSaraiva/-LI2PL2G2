@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="camada__da__interface_8c" kind="file" language="C++">
     <compoundname>camada_da_interface.c</compoundname>
     <includes refid="camada__da__interface_8h" local="yes">camada_da_interface.h</includes>
     <incdepgraph>
+<<<<<<< HEAD
       <node id="32">
         <label>bot.h</label>
         <link refid="bot_8h"/>
@@ -16,12 +17,25 @@
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
+=======
+      <node id="7">
+        <label>logica_do_programa.h</label>
+        <link refid="logica__do__programa_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
       </node>
+<<<<<<< HEAD
       <node id="29">
         <label>stdlib.h</label>
       </node>
@@ -31,9 +45,16 @@
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
+=======
+      <node id="3">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="4" relation="include">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
+<<<<<<< HEAD
       </node>
       <node id="27">
         <label>string.h</label>
@@ -62,11 +83,42 @@
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
+=======
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>bot.h</label>
+        <link refid="bot_8h"/>
+        <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>listas.h</label>
+        <link refid="listas_8h"/>
+        <childnode refid="5" relation="include">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+<<<<<<< HEAD
       </node>
       <node id="33">
         <label>math.h</label>
@@ -79,11 +131,42 @@
         <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
+=======
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="10">
+        <label>math.h</label>
+      </node>
+      <node id="1">
+        <label>camada_da_interface.c</label>
+        <link refid="camada__da__interface_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>camada_da_interface.h</label>
+        <link refid="camada__da__interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>
       </node>
+<<<<<<< HEAD
       <node id="28">
+=======
+      <node id="5">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -111,12 +194,13 @@
           <declname>estado</declname>
         </param>
         <briefdescription>
-<para>Função que desenha o tabuleiro no estado atual. </para>        </briefdescription>
+<para>Função que desenha o tabuleiro no estado atual. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="7" column="1" bodyfile="camada_da_interface.c" bodystart="7" bodyend="43"/>
+        <location file="camada_da_interface.c" line="7" column="6" bodyfile="camada_da_interface.c" bodystart="7" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a3cec1f7f711da0874ec656837ad771fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -132,12 +216,13 @@
           <declname>save</declname>
         </param>
         <briefdescription>
-<para>Função auxiliar da função gravar_estado. </para>        </briefdescription>
+<para>Função auxiliar da função gravar_estado. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="48" column="1" bodyfile="camada_da_interface.c" bodystart="48" bodyend="79"/>
+        <location file="camada_da_interface.c" line="48" column="6" bodyfile="camada_da_interface.c" bodystart="48" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a995a746618aead6885562e953d9ab3dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -153,12 +238,13 @@
           <declname>save</declname>
         </param>
         <briefdescription>
-<para>Função auxiliar da função gravar estado. </para>        </briefdescription>
+<para>Função auxiliar da função gravar estado. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="81" column="1" bodyfile="camada_da_interface.c" bodystart="81" bodyend="111"/>
+        <location file="camada_da_interface.c" line="81" column="6" bodyfile="camada_da_interface.c" bodystart="81" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1aa4d2bacf7b2ab01ba45b8dd7467a4cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -175,12 +261,13 @@
           <array>[]</array>
         </param>
         <briefdescription>
-<para>Função auxiliar da função interpretador que escreve um estado em um ficheiro. </para>        </briefdescription>
+<para>Função auxiliar da função interpretador que escreve um estado em um ficheiro. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="114" column="1" bodyfile="camada_da_interface.c" bodystart="114" bodyend="133"/>
+        <location file="camada_da_interface.c" line="114" column="6" bodyfile="camada_da_interface.c" bodystart="114" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1afecedbc2f32c723fea80df91ebaaf7bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -197,12 +284,13 @@
           <array>[]</array>
         </param>
         <briefdescription>
-<para>Função que lê o estado de um ficheiro. </para>        </briefdescription>
+<para>Função que lê o estado de um ficheiro. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="138" column="1" bodyfile="camada_da_interface.c" bodystart="138" bodyend="210"/>
+        <location file="camada_da_interface.c" line="138" column="6" bodyfile="camada_da_interface.c" bodystart="138" bodyend="210"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1ab783fac6270e30fbc50d1b09ee4b2867" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -214,12 +302,13 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função auxiliar da função interpretador que escreve um estado em um ficheiro. </para>        </briefdescription>
+<para>Função auxiliar da função interpretador que escreve um estado em um ficheiro. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="212" column="1" bodyfile="camada_da_interface.c" bodystart="212" bodyend="240"/>
+        <location file="camada_da_interface.c" line="212" column="6" bodyfile="camada_da_interface.c" bodystart="212" bodyend="240"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a9e97feb76fafa957aaf05ee729a13999" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -231,12 +320,13 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que apaga a ultima jogada. </para>        </briefdescription>
+<para>Função que apaga a ultima jogada. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="242" column="1" bodyfile="camada_da_interface.c" bodystart="242" bodyend="256"/>
+        <location file="camada_da_interface.c" line="242" column="6" bodyfile="camada_da_interface.c" bodystart="242" bodyend="256"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a22ec825139ca5e16ca75fd66a33c94e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -248,12 +338,13 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que apaga a ultima jogada. </para>        </briefdescription>
+<para>Função que apaga a ultima jogada. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="261" column="1" bodyfile="camada_da_interface.c" bodystart="261" bodyend="289"/>
+        <location file="camada_da_interface.c" line="261" column="6" bodyfile="camada_da_interface.c" bodystart="261" bodyend="289"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1af102fab7a3dd8a7c0290ef3b22c8e3d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structESTADO" kindref="compound">ESTADO</ref></type>
@@ -269,13 +360,16 @@
           <declname>n</declname>
         </param>
         <briefdescription>
-<para>Função que executa o comando pos. </para>        </briefdescription>
+<para>Função que executa o comando pos. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O estado do jogo </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>O estado do jogo </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="291" column="1" bodyfile="camada_da_interface.c" bodystart="291" bodyend="311"/>
+        <location file="camada_da_interface.c" line="291" column="8" bodyfile="camada_da_interface.c" bodystart="291" bodyend="311"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a24da95ebeede4a540e37790ce8be359b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -287,13 +381,16 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que tranforma comandos dos jogador em ações no estado do jogo. </para>        </briefdescription>
+<para>Função que tranforma comandos dos jogador em ações no estado do jogo. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>1 se a função foi bem sucedida, 0 caso contrário </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>1 se a função foi bem sucedida, 0 caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="316" column="1" bodyfile="camada_da_interface.c" bodystart="316" bodyend="410"/>
+        <location file="camada_da_interface.c" line="316" column="5" bodyfile="camada_da_interface.c" bodystart="316" bodyend="410"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1ae41fb376b5e99f2c6981f8c754806bfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
@@ -305,13 +402,16 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Função auxiliar da função void que tranforma um número na sua letra logicamente correspondente. </para>        </briefdescription>
+<para>Função auxiliar da função void que tranforma um número na sua letra logicamente correspondente. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>A letra na posiçao x do array </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>A letra na posiçao x do array </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="415" column="1" bodyfile="camada_da_interface.c" bodystart="415" bodyend="418"/>
+        <location file="camada_da_interface.c" line="415" column="6" bodyfile="camada_da_interface.c" bodystart="415" bodyend="418"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a33d09196f922a638847c19f3aca3fc3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -323,12 +423,13 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que fornece informação sobre o estado do jogo aos jogadores. </para>        </briefdescription>
+<para>Função que fornece informação sobre o estado do jogo aos jogadores. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="421" column="1" bodyfile="camada_da_interface.c" bodystart="421" bodyend="431"/>
+        <location file="camada_da_interface.c" line="421" column="6" bodyfile="camada_da_interface.c" bodystart="421" bodyend="431"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

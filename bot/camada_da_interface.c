@@ -4,7 +4,6 @@
 
 
 
-
 void mostrar_tabuleiro(ESTADO *estado) {
 
   int i, j;
@@ -53,8 +52,8 @@ void escreve_tabuleuiro(ESTADO *e,FILE *save){
    
         for(j = 0; j < 8; j++){
             
-            if (i == 7 && j == 7) fprintf(save,"2");
-            else if(i == 0 && j == 0) fprintf(save,"1");
+            if (i == 7 && j == 7 && e -> tab[7][7] == VAZIO) fprintf(save,"2");
+            else if(i == 0 && j == 0 && e -> tab[0][0] == VAZIO) fprintf(save,"1");
             else {    
                     switch (e -> tab [i][j])
                     {
@@ -89,10 +88,10 @@ void escreve_movimentos(ESTADO *e, FILE *save){
         int nlinha1 =  obter_jogada_por_jog(e,i,1).linha + 1;  
         int ncoluna2 = obter_jogada_por_jog(e,i,2).coluna;
         int nlinha2 = obter_jogada_por_jog(e,i,2).linha + 1;
-       
+
         if (ncoluna2 !=-1 && nlinha2 != -1){
-            fprintf(save, "%02d: %c%d",i + 1,letra(ncoluna1),nlinha1);
-            fprintf(save, " %c%d\n",letra(ncoluna2),nlinha2);
+            fprintf(save, "%02d: %c%d ",i + 1,letra(ncoluna1),nlinha1);
+            fprintf(save, "%c%d\n",letra(ncoluna2),nlinha2);
         }
     }
 
@@ -102,11 +101,12 @@ void escreve_movimentos(ESTADO *e, FILE *save){
     if (obter_jogador_atual(e) == 2){
         int c_ult = obter_ultima_jogada(e).coluna;
         int l_ult = obter_ultima_jogada(e).linha;
+        
         //O espaço no final da string é fundamental pro bot
         fprintf(save, "%02d: %c%d", num_jogadas + 1, letra(c_ult),l_ult + 1);
+
     }
 }
-
 
 
 void gravar_estado (ESTADO *e, char filename[]){
@@ -363,7 +363,7 @@ int interpretador(ESTADO *e) {
                 for(int i = 0; n < nt-i; i++)
                 apaga_ultima_jogada (e);
             }
-            COORDENADA coord = joga_euclidiana(e);
+            COORDENADA coord = joga_MinMax(e);
            
             if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
                 int j_atual = obter_jogador_atual (e);

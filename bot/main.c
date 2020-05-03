@@ -34,5 +34,6 @@ int main (int argc, char *argv[]){
                 printf("O vencedor é PL%d\n",j_atual);
     }
     gravar_estado (e,filename2);
+    
     return 0;
 }
