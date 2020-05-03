@@ -51,27 +51,24 @@
     <member refid="bot_8c_1ac73c0279607c36fd19b4eadb84bb24ef" kind="function"><name>joga_MinMax</name></member>
     <member refid="bot_8c_1ae778a7a9723a20ac11042ba78c54e849" kind="function"><name>joga_euclidiana</name></member>
     <member refid="bot_8c_1a8462cdb7d30b34c6cf61ab7176dd37e8" kind="function"><name>joga_aleatorio</name></member>
-    <member refid="bot_8c_1a0646f7852572dfa31926f7bcb81c292b" kind="function"><name>verifica_jogada_flood</name></member>
-    <member refid="bot_8c_1a8f357cfd8c41b7f5842e23c4cea1f36f" kind="function"><name>joga_flood</name></member>
   </compound>
   <compound refid="bot_8h" kind="file"><name>bot.h</name>
-<<<<<<< HEAD
-    <member refid="bot_8h_1afdf1a0c3a02d076dce4c3534fb79e79d" kind="typedef"><name>TREEMinMax</name></member>
-=======
     <member refid="bot_8h_1a3d6bd3cc23521d2e51b87070b5358717" kind="typedef"><name>TREEMinMax</name></member>
->>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
     <member refid="bot_8h_1a67d2ac5fe27554a704b4faa0e630f17d" kind="function"><name>jogada_possivel</name></member>
     <member refid="bot_8h_1a245e961862375b7367604c36a5400301" kind="function"><name>calcula_dist</name></member>
     <member refid="bot_8h_1ae778a7a9723a20ac11042ba78c54e849" kind="function"><name>joga_euclidiana</name></member>
     <member refid="bot_8h_1a8462cdb7d30b34c6cf61ab7176dd37e8" kind="function"><name>joga_aleatorio</name></member>
-<<<<<<< HEAD
-=======
-    <member refid="bot_8h_1a0646f7852572dfa31926f7bcb81c292b" kind="function"><name>verifica_jogada_flood</name></member>
-    <member refid="bot_8h_1a8f357cfd8c41b7f5842e23c4cea1f36f" kind="function"><name>joga_flood</name></member>
     <member refid="bot_8h_1a47673aaa7a9d328ad98c203bb1607244" kind="function"><name>atribui_valor</name></member>
     <member refid="bot_8h_1a0394e68de7a4fa0f2c6d24b4fed4cb47" kind="function"><name>fill_valor</name></member>
+    <member refid="bot_8h_1a9062a04ca537650dbf6ef938f9eb782a" kind="function"><name>create_tree</name></member>
+    <member refid="bot_8h_1a95db090178dc53a72217e669b9f30e23" kind="function"><name>create_tree_vazia</name></member>
+    <member refid="bot_8h_1afb323260019d7e1e3320a5670bcf9404" kind="function"><name>create_tree_total</name></member>
+    <member refid="bot_8h_1ae1328cd7a47d3cd432c4fdd07ce9d52f" kind="function"><name>is_tree_finished</name></member>
+    <member refid="bot_8h_1a92d5a0caf1d64e3cfba2bf585c5ebb98" kind="function"><name>is_last_decision</name></member>
+    <member refid="bot_8h_1a656581ee4b4a57da70c7ed8b792f1eb1" kind="function"><name>devolve_coordenada</name></member>
+    <member refid="bot_8h_1acc0d3c78a0c80b5bdab6dbc2840eeb2c" kind="function"><name>max_nodo</name></member>
+    <member refid="bot_8h_1ae7e0e698a3e0fa16dba569aacd4ccc23" kind="function"><name>min_nodo</name></member>
     <member refid="bot_8h_1ab42e1aefe4a3763de9f1306a8cab9ca6" kind="function"><name>aplly_fill_valor</name></member>
->>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
     <member refid="bot_8h_1ac73c0279607c36fd19b4eadb84bb24ef" kind="function"><name>joga_MinMax</name></member>
   </compound>
   <compound refid="camada__da__interface_8c" kind="file"><name>camada_da_interface.c</name>

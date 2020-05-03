@@ -30,7 +30,13 @@ Definição do estado e das funções que o manipulam
 
 typedef enum {VAZIO, BRANCA, PRETA} CASA;
 typedef struct {
+/**
+\brief  Coluna da coordenada
+*/
     int coluna;
+/**
+\brief  Linha da coordenada
+*/
     int linha;
 } COORDENADA;
  
@@ -38,7 +44,13 @@ typedef struct {
 \brief Definição da jogada
 */
 typedef struct {
+/**
+\brief  Jogador1 da jogada
+*/
     COORDENADA jogador1;
+/**
+\brief  Jogador2 da jogada
+*/
     COORDENADA jogador2;
 } JOGADA;
 
@@ -52,12 +64,33 @@ typedef JOGADA JOGADAS[32];
 \brief Definição do estado
 */
 typedef struct {
+/**
+\brief  Matrix do tabuleiro
+*/
     CASA tab[8][8];
+/**
+\brief  Ultima jogada efetuada
+*/
     COORDENADA ultima_jogada;
+/**
+\brief Lista das jogadas
+*/
     JOGADAS jogadas;
+/**
+\brief  Número de jogadas
+*/
     int num_jogadas;
+/**
+\brief  jogador atual (1 ou 2)
+*/
     int jogador_atual;
+/**
+\brief  Inteiro para saber se o comando pos foi usado
+*/
     int ultimo_comando_pos;
+/**
+\brief Valor do último comando pos
+*/
     int valor_pos;
 } ESTADO;
 

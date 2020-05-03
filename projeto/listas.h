@@ -19,7 +19,13 @@ Definição das funções relacionadas com listas ligadas
 */
 typedef struct slist
 {
+/**
+\brief Apontador para o valor do nodo
+*/
     void *valor;
+/**
+\brief  Apontador para o próximo nodo
+*/
     struct slist *prox;
 }Nodo;
 

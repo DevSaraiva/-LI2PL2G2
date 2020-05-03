@@ -28,16 +28,53 @@ LISTA jogada_possivel (ESTADO *e,COORDENADA c);
 */
 
 typedef struct MinMaxTREE {
+
+/**
+\brief Coordenada jogada
+*/
     COORDENADA coord;
+    
+/**
+\brief Número de nodos
+*/
     int valor;
+    
+/**
+\brief  Estado do jogo
+*/
     ESTADO * e;
+    
+/**
+\brief  nodo 1 da árvore
+*/
     struct MinMaxTREE  *nodo1;
+/**
+\brief  nodo 2 da árvore
+*/
     struct MinMaxTREE  *nodo2;
+/**
+\brief  nodo 3 da árvore
+*/
     struct MinMaxTREE  *nodo3;
+/**
+\brief  nodo 4 da árvore
+*/
     struct MinMaxTREE  *nodo4;
+    /**
+\brief  nodo 5 da árvore
+*/
     struct MinMaxTREE  *nodo5;
+/**
+\brief  nodo 6 da árvore
+*/
     struct MinMaxTREE  *nodo6;
+/**
+\brief  nodo 7 da árvore
+*/
     struct MinMaxTREE  *nodo7;
+/**
+\brief  nodo 8 da árvore
+*/
     struct MinMaxTREE  *nodo8;
 } TREEMinMax;
 

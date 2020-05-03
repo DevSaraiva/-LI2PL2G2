@@ -4,43 +4,6 @@
     <compoundname>listas.c</compoundname>
     <includes refid="listas_8h" local="yes">listas.h</includes>
     <incdepgraph>
-<<<<<<< HEAD
-      <node id="66">
-        <label>stdlib.h</label>
-      </node>
-      <node id="68">
-        <label>camada_de_dados.h</label>
-        <link refid="camada__de__dados_8h"/>
-        <childnode refid="67" relation="include">
-        </childnode>
-        <childnode refid="65" relation="include">
-        </childnode>
-        <childnode refid="66" relation="include">
-        </childnode>
-      </node>
-      <node id="67">
-        <label>string.h</label>
-      </node>
-      <node id="63">
-        <label>listas.c</label>
-        <link refid="listas_8c"/>
-        <childnode refid="64" relation="include">
-        </childnode>
-      </node>
-      <node id="64">
-        <label>listas.h</label>
-        <link refid="listas_8h"/>
-        <childnode refid="65" relation="include">
-        </childnode>
-        <childnode refid="66" relation="include">
-        </childnode>
-        <childnode refid="67" relation="include">
-        </childnode>
-        <childnode refid="68" relation="include">
-        </childnode>
-      </node>
-      <node id="65">
-=======
       <node id="6">
         <label>camada_de_dados.h</label>
         <link refid="camada__de__dados_8h"/>
@@ -76,7 +39,6 @@
         <label>string.h</label>
       </node>
       <node id="3">
->>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -257,7 +219,7 @@
 <codeline lineno="43"><highlight class="normal"><ref refid="structslist" kindref="compound">LISTA</ref><sp/><ref refid="listas_8h_1a9026a681a68322b5ec7f07137b864cbd" kindref="member">remove_cabeca</ref>(<ref refid="structslist" kindref="compound">LISTA</ref><sp/>L){</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structslist" kindref="compound">LISTA</ref><sp/>tmp<sp/>=<sp/>L;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(L<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>L<sp/>=<sp/>L-&gt;prox;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>L<sp/>=<sp/>L-&gt;<ref refid="structslist_1a2a3c25b5642546ea739b43061e3eb1f0" kindref="member">prox</ref>;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/>(tmp);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>L;</highlight></codeline>

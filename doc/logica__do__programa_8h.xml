@@ -12,49 +12,6 @@
     <includedby refid="logica__do__programa_8c" local="yes">logica_do_programa.c</includedby>
     <includedby refid="main_8c" local="yes">main.c</includedby>
     <incdepgraph>
-<<<<<<< HEAD
-      <node id="92">
-        <label>stdlib.h</label>
-      </node>
-      <node id="89">
-        <label>camada_de_dados.h</label>
-        <link refid="camada__de__dados_8h"/>
-        <childnode refid="90" relation="include">
-        </childnode>
-        <childnode refid="91" relation="include">
-        </childnode>
-        <childnode refid="92" relation="include">
-        </childnode>
-      </node>
-      <node id="90">
-        <label>string.h</label>
-      </node>
-      <node id="88">
-        <label>logica_do_programa.h</label>
-        <link refid="logica__do__programa_8h"/>
-        <childnode refid="89" relation="include">
-        </childnode>
-        <childnode refid="93" relation="include">
-        </childnode>
-        <childnode refid="91" relation="include">
-        </childnode>
-        <childnode refid="92" relation="include">
-        </childnode>
-      </node>
-      <node id="93">
-        <label>listas.h</label>
-        <link refid="listas_8h"/>
-        <childnode refid="91" relation="include">
-        </childnode>
-        <childnode refid="92" relation="include">
-        </childnode>
-        <childnode refid="90" relation="include">
-        </childnode>
-        <childnode refid="89" relation="include">
-        </childnode>
-      </node>
-      <node id="91">
-=======
       <node id="1">
         <label>logica_do_programa.h</label>
         <link refid="logica__do__programa_8h"/>
@@ -96,39 +53,10 @@
         <label>string.h</label>
       </node>
       <node id="4">
->>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
         <label>stdio.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-<<<<<<< HEAD
-      <node id="95">
-        <label>bot.h</label>
-        <link refid="bot_8h"/>
-        <childnode refid="96" relation="include">
-        </childnode>
-      </node>
-      <node id="97">
-        <label>main.c</label>
-        <link refid="main_8c"/>
-      </node>
-      <node id="96">
-        <label>camada_da_interface.h</label>
-        <link refid="camada__da__interface_8h"/>
-        <childnode refid="95" relation="include">
-        </childnode>
-        <childnode refid="97" relation="include">
-        </childnode>
-      </node>
-      <node id="94">
-        <label>logica_do_programa.h</label>
-        <link refid="logica__do__programa_8h"/>
-        <childnode refid="95" relation="include">
-        </childnode>
-        <childnode refid="96" relation="include">
-        </childnode>
-        <childnode refid="97" relation="include">
-=======
       <node id="1">
         <label>logica_do_programa.h</label>
         <link refid="logica__do__programa_8h"/>
@@ -155,7 +83,6 @@
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
->>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
         </childnode>
       </node>
     </invincdepgraph>
@@ -254,11 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-<<<<<<< HEAD
-        <location file="logica_do_programa.h" line="50" column="1" bodyfile="logica_do_programa.c" bodystart="60" bodyend="72"/>
-=======
         <location file="logica_do_programa.h" line="50" column="5" bodyfile="logica_do_programa.c" bodystart="60" bodyend="73" declfile="logica_do_programa.h" declline="50" declcolumn="5"/>
->>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
       </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1ab2fb8cd7bf019ed1c45b7987033795dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -280,11 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-<<<<<<< HEAD
-        <location file="logica_do_programa.h" line="56" column="1" bodyfile="logica_do_programa.c" bodystart="77" bodyend="110"/>
-=======
-        <location file="logica_do_programa.h" line="56" column="6" bodyfile="logica_do_programa.c" bodystart="78" bodyend="113" declfile="logica_do_programa.h" declline="56" declcolumn="6"/>
->>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
+        <location file="logica_do_programa.h" line="56" column="6" bodyfile="logica_do_programa.c" bodystart="78" bodyend="111" declfile="logica_do_programa.h" declline="56" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
