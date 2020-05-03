@@ -59,6 +59,7 @@ int casa_vencedora (ESTADO *e,COORDENADA c){
 
 int jogada_e_valida (ESTADO *estado,COORDENADA c){
 
+if(c.coluna<0 || c.linha <0 || c.coluna > 7|| c.linha > 7) return 0;
     int c_ult = obter_ultima_jogada(estado).coluna;
     int l_ult = obter_ultima_jogada(estado).linha;
     int c_coluna = c.coluna;
