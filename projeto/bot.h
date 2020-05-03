@@ -68,27 +68,96 @@ int verifica_jogada_flood (ESTADO *e,COORDENADA c);
 COORDENADA joga_flood (ESTADO *e);
 
 /**
-\brief Função que atribui determinada classificação a um nodo baseado na sua distancia relativa aos pontos de fim de jogo
+\brief Função atribui uma classificação a determinado nodo de acordo com a sua posição relativa em relação à casa vitoriosa
 */
+
 
 int atribui_valor (ESTADO *e, int jog_max, COORDENADA c);
 
 /**
-\brief Função que calcula o valor do nodo principal de uma arvore com profundidade 1;
+\brief Função preenche o valor de determinado nodo atravês da função atribui valor
 */
 
 void fill_valor ( TREEMinMax * tree, int max_jog);
 
 /**
-\brief Função que aplica a funçao fill ao ultimo nodo de uma arvore;
+\brief Função que cria uma arvore com 8 nodos
+*/
+
+
+TREEMinMax * create_tree();
+
+/**
+\brief Função que cria uma arvore vazia
+*/
+
+TREEMinMax * create_tree_vazia();
+
+
+/**
+\brief Função que cria uma arvore completa com a profundidade desejada
+*/
+
+TREEMinMax * create_tree_total (int depth, ESTADO * e, int jog_max, COORDENADA c);
+
+
+/**
+\brief Função verifica se uma arvore está terminada
+*/
+
+int is_tree_finished(TREEMinMax * tree);
+
+
+/**
+\brief Função verifica se uma arvore termina nos proximos nodos
+*/
+
+int is_last_decision (TREEMinMax * tree);
+
+/**
+\brief Função que devolve a coordenada correspondente ao nodo com  determinado valor atribuido 
+*/
+
+COORDENADA devolve_coordenada (TREEMinMax * tree, int val);
+
+
+/**
+\brief Função que o calcula qual a arvore que possui o valor mais alto
+*/
+
+int  max_nodo (TREEMinMax * tree);
+
+
+
+/**
+\brief Função que o calcula qual a arvore que possui o valor mais baixo
+*/
+
+
+int  min_nodo (TREEMinMax * tree);
+
+
+/**
+\brief Função que calcula o valor de cada nodo atravês das previsões das jogadas para arvores com profundidade 1
+*/
+
+
+void fill_valor ( TREEMinMax * tree, int max_jog);
+
+/**
+\brief Função que aplica fill valor a qualquer arvore
 */
 
 void aplly_fill_valor (int depth, TREEMinMax * tree, int max_jog);
 
 
+
+
 /**
 \brief Função que joga automaticamente segundo o algoritmo min_max
 */
+
+
 
 COORDENADA joga_MinMax(ESTADO *e);
 

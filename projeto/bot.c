@@ -76,7 +76,10 @@ int atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
     if (jog_max == 1) jog_min = 2;
     else jog_min = 1;
 
-    int jog_atual = obter_jogador_atual(e);
+    int jog = obter_jogador_atual(e);
+    int jog_atual;
+    if (jog == 1) jog_atual = 2;
+    else jog_atual = 1;
 
     if(jogada_presa(e,c)){
         if(jog_atual == jog_max) valor = -1000;
@@ -252,7 +255,6 @@ COORDENADA devolve_coordenada (TREEMinMax * tree, int val){
     if( tree -> nodo6 != NULL && tree -> nodo6 -> valor == val) c = tree -> nodo6 -> coord;
     if( tree -> nodo7 != NULL && tree -> nodo7 -> valor == val) c = tree -> nodo7 -> coord;
     if( tree -> nodo8 != NULL && tree -> nodo8 -> valor == val) c = tree -> nodo8 -> coord;
-
 return c;
 }
 
@@ -369,9 +371,27 @@ void fill_valor ( TREEMinMax * tree, int max_jog){
 
     int jog = obter_jogador_atual(tree -> e);
     int valor;
+    ESTADO * e = tree -> e;
+    COORDENADA c = tree -> coord;
     
-        if (jog == max_jog) valor = max_nodo(tree);
-        else valor = min_nodo(tree);
+    
+        if (jog == max_jog){
+            
+            int valor_cabeca = atribui_valor(e,max_jog,c);
+            int valor_nodo = max_nodo(tree);
+            if (valor_cabeca > valor_nodo) valor = valor_cabeca;
+            else valor = valor_nodo;
+        }
+        
+        
+        else{
+            
+            int valor_cabeca = atribui_valor(e,max_jog,c);
+            int valor_nodo = min_nodo(tree);
+
+            if (valor_cabeca > valor_nodo) valor = valor_nodo;
+            else valor = valor_cabeca;
+        } 
 
         tree -> valor = valor;
         
@@ -428,13 +448,11 @@ COORDENADA joga_MinMax(ESTADO *e){
     int max_jog = obter_jogador_atual(e);
     int valor;
     int depth = 5;
-    int i ;
     TREEMinMax * tree = malloc(sizeof(TREEMinMax));
     tree = create_tree_total(depth , e, max_jog,ultima_jog);
     
 
-    for(i = depth; i != 1; i--){
-    
+    for (; depth != 1; depth--){
     
         aplly_fill_valor(depth, tree, max_jog);
     

@@ -371,9 +371,27 @@ void fill_valor ( TREEMinMax * tree, int max_jog){
 
     int jog = obter_jogador_atual(tree -> e);
     int valor;
+    ESTADO * e = tree -> e;
+    COORDENADA c = tree -> coord;
     
-        if (jog == max_jog) valor = max_nodo(tree);
-        else valor = min_nodo(tree);
+    
+        if (jog == max_jog){
+            
+            int valor_cabeca = atribui_valor(e,max_jog,c);
+            int valor_nodo = max_nodo(tree);
+            if (valor_cabeca > valor_nodo) valor = valor_cabeca;
+            else valor = valor_nodo;
+        }
+        
+        
+        else{
+            
+            int valor_cabeca = atribui_valor(e,max_jog,c);
+            int valor_nodo = min_nodo(tree);
+
+            if (valor_cabeca > valor_nodo) valor = valor_nodo;
+            else valor = valor_cabeca;
+        } 
 
         tree -> valor = valor;
         
