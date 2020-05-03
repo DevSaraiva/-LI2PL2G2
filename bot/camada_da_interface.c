@@ -4,7 +4,6 @@
 
 
 
-
 void mostrar_tabuleiro(ESTADO *estado) {
 
   int i, j;
@@ -86,14 +85,17 @@ void escreve_movimentos(ESTADO *e, FILE *save){
     
     for (int i = 0; i < num_jogadas; i++) {
         
-
-        int ncoluna1 = e->jogadas[i].jogador1.coluna;
-        int nlinha1 = e->jogadas[i].jogador1.linha + 1;
-        int ncoluna2 = e->jogadas[i].jogador2.coluna;
-        int nlinha2 = e->jogadas[i].jogador2.linha + 1;
-       
-        if (ncoluna2 !=-1 && nlinha2 != -1){
+        int ncoluna1 = obter_jogada_por_jog(e,i,1).coluna; 
+        int nlinha1 =  obter_jogada_por_jog(e,i,1).linha + 1;  
+        int ncoluna2 = obter_jogada_por_jog(e,i,2).coluna;
+        int nlinha2 = obter_jogada_por_jog(e,i,2).linha + 1;
+            
+        
+        if (ncoluna1 != -1 && nlinha1 != -1){
             fprintf(save, "%02d: %c%d",i + 1,letra(ncoluna1),nlinha1);
+        }
+
+        if (ncoluna2 !=-1 && nlinha2 != -1){
             fprintf(save, " %c%d\n",letra(ncoluna2),nlinha2);
         }
     }
@@ -104,11 +106,9 @@ void escreve_movimentos(ESTADO *e, FILE *save){
     if (obter_jogador_atual(e) == 2){
         int c_ult = obter_ultima_jogada(e).coluna;
         int l_ult = obter_ultima_jogada(e).linha;
-        //O espaço no final da string é fundamental pro bot
-        fprintf(save, "%02d: %c%d ", num_jogadas + 1, letra(c_ult),l_ult + 1);
+        fprintf(save, "%02d: %c%d", num_jogadas + 1, letra(c_ult),l_ult + 1);
     }
 }
-
 
 
 void gravar_estado (ESTADO *e, char filename[]){
@@ -377,7 +377,7 @@ int interpretador(ESTADO *e) {
                 for(int i = 0; n < nt-i; i++)
                 apaga_ultima_jogada (e);
             }
-            COORDENADA coord = joga_euclidiana(e);
+            COORDENADA coord = joga_MinMax(e);
            
             if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
                 int j_atual = obter_jogador_atual (e);
