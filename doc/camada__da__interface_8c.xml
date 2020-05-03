@@ -1,94 +1,172 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="camada__da__interface_8c" kind="file" language="C++">
     <compoundname>camada_da_interface.c</compoundname>
     <includes refid="camada__da__interface_8h" local="yes">camada_da_interface.h</includes>
     <incdepgraph>
-      <node id="33">
+<<<<<<< HEAD
+      <node id="32">
         <label>bot.h</label>
         <link refid="bot_8h"/>
-        <childnode refid="34" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
         <childnode refid="26" relation="include">
+=======
+      <node id="7">
+        <label>logica_do_programa.h</label>
+        <link refid="logica__do__programa_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+<<<<<<< HEAD
+      <node id="29">
+        <label>stdlib.h</label>
+      </node>
+      <node id="26">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+=======
+      <node id="3">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="4" relation="include">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+<<<<<<< HEAD
+      </node>
+      <node id="27">
+        <label>string.h</label>
+      </node>
+      <node id="24">
+        <label>camada_da_interface.c</label>
+        <link refid="camada__da__interface_8c"/>
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
       <node id="30">
-        <label>stdlib.h</label>
-      </node>
-      <node id="27">
-        <label>camada_de_dados.h</label>
-        <link refid="camada__de__dados_8h"/>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-      </node>
-      <node id="28">
-        <label>string.h</label>
-      </node>
-      <node id="25">
-        <label>camada_da_interface.c</label>
-        <link refid="camada__da__interface_8c"/>
-        <childnode refid="26" relation="include">
-        </childnode>
-      </node>
-      <node id="31">
         <label>logica_do_programa.h</label>
         <link refid="logica__do__programa_8h"/>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-      </node>
-      <node id="26">
-        <label>camada_da_interface.h</label>
-        <link refid="camada__da__interface_8h"/>
-        <childnode refid="27" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-      </node>
-      <node id="34">
-        <label>time.h</label>
-      </node>
-      <node id="35">
-        <label>math.h</label>
-      </node>
-      <node id="32">
-        <label>listas.h</label>
-        <link refid="listas_8h"/>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
         <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
       </node>
-      <node id="29">
+      <node id="25">
+        <label>camada_da_interface.h</label>
+        <link refid="camada__da__interface_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+=======
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>bot.h</label>
+        <link refid="bot_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>listas.h</label>
+        <link refid="listas_8h"/>
+        <childnode refid="5" relation="include">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+<<<<<<< HEAD
+      </node>
+      <node id="33">
+        <label>math.h</label>
+      </node>
+      <node id="31">
+        <label>listas.h</label>
+        <link refid="listas_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+=======
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="10">
+        <label>math.h</label>
+      </node>
+      <node id="1">
+        <label>camada_da_interface.c</label>
+        <link refid="camada__da__interface_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>camada_da_interface.h</label>
+        <link refid="camada__da__interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+<<<<<<< HEAD
+      <node id="28">
+=======
+      <node id="5">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -116,12 +194,13 @@
           <declname>estado</declname>
         </param>
         <briefdescription>
-<para>Função que desenha o tabuleiro no estado atual. </para>        </briefdescription>
+<para>Função que desenha o tabuleiro no estado atual. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="7" column="1" bodyfile="camada_da_interface.c" bodystart="7" bodyend="43"/>
+        <location file="camada_da_interface.c" line="7" column="6" bodyfile="camada_da_interface.c" bodystart="7" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a3cec1f7f711da0874ec656837ad771fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -137,12 +216,13 @@
           <declname>save</declname>
         </param>
         <briefdescription>
-<para>Função auxiliar da função gravar_estado. </para>        </briefdescription>
+<para>Função auxiliar da função gravar_estado. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="48" column="1" bodyfile="camada_da_interface.c" bodystart="48" bodyend="79"/>
+        <location file="camada_da_interface.c" line="48" column="6" bodyfile="camada_da_interface.c" bodystart="48" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a995a746618aead6885562e953d9ab3dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -158,12 +238,13 @@
           <declname>save</declname>
         </param>
         <briefdescription>
-<para>Função auxiliar da função gravar estado. </para>        </briefdescription>
+<para>Função auxiliar da função gravar estado. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="81" column="1" bodyfile="camada_da_interface.c" bodystart="81" bodyend="111"/>
+        <location file="camada_da_interface.c" line="81" column="6" bodyfile="camada_da_interface.c" bodystart="81" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1aa4d2bacf7b2ab01ba45b8dd7467a4cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -180,12 +261,13 @@
           <array>[]</array>
         </param>
         <briefdescription>
-<para>Função auxiliar da função interpretador que escreve um estado em um ficheiro. </para>        </briefdescription>
+<para>Função auxiliar da função interpretador que escreve um estado em um ficheiro. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="114" column="1" bodyfile="camada_da_interface.c" bodystart="114" bodyend="133"/>
+        <location file="camada_da_interface.c" line="114" column="6" bodyfile="camada_da_interface.c" bodystart="114" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1afecedbc2f32c723fea80df91ebaaf7bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -202,12 +284,13 @@
           <array>[]</array>
         </param>
         <briefdescription>
-<para>Função que lê o estado de um ficheiro. </para>        </briefdescription>
+<para>Função que lê o estado de um ficheiro. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="138" column="1" bodyfile="camada_da_interface.c" bodystart="138" bodyend="210"/>
+        <location file="camada_da_interface.c" line="138" column="6" bodyfile="camada_da_interface.c" bodystart="138" bodyend="210"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1ab783fac6270e30fbc50d1b09ee4b2867" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -219,12 +302,13 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função auxiliar da função interpretador que escreve um estado em um ficheiro. </para>        </briefdescription>
+<para>Função auxiliar da função interpretador que escreve um estado em um ficheiro. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="212" column="1" bodyfile="camada_da_interface.c" bodystart="212" bodyend="240"/>
+        <location file="camada_da_interface.c" line="212" column="6" bodyfile="camada_da_interface.c" bodystart="212" bodyend="240"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a9e97feb76fafa957aaf05ee729a13999" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -236,12 +320,13 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que apaga a ultima jogada. </para>        </briefdescription>
+<para>Função que apaga a ultima jogada. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="242" column="1" bodyfile="camada_da_interface.c" bodystart="242" bodyend="256"/>
+        <location file="camada_da_interface.c" line="242" column="6" bodyfile="camada_da_interface.c" bodystart="242" bodyend="256"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a22ec825139ca5e16ca75fd66a33c94e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -253,12 +338,13 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que apaga a ultima jogada. </para>        </briefdescription>
+<para>Função que apaga a ultima jogada. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="261" column="1" bodyfile="camada_da_interface.c" bodystart="261" bodyend="289"/>
+        <location file="camada_da_interface.c" line="261" column="6" bodyfile="camada_da_interface.c" bodystart="261" bodyend="289"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1af102fab7a3dd8a7c0290ef3b22c8e3d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structESTADO" kindref="compound">ESTADO</ref></type>
@@ -274,13 +360,16 @@
           <declname>n</declname>
         </param>
         <briefdescription>
-<para>Função que executa o comando pos. </para>        </briefdescription>
+<para>Função que executa o comando pos. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O estado do jogo </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>O estado do jogo </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="291" column="1" bodyfile="camada_da_interface.c" bodystart="291" bodyend="311"/>
+        <location file="camada_da_interface.c" line="291" column="8" bodyfile="camada_da_interface.c" bodystart="291" bodyend="311"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a24da95ebeede4a540e37790ce8be359b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -292,13 +381,16 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que tranforma comandos dos jogador em ações no estado do jogo. </para>        </briefdescription>
+<para>Função que tranforma comandos dos jogador em ações no estado do jogo. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>1 se a função foi bem sucedida, 0 caso contrário </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>1 se a função foi bem sucedida, 0 caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="316" column="1" bodyfile="camada_da_interface.c" bodystart="316" bodyend="410"/>
+        <location file="camada_da_interface.c" line="316" column="5" bodyfile="camada_da_interface.c" bodystart="316" bodyend="410"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1ae41fb376b5e99f2c6981f8c754806bfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
@@ -310,13 +402,16 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Função auxiliar da função void que tranforma um número na sua letra logicamente correspondente. </para>        </briefdescription>
+<para>Função auxiliar da função void que tranforma um número na sua letra logicamente correspondente. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>A letra na posiçao x do array </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>A letra na posiçao x do array </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="415" column="1" bodyfile="camada_da_interface.c" bodystart="415" bodyend="418"/>
+        <location file="camada_da_interface.c" line="415" column="6" bodyfile="camada_da_interface.c" bodystart="415" bodyend="418"/>
       </memberdef>
       <memberdef kind="function" id="camada__da__interface_8c_1a33d09196f922a638847c19f3aca3fc3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -328,12 +423,13 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que fornece informação sobre o estado do jogo aos jogadores. </para>        </briefdescription>
+<para>Função que fornece informação sobre o estado do jogo aos jogadores. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_da_interface.c" line="421" column="1" bodyfile="camada_da_interface.c" bodystart="421" bodyend="431"/>
+        <location file="camada_da_interface.c" line="421" column="6" bodyfile="camada_da_interface.c" bodystart="421" bodyend="431"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -603,8 +699,8 @@
 <codeline lineno="260"><highlight class="normal"></highlight></codeline>
 <codeline lineno="261"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1a22ec825139ca5e16ca75fd66a33c94e5" kindref="member">apaga_ultima_jogada</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e){</highlight></codeline>
 <codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="camada__de__dados_8h_1abbfeab93575f20e5867482fd41a71cba" kindref="member">obter_numero_de_jogadas</ref><sp/>(e);</highlight></codeline>
-<codeline lineno="263"><highlight class="normal"></highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_pos<sp/>=<sp/><ref refid="camada__de__dados_8h_1a91f83ff370b2ee904584ac7b2a83e573" kindref="member">obter_valor_pos</ref>(e);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n_pos<sp/>==<sp/>0)<sp/>{</highlight></codeline>
 <codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1a35c87726f07cb6e89e088c9f2ada6ec2" kindref="member">set_jogador_atual</ref>(e,1);</highlight></codeline>
 <codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1a6488675aa725aba9817ddf7e4400f1ff" kindref="member">set_numero_de_jogadas</ref>(e,0);</highlight></codeline>
 <codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c<sp/>=<sp/>{4,4};</highlight></codeline>
@@ -614,9 +710,9 @@
 <codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1a48e0ec2d6ce99bf5078a2b7e37b80a71" kindref="member">set_valor_pos</ref><sp/>(e,0);</highlight></codeline>
 <codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1afd3a085c8db7800a35884a89b842893d" kindref="member">set_comando_pos</ref>(e,0);</highlight></codeline>
 <codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight></codeline>
-<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="camada__de__dados_8h_1a648af8c5557bb6c70d0526b630ccb6d1" kindref="member">obter_jogada_por_jog</ref>(e,i,1).coluna<sp/>==<sp/>-1<sp/>&amp;&amp;<sp/><ref refid="camada__de__dados_8h_1a648af8c5557bb6c70d0526b630ccb6d1" kindref="member">obter_jogada_por_jog</ref>(e,i,1).linha<sp/>==<sp/>-1)</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__da__interface_8h_1a9e97feb76fafa957aaf05ee729a13999" kindref="member">apaga_ultima_jogada_completa</ref><sp/>(e);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="camada__de__dados_8h_1a648af8c5557bb6c70d0526b630ccb6d1" kindref="member">obter_jogada_por_jog</ref>(e,i,1).coluna<sp/>==<sp/>-1<sp/>&amp;&amp;<sp/><ref refid="camada__de__dados_8h_1a648af8c5557bb6c70d0526b630ccb6d1" kindref="member">obter_jogada_por_jog</ref>(e,i,1).linha<sp/>==<sp/>-1){</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__da__interface_8h_1a9e97feb76fafa957aaf05ee729a13999" kindref="member">apaga_ultima_jogada_completa</ref><sp/>(e);<sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;CDz&quot;</highlight><highlight class="normal">);}</highlight></codeline>
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>j<sp/>=<sp/><ref refid="camada__de__dados_8h_1a648af8c5557bb6c70d0526b630ccb6d1" kindref="member">obter_jogada_por_jog</ref><sp/>(e,i,1);<sp/></highlight></codeline>
 <codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1a60a461e722e8beb32647bed475481e25" kindref="member">set_estado_casa_c</ref>(e,j,VAZIO);</highlight></codeline>
@@ -639,7 +735,7 @@
 <codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1afe76af8f3d8d748148e9aebd7f68349e" kindref="member">set_estado_casa</ref>(s,4,4,PRETA);</highlight></codeline>
 <codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>j1,j2;</highlight></codeline>
-<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;i<sp/>&lt;<sp/>n;i++){</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;i<sp/>&lt;<sp/>n;i++){</highlight></codeline>
 <codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j1<sp/>=<sp/><ref refid="camada__de__dados_8h_1a648af8c5557bb6c70d0526b630ccb6d1" kindref="member">obter_jogada_por_jog</ref><sp/>(e,i,1);</highlight></codeline>
 <codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j2<sp/>=<sp/><ref refid="camada__de__dados_8h_1a648af8c5557bb6c70d0526b630ccb6d1" kindref="member">obter_jogada_por_jog</ref><sp/>(e,i,2);</highlight></codeline>
 <codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1a60a461e722e8beb32647bed475481e25" kindref="member">set_estado_casa_c</ref><sp/>(s,j1,PRETA);</highlight></codeline>
@@ -672,10 +768,10 @@
 <codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/><ref refid="camada__de__dados_8h_1a91f83ff370b2ee904584ac7b2a83e573" kindref="member">obter_valor_pos</ref>(e);</highlight></codeline>
 <codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nt<sp/>=<sp/><ref refid="camada__de__dados_8h_1abbfeab93575f20e5867482fd41a71cba" kindref="member">obter_numero_de_jogadas</ref>(e);</highlight></codeline>
 <codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>n<sp/>&lt;=<sp/>nt-i;<sp/>i++)</highlight></codeline>
-<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__da__interface_8h_1a22ec825139ca5e16ca75fd66a33c94e5" kindref="member">apaga_ultima_jogada</ref><sp/>(e);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__da__interface_8h_1a22ec825139ca5e16ca75fd66a33c94e5" kindref="member">apaga_ultima_jogada</ref><sp/>(e);</highlight></codeline>
 <codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logica__do__programa_8h_1ab2fb8cd7bf019ed1c45b7987033795dd" kindref="member">jogar</ref>(e,<sp/>coord);</highlight></codeline>
-<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="logica__do__programa_8h_1aa302374c28d47481589def1bbb75eed7" kindref="member">casa_vencedora</ref><sp/>(e,coord)<sp/>||<sp/><ref refid="logica__do__programa_8h_1a69a7a211193098fe83cf02f7450bdd85" kindref="member">jogada_presa</ref><sp/>(e,coord)){</highlight></codeline>
 <codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j_atual<sp/>=<sp/><ref refid="camada__de__dados_8h_1ad6e326e4ffa57ca1ae0c75377ecefc8c" kindref="member">obter_jogador_atual</ref><sp/>(e);</highlight></codeline>
 <codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;O<sp/>vencedor<sp/>é<sp/>o<sp/>PL%d\n&quot;</highlight><highlight class="normal">,j_atual);</highlight></codeline>
@@ -683,7 +779,7 @@
 <codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="camada__da__interface_8h_1a4525a57d0cd9ed3c9150e19b67e1dad6" kindref="member">mostrar_tabuleiro</ref>(e);</highlight></codeline>
 <codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="camada__de__dados_8h_1a229893df34b1c4d70de18501c365ff13" kindref="member">obter_comando_pos</ref>(e))<sp/><ref refid="camada__de__dados_8h_1afd3a085c8db7800a35884a89b842893d" kindref="member">set_comando_pos</ref>(e,0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/></highlight></codeline>
 <codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(sscanf(linha,</highlight><highlight class="stringliteral">&quot;%[Q]&quot;</highlight><highlight class="normal">,<sp/>&amp;quit)){</highlight></codeline>
@@ -706,21 +802,21 @@
 <codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sscanf(linha,<sp/></highlight><highlight class="stringliteral">&quot;pos<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>&amp;n_jog)){<sp/></highlight></codeline>
 <codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/><ref refid="camada__de__dados_8h_1abbfeab93575f20e5867482fd41a71cba" kindref="member">obter_numero_de_jogadas</ref>(e);</highlight></codeline>
 <codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j_atual<sp/>=<sp/><ref refid="camada__de__dados_8h_1ad6e326e4ffa57ca1ae0c75377ecefc8c" kindref="member">obter_jogador_atual</ref><sp/>(e);</highlight></codeline>
-<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n_jog<sp/>&gt;<sp/>n<sp/>||<sp/>j_atual<sp/>==<sp/>1)<sp/>printf(</highlight><highlight class="stringliteral">&quot;Posição<sp/>anterior<sp/>inválida\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((n_jog<sp/>&gt;=<sp/>n<sp/>&amp;&amp;<sp/>j_atual<sp/>==<sp/>1)<sp/>||<sp/>n_jog<sp/>&gt;<sp/>n<sp/>)<sp/>printf(</highlight><highlight class="stringliteral">&quot;Posição<sp/>anterior<sp/>inválida\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d\n&quot;</highlight><highlight class="normal">,n);</highlight></codeline>
-<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__da__interface_8h_1af102fab7a3dd8a7c0290ef3b22c8e3d3" kindref="member">escreve_pos</ref>(e,n_jog);</highlight></codeline>
-<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="camada__de__dados_8h_1a229893df34b1c4d70de18501c365ff13" kindref="member">obter_comando_pos</ref>(e)<sp/>==<sp/>0)<sp/><ref refid="camada__de__dados_8h_1afd3a085c8db7800a35884a89b842893d" kindref="member">set_comando_pos</ref>(e,1);</highlight></codeline>
-<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1a48e0ec2d6ce99bf5078a2b7e37b80a71" kindref="member">set_valor_pos</ref>(e,n_jog);}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__da__interface_8h_1af102fab7a3dd8a7c0290ef3b22c8e3d3" kindref="member">escreve_pos</ref>(e,n_jog);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="camada__de__dados_8h_1a229893df34b1c4d70de18501c365ff13" kindref="member">obter_comando_pos</ref>(e)<sp/>==<sp/>0)<sp/><ref refid="camada__de__dados_8h_1afd3a085c8db7800a35884a89b842893d" kindref="member">set_comando_pos</ref>(e,1);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1a48e0ec2d6ce99bf5078a2b7e37b80a71" kindref="member">set_valor_pos</ref>(e,n_jog);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(linha,<sp/></highlight><highlight class="stringliteral">&quot;jog\n&quot;</highlight><highlight class="normal">)==0)<sp/>{</highlight></codeline>
 <codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="camada__de__dados_8h_1a229893df34b1c4d70de18501c365ff13" kindref="member">obter_comando_pos</ref>(e))<sp/>{</highlight></codeline>
 <codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/><ref refid="camada__de__dados_8h_1a91f83ff370b2ee904584ac7b2a83e573" kindref="member">obter_valor_pos</ref>(e);</highlight></codeline>
 <codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nt<sp/>=<sp/><ref refid="camada__de__dados_8h_1abbfeab93575f20e5867482fd41a71cba" kindref="member">obter_numero_de_jogadas</ref>(e);</highlight></codeline>
-<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>n<sp/>&lt;<sp/>nt-i;<sp/>i++)</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>n<sp/>&lt;=<sp/>nt-i;<sp/>i++)</highlight></codeline>
 <codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__da__interface_8h_1a22ec825139ca5e16ca75fd66a33c94e5" kindref="member">apaga_ultima_jogada</ref><sp/>(e);</highlight></codeline>
 <codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord<sp/>=<sp/><ref refid="bot_8h_1ae778a7a9723a20ac11042ba78c54e849" kindref="member">joga_euclidiana</ref>(e);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord<sp/>=<sp/><ref refid="bot_8h_1ac73c0279607c36fd19b4eadb84bb24ef" kindref="member">joga_MinMax</ref>(e);</highlight></codeline>
 <codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="logica__do__programa_8h_1aa302374c28d47481589def1bbb75eed7" kindref="member">casa_vencedora</ref><sp/>(e,coord)<sp/>||<sp/><ref refid="logica__do__programa_8h_1a69a7a211193098fe83cf02f7450bdd85" kindref="member">jogada_presa</ref><sp/>(e,coord)){</highlight></codeline>
 <codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j_atual<sp/>=<sp/><ref refid="camada__de__dados_8h_1ad6e326e4ffa57ca1ae0c75377ecefc8c" kindref="member">obter_jogador_atual</ref><sp/>(e);</highlight></codeline>
@@ -735,7 +831,7 @@
 <codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="camada__de__dados_8h_1a229893df34b1c4d70de18501c365ff13" kindref="member">obter_comando_pos</ref>(e))<sp/>{</highlight></codeline>
 <codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/><ref refid="camada__de__dados_8h_1a91f83ff370b2ee904584ac7b2a83e573" kindref="member">obter_valor_pos</ref>(e);</highlight></codeline>
 <codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nt<sp/>=<sp/><ref refid="camada__de__dados_8h_1abbfeab93575f20e5867482fd41a71cba" kindref="member">obter_numero_de_jogadas</ref>(e);</highlight></codeline>
-<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>n<sp/>&lt;<sp/>nt-i;<sp/>i++)</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>n<sp/>&lt;=<sp/>nt-i;<sp/>i++)</highlight></codeline>
 <codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__da__interface_8h_1a22ec825139ca5e16ca75fd66a33c94e5" kindref="member">apaga_ultima_jogada</ref><sp/>(e);</highlight></codeline>
 <codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>coord<sp/>=<sp/><ref refid="bot_8h_1a8462cdb7d30b34c6cf61ab7176dd37e8" kindref="member">joga_aleatorio</ref>(e);</highlight></codeline>

@@ -1,32 +1,58 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="camada__de__dados_8c" kind="file" language="C++">
     <compoundname>camada_de_dados.c</compoundname>
     <includes refid="camada__de__dados_8h" local="yes">camada_de_dados.h</includes>
     <incdepgraph>
-      <node id="54">
+<<<<<<< HEAD
+      <node id="51">
         <label>stdlib.h</label>
       </node>
-      <node id="50">
+      <node id="47">
         <label>camada_de_dados.c</label>
         <link refid="camada__de__dados_8c"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
         <childnode refid="51" relation="include">
         </childnode>
       </node>
-      <node id="51">
-        <label>camada_de_dados.h</label>
-        <link refid="camada__de__dados_8h"/>
-        <childnode refid="52" relation="include">
-        </childnode>
-        <childnode refid="53" relation="include">
-        </childnode>
-        <childnode refid="54" relation="include">
-        </childnode>
-      </node>
-      <node id="52">
+      <node id="49">
         <label>string.h</label>
       </node>
-      <node id="53">
+      <node id="50">
+=======
+      <node id="1">
+        <label>camada_de_dados.c</label>
+        <link refid="camada__de__dados_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3">
+        <label>string.h</label>
+      </node>
+      <node id="4">
+>>>>>>> b497962538e40ac6583047a6505dc079f9bfb61a
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -41,12 +67,13 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que coloca todas as casas do tabuleiro como vazias exepto a casa inicial. </para>        </briefdescription>
+<para>Função que coloca todas as casas do tabuleiro como vazias exepto a casa inicial. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="4" column="1" bodyfile="camada_de_dados.c" bodystart="4" bodyend="14"/>
+        <location file="camada_de_dados.c" line="4" column="6" bodyfile="camada_de_dados.c" bodystart="4" bodyend="14"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a59f994ca81b7ae54ecb349ae99b741d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -58,12 +85,13 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que atribui jogadas inválidas a todas as jogadas não efetuadas presentes na lista de jogadas. </para>        </briefdescription>
+<para>Função que atribui jogadas inválidas a todas as jogadas não efetuadas presentes na lista de jogadas. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="18" column="1" bodyfile="camada_de_dados.c" bodystart="18" bodyend="26"/>
+        <location file="camada_de_dados.c" line="18" column="6" bodyfile="camada_de_dados.c" bodystart="18" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a40555aff97afc67bd1866f2785111310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -75,13 +103,16 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que retorna a ultima jogada efetuada. </para>        </briefdescription>
+<para>Função que retorna a ultima jogada efetuada. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>A última coordenada jogada </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>A última coordenada jogada </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="30" column="1" bodyfile="camada_de_dados.c" bodystart="30" bodyend="33"/>
+        <location file="camada_de_dados.c" line="30" column="12" bodyfile="camada_de_dados.c" bodystart="30" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a2f36f7634349620a18340ba7276aa601" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -97,12 +128,13 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Função que define a ultima jogada efetuada. </para>        </briefdescription>
+<para>Função que define a ultima jogada efetuada. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="35" column="1" bodyfile="camada_de_dados.c" bodystart="35" bodyend="37"/>
+        <location file="camada_de_dados.c" line="35" column="6" bodyfile="camada_de_dados.c" bodystart="35" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1ad6e326e4ffa57ca1ae0c75377ecefc8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -114,13 +146,16 @@
           <declname>estado</declname>
         </param>
         <briefdescription>
-<para>Função que retorna o jogador que possui a vez de jogar. </para>        </briefdescription>
+<para>Função que retorna o jogador que possui a vez de jogar. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>Número do jogador atual (1 ou 2) </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>Número do jogador atual (1 ou 2) </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="40" column="1" bodyfile="camada_de_dados.c" bodystart="40" bodyend="43"/>
+        <location file="camada_de_dados.c" line="40" column="5" bodyfile="camada_de_dados.c" bodystart="40" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a35c87726f07cb6e89e088c9f2ada6ec2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -136,12 +171,13 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Função que define o jogador que possui a vez de jogar. </para>        </briefdescription>
+<para>Função que define o jogador que possui a vez de jogar. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="45" column="1" bodyfile="camada_de_dados.c" bodystart="45" bodyend="47"/>
+        <location file="camada_de_dados.c" line="45" column="6" bodyfile="camada_de_dados.c" bodystart="45" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a6faa68373203923729ed38657aa0f768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref></type>
@@ -157,13 +193,16 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para>Função que obtém o estado de determinada casa localizada na coordenada passada. </para>        </briefdescription>
+<para>Função que obtém o estado de determinada casa localizada na coordenada passada. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O estado da casa </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>O estado da casa </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="50" column="1" bodyfile="camada_de_dados.c" bodystart="50" bodyend="55"/>
+        <location file="camada_de_dados.c" line="50" column="6" bodyfile="camada_de_dados.c" bodystart="50" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a60a461e722e8beb32647bed475481e25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -183,12 +222,13 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Função que define o estado de determinada casa localizada na coordenada passada. </para>        </briefdescription>
+<para>Função que define o estado de determinada casa localizada na coordenada passada. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="57" column="1" bodyfile="camada_de_dados.c" bodystart="57" bodyend="61"/>
+        <location file="camada_de_dados.c" line="57" column="6" bodyfile="camada_de_dados.c" bodystart="57" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1afe76af8f3d8d748148e9aebd7f68349e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -212,12 +252,13 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Define o estado da casa. </para>        </briefdescription>
+<para>Define o estado da casa. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="63" column="1" bodyfile="camada_de_dados.c" bodystart="63" bodyend="65"/>
+        <location file="camada_de_dados.c" line="63" column="6" bodyfile="camada_de_dados.c" bodystart="63" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1abbfeab93575f20e5867482fd41a71cba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -229,13 +270,16 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que devolve número de jogadas efetuadas até o momento. </para>        </briefdescription>
+<para>Função que devolve número de jogadas efetuadas até o momento. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>Número de jogadas efetuadas </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>Número de jogadas efetuadas </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="68" column="1" bodyfile="camada_de_dados.c" bodystart="68" bodyend="71"/>
+        <location file="camada_de_dados.c" line="68" column="5" bodyfile="camada_de_dados.c" bodystart="68" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a6488675aa725aba9817ddf7e4400f1ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -251,12 +295,13 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Função que define número de jogadas efetuadas até o momento. </para>        </briefdescription>
+<para>Função que define número de jogadas efetuadas até o momento. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="73" column="1" bodyfile="camada_de_dados.c" bodystart="73" bodyend="75"/>
+        <location file="camada_de_dados.c" line="73" column="6" bodyfile="camada_de_dados.c" bodystart="73" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a8ea2483c691783d59f493c9a779abdd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -276,12 +321,13 @@
           <declname>i</declname>
         </param>
         <briefdescription>
-<para>Função que define determinada jogada da lista de jogadas do estado. </para>        </briefdescription>
+<para>Função que define determinada jogada da lista de jogadas do estado. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="77" column="1" bodyfile="camada_de_dados.c" bodystart="77" bodyend="79"/>
+        <location file="camada_de_dados.c" line="77" column="6" bodyfile="camada_de_dados.c" bodystart="77" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a788fcf76b3701f0fdcf5db312132a9c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structJOGADA" kindref="compound">JOGADA</ref></type>
@@ -297,13 +343,16 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Função que retorna uma jogada de determinada posição na lista de jogadas. </para>        </briefdescription>
+<para>Função que retorna uma jogada de determinada posição na lista de jogadas. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>A jogada selecionada </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>A jogada selecionada </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="82" column="1" bodyfile="camada_de_dados.c" bodystart="82" bodyend="86"/>
+        <location file="camada_de_dados.c" line="82" column="8" bodyfile="camada_de_dados.c" bodystart="82" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a648af8c5557bb6c70d0526b630ccb6d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -323,13 +372,16 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Obtem as jogadas de um dado jogador. </para>        </briefdescription>
+<para>Obtem as jogadas de um dado jogador. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>Coordenada da jogada de um determinado jogador </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>Coordenada da jogada de um determinado jogador </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="88" column="1" bodyfile="camada_de_dados.c" bodystart="88" bodyend="101"/>
+        <location file="camada_de_dados.c" line="88" column="12" bodyfile="camada_de_dados.c" bodystart="88" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a229893df34b1c4d70de18501c365ff13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -341,13 +393,16 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que diz se o comando pos está ativo. </para>        </briefdescription>
+<para>Função que diz se o comando pos está ativo. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O último comando pos usado </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>O último comando pos usado </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="103" column="1" bodyfile="camada_de_dados.c" bodystart="103" bodyend="106"/>
+        <location file="camada_de_dados.c" line="103" column="5" bodyfile="camada_de_dados.c" bodystart="103" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1afd3a085c8db7800a35884a89b842893d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -363,12 +418,13 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Função define um comando pos. </para>        </briefdescription>
+<para>Função define um comando pos. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="108" column="1" bodyfile="camada_de_dados.c" bodystart="108" bodyend="110"/>
+        <location file="camada_de_dados.c" line="108" column="6" bodyfile="camada_de_dados.c" bodystart="108" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a91f83ff370b2ee904584ac7b2a83e573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -380,13 +436,16 @@
           <declname>e</declname>
         </param>
         <briefdescription>
-<para>Função que diz qual o valor do comando pos. </para>        </briefdescription>
+<para>Função que diz qual o valor do comando pos. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O valor do último comando pos usado </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>O valor do último comando pos usado </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="113" column="1" bodyfile="camada_de_dados.c" bodystart="113" bodyend="116"/>
+        <location file="camada_de_dados.c" line="113" column="5" bodyfile="camada_de_dados.c" bodystart="113" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a48e0ec2d6ce99bf5078a2b7e37b80a71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -402,12 +461,13 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Função define o valor do comando pos. </para>        </briefdescription>
+<para>Função define o valor do comando pos. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="117" column="1" bodyfile="camada_de_dados.c" bodystart="117" bodyend="119"/>
+        <location file="camada_de_dados.c" line="117" column="6" bodyfile="camada_de_dados.c" bodystart="117" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1ad109f3e32f207e33bb2f4d43949e54a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -427,12 +487,13 @@
           <declname>x</declname>
         </param>
         <briefdescription>
-<para>Define uma jogada daso um índice. </para>        </briefdescription>
+<para>Define uma jogada daso um índice. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="121" column="1" bodyfile="camada_de_dados.c" bodystart="121" bodyend="126"/>
+        <location file="camada_de_dados.c" line="121" column="6" bodyfile="camada_de_dados.c" bodystart="121" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a553aea90c78e14dca02698fd3e9ad52e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -456,12 +517,13 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para>Define uma jogada para um só jogador dando um índice. </para>        </briefdescription>
+<para>Define uma jogada para um só jogador dando um índice. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="128" column="1" bodyfile="camada_de_dados.c" bodystart="128" bodyend="131"/>
+        <location file="camada_de_dados.c" line="128" column="6" bodyfile="camada_de_dados.c" bodystart="128" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8c_1a7e0c7e26fb685d9ab501e19b05e6954f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
@@ -469,13 +531,16 @@
         <argsstring>()</argsstring>
         <name>inicializar_estado</name>
         <briefdescription>
-<para>função que inicializa um estado </para>        </briefdescription>
+<para>função que inicializa um estado </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O ponteiro para o estado </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>O ponteiro para o estado </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.c" line="133" column="1" bodyfile="camada_de_dados.c" bodystart="133" bodyend="144"/>
+        <location file="camada_de_dados.c" line="133" column="8" bodyfile="camada_de_dados.c" bodystart="133" bodyend="144"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -58,14 +58,6 @@ COORDENADA joga_euclidiana (ESTADO *e);
 */
 COORDENADA joga_aleatorio (ESTADO *e);
 
-/**
-\brief  Função que aplica a heuristica do floddfill e joga automáticamente
-*/
-int verifica_jogada_flood (ESTADO *e,COORDENADA c);
-/**
-\brief COORDENADA auxiliar para a heuristica floddfill
-*/
-COORDENADA joga_flood (ESTADO *e);
 
 /**
 \brief Função atribui uma classificação a determinado nodo de acordo com a sua posição relativa em relação à casa vitoriosa
