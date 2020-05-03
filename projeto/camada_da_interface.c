@@ -272,8 +272,8 @@ void apaga_ultima_jogada (ESTADO *e){
         set_comando_pos(e,0);
     }
     else {
-        if (obter_jogada_por_jog(e,i,1).coluna == -1 && obter_jogada_por_jog(e,i,1).linha == -1){
-            apaga_ultima_jogada_completa (e); printf ("CDz");}
+        if (obter_jogada_por_jog(e,i,1).coluna == -1 && obter_jogada_por_jog(e,i,1).linha == -1)
+            apaga_ultima_jogada_completa (e);
         else{
             COORDENADA j = obter_jogada_por_jog (e,i,1); 
             set_estado_casa_c(e,j,VAZIO);
