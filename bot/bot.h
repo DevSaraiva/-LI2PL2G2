@@ -68,6 +68,25 @@ int verifica_jogada_flood (ESTADO *e,COORDENADA c);
 COORDENADA joga_flood (ESTADO *e);
 
 /**
+\brief Função que atribui determinada classificação a um nodo baseado na sua distancia relativa aos pontos de fim de jogo
+*/
+
+int atribui_valor (ESTADO *e, int jog_max, COORDENADA c);
+
+/**
+\brief Função que calcula o valor do nodo principal de uma arvore com profundidade 1;
+*/
+
+void fill_valor ( TREEMinMax * tree, int max_jog);
+
+/**
+\brief Função que aplica a funçao fill ao ultimo nodo de uma arvore;
+*/
+
+void aplly_fill_valor (int depth, TREEMinMax * tree, int max_jog);
+
+
+/**
 \brief Função que joga automaticamente segundo o algoritmo min_max
 */
 

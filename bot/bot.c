@@ -427,14 +427,15 @@ COORDENADA joga_MinMax(ESTADO *e){
     COORDENADA jogada;
     int max_jog = obter_jogador_atual(e);
     int valor;
-    int depth = 7;
+    int depth = 5;
+    int i ;
     TREEMinMax * tree = malloc(sizeof(TREEMinMax));
     tree = create_tree_total(depth , e, max_jog,ultima_jog);
     
 
-    while(depth != 1){
+    for(i = depth; i != 1; i--){
     
-        depth--;
+    
         aplly_fill_valor(depth, tree, max_jog);
     
     }
