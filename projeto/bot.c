@@ -65,7 +65,6 @@ return dist;
 
 
 
-
 int atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
     
     COORDENADA * coord;
@@ -76,10 +75,9 @@ int atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
     if (jog_max == 1) jog_min = 2;
     else jog_min = 1;
 
-    int jog = obter_jogador_atual(e);
-    int jog_atual;
-    if (jog == 1) jog_atual = 2;
-    else jog_atual = 1;
+    
+    int jog_atual =  obter_jogador_atual(e);
+    
 
     if(jogada_presa(e,c)){
         if(jog_atual == jog_max) valor = -1000;
@@ -256,6 +254,7 @@ COORDENADA devolve_coordenada (TREEMinMax * tree, int val){
     if( tree -> nodo7 != NULL && tree -> nodo7 -> valor == val) c = tree -> nodo7 -> coord;
     if( tree -> nodo8 != NULL && tree -> nodo8 -> valor == val) c = tree -> nodo8 -> coord;
 return c;
+
 }
 
 
@@ -379,18 +378,16 @@ void fill_valor ( TREEMinMax * tree, int max_jog){
             
             int valor_cabeca = atribui_valor(e,max_jog,c);
             int valor_nodo = max_nodo(tree);
-            if (valor_cabeca > valor_nodo) valor = valor_cabeca;
+            if (valor_cabeca == 1000) valor = valor_cabeca;
             else valor = valor_nodo;
-        }
         
-        
-        else{
+        } else {
             
             int valor_cabeca = atribui_valor(e,max_jog,c);
             int valor_nodo = min_nodo(tree);
 
-            if (valor_cabeca > valor_nodo) valor = valor_nodo;
-            else valor = valor_cabeca;
+            if (valor_cabeca == -1000) valor = valor_cabeca;
+            else valor = valor_nodo;
         } 
 
         tree -> valor = valor;
@@ -447,15 +444,14 @@ COORDENADA joga_MinMax(ESTADO *e){
     COORDENADA jogada;
     int max_jog = obter_jogador_atual(e);
     int valor;
-    int depth = 5;
+    int depth = 7;
     TREEMinMax * tree = malloc(sizeof(TREEMinMax));
     tree = create_tree_total(depth , e, max_jog,ultima_jog);
-    
+
 
     for (; depth != 1; depth--){
-    
+
         aplly_fill_valor(depth, tree, max_jog);
-    
     }
     
     valor = max_nodo(tree);
@@ -531,4 +527,3 @@ COORDENADA joga_aleatorio (ESTADO *e) {
     
     return *coord; 
 }
-
