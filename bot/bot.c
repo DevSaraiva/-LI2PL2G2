@@ -76,10 +76,9 @@ int atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
     if (jog_max == 1) jog_min = 2;
     else jog_min = 1;
 
-    int jog = obter_jogador_atual(e);
-    int jog_atual;
-    if (jog == 1) jog_atual = 2;
-    else jog_atual = 1;
+    
+    int jog_atual =  obter_jogador_atual(e);
+    
 
     if(jogada_presa(e,c)){
         if(jog_atual == jog_max) valor = -1000;
