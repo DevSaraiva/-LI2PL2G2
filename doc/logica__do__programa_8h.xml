@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="logica__do__programa_8h" kind="file" language="C++">
     <compoundname>logica_do_programa.h</compoundname>
     <includes refid="camada__de__dados_8h" local="yes">camada_de_dados.h</includes>
@@ -8,80 +8,81 @@
     <includes local="no">stdlib.h</includes>
     <includedby refid="bot_8h" local="yes">bot.h</includedby>
     <includedby refid="camada__da__interface_8h" local="yes">camada_da_interface.h</includedby>
+    <includedby refid="bot_8c" local="yes">bot.c</includedby>
     <includedby refid="logica__do__programa_8c" local="yes">logica_do_programa.c</includedby>
     <includedby refid="main_8c" local="yes">main.c</includedby>
     <incdepgraph>
-      <node id="95">
-        <label>stdlib.h</label>
-      </node>
-      <node id="92">
-        <label>camada_de_dados.h</label>
-        <link refid="camada__de__dados_8h"/>
-        <childnode refid="93" relation="include">
-        </childnode>
-        <childnode refid="94" relation="include">
-        </childnode>
-        <childnode refid="95" relation="include">
-        </childnode>
-      </node>
-      <node id="93">
-        <label>string.h</label>
-      </node>
-      <node id="91">
+      <node id="1">
         <label>logica_do_programa.h</label>
         <link refid="logica__do__programa_8h"/>
-        <childnode refid="92" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="96" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="94" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="95" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="96">
+      <node id="2">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
         <label>listas.h</label>
         <link refid="listas_8h"/>
-        <childnode refid="94" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="95" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="93" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="92" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="94">
+      <node id="3">
+        <label>string.h</label>
+      </node>
+      <node id="4">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="98">
-        <label>bot.h</label>
-        <link refid="bot_8h"/>
-        <childnode refid="99" relation="include">
+      <node id="1">
+        <label>logica_do_programa.h</label>
+        <link refid="logica__do__programa_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="100">
+      <node id="2">
+        <label>bot.h</label>
+        <link refid="bot_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
         <label>main.c</label>
         <link refid="main_8c"/>
       </node>
-      <node id="99">
+      <node id="3">
         <label>camada_da_interface.h</label>
         <link refid="camada__da__interface_8h"/>
-        <childnode refid="98" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="100" relation="include">
-        </childnode>
-      </node>
-      <node id="97">
-        <label>logica_do_programa.h</label>
-        <link refid="logica__do__programa_8h"/>
-        <childnode refid="98" relation="include">
-        </childnode>
-        <childnode refid="99" relation="include">
-        </childnode>
-        <childnode refid="100" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -96,13 +97,16 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para>Função que verifica se a casa é valida para jogar. </para>        </briefdescription>
+<para>Função que verifica se a casa é valida para jogar. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>1 se válida, 0 caso contrário </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>1 se válida, 0 caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logica_do_programa.h" line="24" column="1" bodyfile="logica_do_programa.c" bodystart="3" bodyend="10"/>
+        <location file="logica_do_programa.h" line="24" column="5" bodyfile="logica_do_programa.c" bodystart="3" bodyend="10" declfile="logica_do_programa.h" declline="24" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1a69a7a211193098fe83cf02f7450bdd85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -118,13 +122,16 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para>Função que verifica se a peca está presa. </para>        </briefdescription>
+<para>Função que verifica se a peca está presa. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>1 se presa, 0 caso contrário </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>1 se presa, 0 caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logica_do_programa.h" line="34" column="1" bodyfile="logica_do_programa.c" bodystart="12" bodyend="45"/>
+        <location file="logica_do_programa.h" line="34" column="5" bodyfile="logica_do_programa.c" bodystart="12" bodyend="45" declfile="logica_do_programa.h" declline="34" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1aa302374c28d47481589def1bbb75eed7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -140,13 +147,16 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para>Função que verifica se o jogo acabou. </para>        </briefdescription>
+<para>Função que verifica se o jogo acabou. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>1 se o jogo acabou, 0 caso contrário </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>1 se o jogo acabou, 0 caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logica_do_programa.h" line="43" column="1" bodyfile="logica_do_programa.c" bodystart="49" bodyend="55"/>
+        <location file="logica_do_programa.h" line="43" column="5" bodyfile="logica_do_programa.c" bodystart="49" bodyend="55" declfile="logica_do_programa.h" declline="43" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1acd1b2f5c71c17e023af74e3c678029a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -162,13 +172,16 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para>Função que verifica se uma jogada é possivel. </para>        </briefdescription>
+<para>Função que verifica se uma jogada é possivel. </para>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>1 se a jogada for possível, 0 caso contrário </para></simplesect>
-</para>        </detaileddescription>
+<para><simplesect kind="return"><para>1 se a jogada for possível, 0 caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logica_do_programa.h" line="50" column="1" bodyfile="logica_do_programa.c" bodystart="60" bodyend="73"/>
+        <location file="logica_do_programa.h" line="50" column="5" bodyfile="logica_do_programa.c" bodystart="60" bodyend="73" declfile="logica_do_programa.h" declline="50" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1ab2fb8cd7bf019ed1c45b7987033795dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -184,18 +197,20 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para>Função que altera o estado do jogo através das coordenadas fornecidas. </para>        </briefdescription>
+<para>Função que altera o estado do jogo através das coordenadas fornecidas. </para>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logica_do_programa.h" line="56" column="1" bodyfile="logica_do_programa.c" bodystart="78" bodyend="113"/>
+        <location file="logica_do_programa.h" line="56" column="6" bodyfile="logica_do_programa.c" bodystart="78" bodyend="113" declfile="logica_do_programa.h" declline="56" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Definição das funções da componente lógica do jogo </para>    </detaileddescription>
+<para>Definição das funções da componente lógica do jogo </para>
+    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>_GUIAO5_LOGICA_DO_PROGRAMA_H</highlight><highlight class="normal"></highlight></codeline>
