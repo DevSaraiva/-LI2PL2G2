@@ -76,13 +76,10 @@ int atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
     if (jog_max == 1) jog_min = 2;
     else jog_min = 1;
 
-    int jog = obter_jogador_atual(e);
-    int jog_atual;
-    if (jog == 1) jog_atual = 2;
-    else jog_atual = 1;
+    int jog_atual = obter_jogador_atual(e);
 
     if(jogada_presa(e,c)){
-        if(jog_atual = jog_max) valor = -1000;
+        if(jog_atual == jog_max) valor = -1000;
         else valor = 1000; 
     
     }else{
@@ -246,15 +243,17 @@ int is_last_decision (TREEMinMax * tree){
 
 COORDENADA devolve_coordenada (TREEMinMax * tree, int val){
 
-    if( tree -> nodo1 != NULL && tree -> nodo1 -> valor == val) return tree -> nodo1 -> coord;
-    if( tree -> nodo2 != NULL && tree -> nodo2 -> valor == val) return tree -> nodo2 -> coord;
-    if( tree -> nodo3 != NULL && tree -> nodo3 -> valor == val) return tree -> nodo3 -> coord;
-    if( tree -> nodo4 != NULL && tree -> nodo4 -> valor == val) return tree -> nodo4 -> coord;
-    if( tree -> nodo5 != NULL && tree -> nodo5 -> valor == val) return tree -> nodo5 -> coord;
-    if( tree -> nodo6 != NULL && tree -> nodo6 -> valor == val) return tree -> nodo6 -> coord;
-    if( tree -> nodo7 != NULL && tree -> nodo7 -> valor == val) return tree -> nodo7 -> coord;
-    if( tree -> nodo8 != NULL && tree -> nodo8 -> valor == val) return tree -> nodo8 -> coord;
+    COORDENADA c;
+    if( tree -> nodo1 != NULL && tree -> nodo1 -> valor == val) c = tree -> nodo1 -> coord;
+    if( tree -> nodo2 != NULL && tree -> nodo2 -> valor == val) c = tree -> nodo2 -> coord;
+    if( tree -> nodo3 != NULL && tree -> nodo3 -> valor == val) c = tree -> nodo3 -> coord;
+    if( tree -> nodo4 != NULL && tree -> nodo4 -> valor == val) c = tree -> nodo4 -> coord;
+    if( tree -> nodo5 != NULL && tree -> nodo5 -> valor == val) c = tree -> nodo5 -> coord;
+    if( tree -> nodo6 != NULL && tree -> nodo6 -> valor == val) c = tree -> nodo6 -> coord;
+    if( tree -> nodo7 != NULL && tree -> nodo7 -> valor == val) c = tree -> nodo7 -> coord;
+    if( tree -> nodo8 != NULL && tree -> nodo8 -> valor == val) c = tree -> nodo8 -> coord;
 
+return c;
 }
 
 
@@ -433,8 +432,9 @@ COORDENADA joga_MinMax(ESTADO *e){
     tree = create_tree_total(depth , e, max_jog,ultima_jog);
     
 
-    for (depth; depth != 1; depth--){
+    while(depth != 1){
     
+        depth--;
         aplly_fill_valor(depth, tree, max_jog);
     
     }
