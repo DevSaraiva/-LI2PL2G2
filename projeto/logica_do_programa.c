@@ -29,14 +29,14 @@ int jogada_presa (ESTADO *e,COORDENADA c){
     }
     int j_atual = obter_jogador_atual (e);
     if ((j_atual == 1)){
-        if((c_ult == 7) && (l_ult == 7)) r = 1;
+        if((c_ult == 0) && (l_ult == 0)) r = 1;
         else {
             set_jogador_atual (e,2);
             r = 1;
         }
     }
     else {
-        if ((c_ult == 0) && (l_ult == 0)) r = 1;
+        if ((c_ult == 7) && (l_ult == 7)) r = 1;
         else {
             set_jogador_atual(e,1);
             r = 1;}
