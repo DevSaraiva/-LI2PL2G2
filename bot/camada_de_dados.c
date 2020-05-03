@@ -85,8 +85,8 @@ JOGADA retorna_Jogada (ESTADO *e, int x){
 
 }
 
-COORDENADA obter_jogada_por_jog (ESTADO *e,int i,int x){
-    if (x == 1){
+COORDENADA obter_jogada_por_jog (ESTADO *e,int i,int jogador){
+    if (jogador == 1){
         int ncoluna1 = e->jogadas[i].jogador1.coluna;
         int nlinha1 = e->jogadas[i].jogador1.linha;
         COORDENADA j1 = {ncoluna1,nlinha1};

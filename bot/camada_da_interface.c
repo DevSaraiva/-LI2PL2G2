@@ -85,12 +85,10 @@ void escreve_movimentos(ESTADO *e, FILE *save){
     //Percorre a lista de movimentos e imprime-a no ficheiro
     
     for (int i = 0; i < num_jogadas; i++) {
-        
-
-        int ncoluna1 = e->jogadas[i].jogador1.coluna;
-        int nlinha1 = e->jogadas[i].jogador1.linha + 1;
-        int ncoluna2 = e->jogadas[i].jogador2.coluna;
-        int nlinha2 = e->jogadas[i].jogador2.linha + 1;
+        int ncoluna1 = obter_jogada_por_jog(e,i,1).coluna; 
+        int nlinha1 =  obter_jogada_por_jog(e,i,1).linha + 1;  
+        int ncoluna2 = obter_jogada_por_jog(e,i,2).coluna;
+        int nlinha2 = obter_jogada_por_jog(e,i,2).linha + 1;
        
         if (ncoluna2 !=-1 && nlinha2 != -1){
             fprintf(save, "%02d: %c%d",i + 1,letra(ncoluna1),nlinha1);
@@ -105,7 +103,7 @@ void escreve_movimentos(ESTADO *e, FILE *save){
         int c_ult = obter_ultima_jogada(e).coluna;
         int l_ult = obter_ultima_jogada(e).linha;
         //O espaço no final da string é fundamental pro bot
-        fprintf(save, "%02d: %c%d ", num_jogadas + 1, letra(c_ult),l_ult + 1);
+        fprintf(save, "%02d: %c%d", num_jogadas + 1, letra(c_ult),l_ult + 1);
     }
 }
 
@@ -136,18 +134,13 @@ void gravar_estado (ESTADO *e, char filename[]){
 
 
 void ler_estado (ESTADO *e,char filename[]) {
-
     inicializar_estado(e);
-
     FILE *save;
     char str[BUF_SIZE];
-    
     save = fopen(filename,"r");
-
     if(save == NULL) {
         printf ("Save inexistente ");
     } else {
-        
         while(!feof(save)) {
 
        //Lê as primeiras 10 linhas correspondentes ao tabuleiro
@@ -176,10 +169,7 @@ void ler_estado (ESTADO *e,char filename[]) {
 
             COORDENADA c1 = {str[4]-97,str[5]-49};
             //Verifica se o jogador 2 já jogou na última jogada
-            
-            
-            if (strlen(str) > 7)
-            {   
+            if (strlen(str) > 7){   
                 COORDENADA c2 = {str[7]-97, str[8]-49};
                 JOGADA j = {c1,c2};
                 set_jogada_indice(e,j,indice);
@@ -187,17 +177,13 @@ void ler_estado (ESTADO *e,char filename[]) {
                 set_numero_de_jogadas(e,indice + 1);
                 set_ultima_jogada(e,c2);
            
-            } else
-            {
-               
+            } else{
                 set_jogador_atual(e,2);
                 set_ultima_jogada(e,c1);
                 set_jogada_jog (e,indice,1,c1);
-
             }
             // Limpa a string
-            for (int i = 0; i < 12; i++)
-            {
+            for (int i = 0; i < 12; i++){
                 str[i]=' ';
             }
             indice++;
@@ -260,8 +246,8 @@ void apaga_ultima_jogada_completa (ESTADO *e){
 
 void apaga_ultima_jogada (ESTADO *e){
     int i = obter_numero_de_jogadas (e);
-
-    if (i == 1) {
+    int n_pos = obter_valor_pos(e);
+    if (n_pos == 0) {
         set_jogador_atual(e,1);
         set_numero_de_jogadas(e,0);
         COORDENADA c = {4,4};
@@ -271,7 +257,7 @@ void apaga_ultima_jogada (ESTADO *e){
         set_valor_pos (e,0);
         set_comando_pos(e,0);
     }
-    else { 
+    else {
         if (obter_jogada_por_jog(e,i,1).coluna == -1 && obter_jogada_por_jog(e,i,1).linha == -1)
         apaga_ultima_jogada_completa (e);
         else{
@@ -363,7 +349,7 @@ int interpretador(ESTADO *e) {
         if (sscanf(linha, "pos %d", &n_jog)){ 
             int n = obter_numero_de_jogadas(e);
             int j_atual = obter_jogador_atual (e);
-            if (n_jog > n || j_atual == 1) printf("Posição anterior inválida\n");
+            if ((n_jog >= n && j_atual == 1) ||n_jog >= n )  printf("Posição anterior inválida\n");
             else {
                 printf("%d\n",n);
                 escreve_pos(e,n_jog);

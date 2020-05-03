@@ -36,10 +36,10 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="10">
+      <node id="15">
         <label>slist</label>
         <link refid="structslist"/>
-        <childnode refid="10" relation="usage">
+        <childnode refid="15" relation="usage">
           <edgelabel>prox</edgelabel>
         </childnode>
       </node>

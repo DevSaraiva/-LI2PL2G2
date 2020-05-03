@@ -260,8 +260,8 @@ void apaga_ultima_jogada_completa (ESTADO *e){
 
 void apaga_ultima_jogada (ESTADO *e){
     int i = obter_numero_de_jogadas (e);
-
-    if (i == 1) {
+    int n_pos = obter_valor_pos(e);
+    if (n_pos == 0) {
         set_jogador_atual(e,1);
         set_numero_de_jogadas(e,0);
         COORDENADA c = {4,4};
@@ -271,9 +271,9 @@ void apaga_ultima_jogada (ESTADO *e){
         set_valor_pos (e,0);
         set_comando_pos(e,0);
     }
-    else { 
-        if (obter_jogada_por_jog(e,i,1).coluna == -1 && obter_jogada_por_jog(e,i,1).linha == -1)
-        apaga_ultima_jogada_completa (e);
+    else {
+        if (obter_jogada_por_jog(e,i,1).coluna == -1 && obter_jogada_por_jog(e,i,1).linha == -1){
+            apaga_ultima_jogada_completa (e); printf ("CDz");}
         else{
             COORDENADA j = obter_jogada_por_jog (e,i,1); 
             set_estado_casa_c(e,j,VAZIO);
@@ -296,7 +296,7 @@ ESTADO escreve_pos (ESTADO *e,int n){
     else {
         set_estado_casa(s,4,4,PRETA);
         COORDENADA j1,j2;
-        for (i=0;i < n;i++){
+        for (i = 0;i < n;i++){
         j1 = obter_jogada_por_jog (e,i,1);
         j2 = obter_jogada_por_jog (e,i,2);
         set_estado_casa_c (s,j1,PRETA);
@@ -329,10 +329,10 @@ int interpretador(ESTADO *e) {
                 int n = obter_valor_pos(e);
                 int nt = obter_numero_de_jogadas(e);
                 for(int i = 0; n <= nt-i; i++)
-                apaga_ultima_jogada (e);
+                    apaga_ultima_jogada (e);
             }
             jogar(e, coord);
-           
+        
             if (casa_vencedora (e,coord) || jogada_presa (e,coord)){
                 int j_atual = obter_jogador_atual (e);
                 printf("O vencedor é o PL%d\n",j_atual);
@@ -340,7 +340,7 @@ int interpretador(ESTADO *e) {
             }
             else mostrar_tabuleiro(e);
             if (obter_comando_pos(e)) set_comando_pos(e,0);                    
-        }
+        }  
     
     
         if(sscanf(linha,"%[Q]", &quit)){
@@ -363,18 +363,18 @@ int interpretador(ESTADO *e) {
         if (sscanf(linha, "pos %d", &n_jog)){ 
             int n = obter_numero_de_jogadas(e);
             int j_atual = obter_jogador_atual (e);
-            if (n_jog > n || j_atual == 1) printf("Posição anterior inválida\n");
+            if ((n_jog >= n && j_atual == 1) || n_jog > n ) printf("Posição anterior inválida\n");
             else {
-                printf("%d\n",n);
                 escreve_pos(e,n_jog);
-            if (obter_comando_pos(e) == 0) set_comando_pos(e,1);
-            set_valor_pos(e,n_jog);}
+                if (obter_comando_pos(e) == 0) set_comando_pos(e,1);
+                    set_valor_pos(e,n_jog);
+            }
         }
         if (strcmp(linha, "jog\n")==0) {
             if (obter_comando_pos(e)) {
                 int n = obter_valor_pos(e);
                 int nt = obter_numero_de_jogadas(e);
-                for(int i = 0; n < nt-i; i++)
+                for(int i = 0; n <= nt-i; i++)
                 apaga_ultima_jogada (e);
             }
             COORDENADA coord = joga_MinMax(e);
@@ -392,7 +392,7 @@ int interpretador(ESTADO *e) {
             if (obter_comando_pos(e)) {
                 int n = obter_valor_pos(e);
                 int nt = obter_numero_de_jogadas(e);
-                for(int i = 0; n < nt-i; i++)
+                for(int i = 0; n <= nt-i; i++)
                 apaga_ultima_jogada (e);
             }
             COORDENADA coord = joga_aleatorio(e);

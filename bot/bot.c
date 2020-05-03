@@ -82,7 +82,7 @@ int atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
     else jog_atual = 1;
 
     if(jogada_presa(e,c)){
-        if(jog_atual = jog_max) valor = -1000;
+        if(jog_atual == jog_max) valor = -1000;
         else valor = 1000; 
     
     }else{
@@ -254,7 +254,6 @@ COORDENADA devolve_coordenada (TREEMinMax * tree, int val){
     if( tree -> nodo6 != NULL && tree -> nodo6 -> valor == val) return tree -> nodo6 -> coord;
     if( tree -> nodo7 != NULL && tree -> nodo7 -> valor == val) return tree -> nodo7 -> coord;
     if( tree -> nodo8 != NULL && tree -> nodo8 -> valor == val) return tree -> nodo8 -> coord;
-
 }
 
 
@@ -431,12 +430,9 @@ COORDENADA joga_MinMax(ESTADO *e){
     int depth = 5;
     TREEMinMax * tree = malloc(sizeof(TREEMinMax));
     tree = create_tree_total(depth , e, max_jog,ultima_jog);
-    
 
     for (depth; depth != 1; depth--){
-    
         aplly_fill_valor(depth, tree, max_jog);
-    
     }
     
     valor = max_nodo(tree);
@@ -511,56 +507,4 @@ COORDENADA joga_aleatorio (ESTADO *e) {
     	jogar(e,*coord);
     
     return *coord; 
-}
-
-
-int verifica_jogada_flood (ESTADO *e,COORDENADA  c){
-    int r = 1;
-    int c_ult = c.coluna;
-    int l_ult = c.linha;
-    COORDENADA x1 = {c_ult+1,l_ult};
-    COORDENADA x2 = {c_ult-1,l_ult};
-    COORDENADA y1 = {c_ult,l_ult+1};
-    COORDENADA y2 = {c_ult,l_ult-1};
-    COORDENADA z1 = {c_ult+1,l_ult+1};
-    COORDENADA z2 = {c_ult+1,l_ult-1};
-    COORDENADA z3 = {c_ult-1,l_ult+1};
-    COORDENADA z4 = {c_ult-1,l_ult-1};
-    COORDENADA ar [8] = {x1, x2, y1, y2, z1,z2,z3,z4};
-
-    for (int i = 0; i < 8; i++){
-        if (casa_valida (ar[i]) && obter_estado_casa(e,ar [i]) == VAZIO)
-            r = 0;
-    }
-    return r;
-}            
-
-
-
-COORDENADA joga_flood (ESTADO *e){
-    LISTA l;
-	COORDENADA c = obter_ultima_jogada(e);
-	l = jogada_possivel (e,c);
-    COORDENADA * possivel_jogada;
-    COORDENADA *prox_jogada;
-    COORDENADA p;
-    int r = 0;
-
-    while (l ->prox != NULL){
-        possivel_jogada = l -> valor;
-    
-        if (verifica_jogada_flood (e,*possivel_jogada)){
-            prox_jogada = possivel_jogada;
-            r = 1;
-        }   
-        l = l -> prox;
-    }
-    if (r == 0) {
-        p = joga_euclidiana(e);
-        return p;
-    }
-    else {
-        jogar(e, *prox_jogada);
-        return *prox_jogada;
-    }
 }

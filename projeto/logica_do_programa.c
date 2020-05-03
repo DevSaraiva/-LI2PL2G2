@@ -58,8 +58,7 @@ int casa_vencedora (ESTADO *e,COORDENADA c){
 
 
 int jogada_e_valida (ESTADO *estado,COORDENADA c){
-    
-    if(c.linha > 7 || c.linha < 0 || c.coluna > 7 || c.linha < 0) return 0;
+     
     int c_ult = obter_ultima_jogada(estado).coluna;
     int l_ult = obter_ultima_jogada(estado).linha;
     int c_coluna = c.coluna;
@@ -78,10 +77,8 @@ int jogada_e_valida (ESTADO *estado,COORDENADA c){
 void jogar (ESTADO *estado, COORDENADA c){
     COORDENADA c_ult = obter_ultima_jogada(estado);
     int j_atual = obter_jogador_atual (estado);
-    
-    //printf("jogar %d %d\n", c.coluna, c.linha);
    
-    if (jogada_e_valida(estado,c)){
+    if (jogada_e_valida(estado,c) == 1 ){
         
         // Atualiza o tabuleiro
         set_estado_casa_c(estado,c,BRANCA);

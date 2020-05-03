@@ -149,7 +149,7 @@ JOGADA retorna_Jogada (ESTADO *e, int x);
 \brief  Obtem as jogadas de um dado jogador
 \return Coordenada da jogada de um determinado jogador
 */
-COORDENADA obter_jogada_por_jog (ESTADO *e,int i,int x);
+COORDENADA obter_jogada_por_jog (ESTADO *e,int i,int jogador);
 /**
 \brief  Função que diz se o comando pos está ativo
 \return O último comando pos usado
