@@ -65,7 +65,6 @@ return dist;
 
 
 
-
 int atribui_valor (ESTADO *e, int jog_max, COORDENADA c){
     
     COORDENADA * coord;
@@ -379,18 +378,16 @@ void fill_valor ( TREEMinMax * tree, int max_jog){
             
             int valor_cabeca = atribui_valor(e,max_jog,c);
             int valor_nodo = max_nodo(tree);
-            if (valor_cabeca > valor_nodo) valor = valor_cabeca;
+            if (valor_cabeca == 1000) valor = valor_cabeca;
             else valor = valor_nodo;
-        }
         
-        
-        else{
+        } else {
             
             int valor_cabeca = atribui_valor(e,max_jog,c);
             int valor_nodo = min_nodo(tree);
 
-            if (valor_cabeca > valor_nodo) valor = valor_nodo;
-            else valor = valor_cabeca;
+            if (valor_cabeca == -1000) valor = valor_cabeca;
+            else valor = valor_nodo;
         } 
 
         tree -> valor = valor;
@@ -447,7 +444,7 @@ COORDENADA joga_MinMax(ESTADO *e){
     COORDENADA jogada;
     int max_jog = obter_jogador_atual(e);
     int valor;
-    int depth = 5;
+    int depth = 6;
     TREEMinMax * tree = malloc(sizeof(TREEMinMax));
     tree = create_tree_total(depth , e, max_jog,ultima_jog);
 
