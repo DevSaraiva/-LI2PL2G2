@@ -29,17 +29,12 @@ int jogada_presa (ESTADO *e,COORDENADA c){
     }
     int j_atual = obter_jogador_atual (e);
     if ((j_atual == 1)){
-        if((c_ult == 0) && (l_ult == 0)) r = 1;
-        else {
-            set_jogador_atual (e,2);
-            r = 1;
-        }
+        set_jogador_atual (e,2);
+        r = 1;
     }
-    else {
-        if ((c_ult == 7) && (l_ult == 7)) r = 1;
-        else {
-            set_jogador_atual(e,1);
-            r = 1;}
+    else{
+        set_jogador_atual(e,1);
+        r = 1;
     }
     return r;
 }
@@ -49,9 +44,9 @@ int jogada_presa (ESTADO *e,COORDENADA c){
 int casa_vencedora (ESTADO *e,COORDENADA c){
     int c_coluna = c.coluna;
     int c_linha = c.linha;
-    int pl= obter_jogador_atual(e);
-    if ((pl == 1 && c_coluna == 0 && c_linha == 0) || (pl==2 && c_coluna == 7 && c_linha == 7)) return 1;
-    else return 0;
+    if ((c_coluna == 0 && c_linha == 0)) {set_jogador_atual(e,1); return 1;} 
+    if ((c_coluna == 7 && c_linha == 7)) {set_jogador_atual(e,2); return 1;}
+    return 0;
 }
 
 
